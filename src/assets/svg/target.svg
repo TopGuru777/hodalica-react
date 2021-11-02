@@ -1,0 +1,22 @@
+<svg id="target" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.14" height="63.14" viewBox="0 0 63.14 63.14">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_10" data-name="Clip 10" d="M0,0H33.42V33.415H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Fill_1" data-name="Fill 1" d="M3.7,5V1.85a1.85,1.85,0,1,0-3.7,0V5c.613-.042,1.229-.064,1.85-.064S3.087,4.956,3.7,5Z" transform="translate(29.72)"/>
+  <path id="Fill_2" data-name="Fill 2" d="M17.3,24.727h7.424A26.446,26.446,0,0,0,16.985,7.739,26.438,26.438,0,0,0,0,0V7.425A19.273,19.273,0,0,1,17.3,24.727Z" transform="translate(33.42 4.998)"/>
+  <path id="Fill_3" data-name="Fill 3" d="M3.083,0A3.083,3.083,0,1,0,6.166,3.083,3.086,3.086,0,0,0,3.083,0Z" transform="translate(28.487 28.491)"/>
+  <path id="Fill_4" data-name="Fill 4" d="M13.578,30.861h0A15.571,15.571,0,0,1,0,17.28H2.973a1.85,1.85,0,0,0,0-3.7H0A15.569,15.569,0,0,1,13.578,0V2.973a1.849,1.849,0,1,0,3.7,0V0A15.569,15.569,0,0,1,30.856,13.58H27.883a1.85,1.85,0,0,0,0,3.7h2.973A15.569,15.569,0,0,1,17.278,30.86V27.887a1.849,1.849,0,1,0-3.7,0V30.86ZM15.428,8.646a6.784,6.784,0,1,0,6.782,6.784A6.791,6.791,0,0,0,15.428,8.646Z" transform="translate(16.142 16.145)"/>
+  <path id="Fill_5" data-name="Fill 5" d="M7.424,0H0A26.446,26.446,0,0,0,7.738,16.988a26.438,26.438,0,0,0,16.985,7.739V17.3A19.273,19.273,0,0,1,7.424,0Z" transform="translate(4.997 33.425)"/>
+  <path id="Fill_6" data-name="Fill 6" d="M24.723,7.425V0A26.64,26.64,0,0,0,0,24.727H7.424A19.273,19.273,0,0,1,24.723,7.425Z" transform="translate(4.997 4.998)"/>
+  <path id="Fill_7" data-name="Fill 7" d="M0,17.3v7.425a26.438,26.438,0,0,0,16.985-7.739A26.446,26.446,0,0,0,24.723,0H17.3A19.273,19.273,0,0,1,0,17.3Z" transform="translate(33.42 33.425)"/>
+  <path id="Fill_8" data-name="Fill 8" d="M3.147,0H0C.042.613.064,1.23.064,1.85S.042,3.087,0,3.7H3.147a1.85,1.85,0,0,0,0-3.7Z" transform="translate(58.143 29.725)"/>
+  <g id="Group_12" data-name="Group 12" transform="translate(0 29.725)">
+    <path id="Clip_10-2" data-name="Clip 10" d="M0,0H33.42V33.415H0Z" fill="none"/>
+    <g id="Group_12-2" data-name="Group 12" clip-path="url(#clip-path)">
+      <path id="Fill_9" data-name="Fill 9" d="M5,0H1.85a1.85,1.85,0,0,0,0,3.7H5c-.042-.613-.064-1.23-.064-1.85S4.955.613,5,0Z"/>
+      <path id="Fill_11" data-name="Fill 11" d="M0,0V3.148a1.85,1.85,0,1,0,3.7,0V0C3.087.042,2.47.064,1.85.064S.613.042,0,0Z" transform="translate(29.72 28.427)"/>
+    </g>
+  </g>
+</svg>

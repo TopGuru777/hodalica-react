@@ -1,0 +1,15 @@
+<svg id="pie-chart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52.48" height="52.48" viewBox="0 0 52.48 52.48">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H43.635V52.48H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_3" data-name="Group 3">
+    <path id="Clip_2-2" data-name="Clip 2" d="M0,0H43.635V52.48H0Z" fill="none"/>
+    <g id="Group_3-2" data-name="Group 3" clip-path="url(#clip-path)">
+      <path id="Fill_1" data-name="Fill 1" d="M43.635,45.9a26.259,26.259,0,1,1-19-45.9V10.993A15.317,15.317,0,1,0,35.884,38.145Z"/>
+    </g>
+  </g>
+  <path id="Fill_4" data-name="Fill 4" d="M14.275,0A25.827,25.827,0,0,1,7.751,15.722L0,7.97A15.08,15.08,0,0,0,3.284,0Z" transform="translate(38.205 27.854)"/>
+  <path id="Fill_5" data-name="Fill 5" d="M24.565,24.569H13.574A15.282,15.282,0,0,0,0,10.993V0A26.243,26.243,0,0,1,24.565,24.569Z" transform="translate(27.915)"/>
+</svg>

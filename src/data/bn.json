@@ -1,0 +1,14 @@
+{
+  "header_mark": {
+    "mark_title": "Wiara Care1",
+    "mark_subtitle": "by Hodalica1"
+  },
+  "menus": {
+    "stats": "Stats1",
+    "reviews": "Reviews1",
+    "profile": "Profile1"
+  },
+  "buttons": {
+    "logout": "Log out1"
+  }
+}

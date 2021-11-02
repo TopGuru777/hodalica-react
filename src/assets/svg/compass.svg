@@ -1,0 +1,14 @@
+<svg id="compass" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98.4" height="98.4" viewBox="0 0 98.4 98.4">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H98.4V98.4H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_3" data-name="Group 3">
+    <path id="Clip_2-2" data-name="Clip 2" d="M0,0H98.4V98.4H0Z" fill="none"/>
+    <g id="Group_3-2" data-name="Group 3" clip-path="url(#clip-path)">
+      <path id="Fill_1" data-name="Fill 1" d="M49.222,98.4A49.21,49.21,0,0,1,30.062,3.866,49.216,49.216,0,0,1,68.38,94.534,48.931,48.931,0,0,1,49.222,98.4ZM74.375,24.056,39.419,39.4,24.069,74.344,59.022,59Z" transform="translate(-0.041)"/>
+    </g>
+  </g>
+  <path id="Fill_4" data-name="Fill 4" d="M11.294,5.644A5.647,5.647,0,1,1,5.649,0,5.646,5.646,0,0,1,11.294,5.644Z" transform="translate(43.532 42.996)"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg id="location-pin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="25" viewBox="0 0 18 25">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H18V25H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Clip_2-2" data-name="Clip 2" d="M0,0H18V25H0Z" fill="none"/>
+  <g id="location-pin-2" data-name="location-pin" clip-path="url(#clip-path)">
+    <path id="Fill_1" data-name="Fill 1" d="M9,25a.734.734,0,0,1-.5-.2A37,37,0,0,1,4.12,19.78a26.47,26.47,0,0,1-2.841-4.859A13.8,13.8,0,0,1,0,9.444,9.24,9.24,0,0,1,9,0a9.24,9.24,0,0,1,9,9.444c0,7.415-8.154,15.042-8.5,15.363A.737.737,0,0,1,9,25ZM9,4.167A5.114,5.114,0,0,0,4,9.376a5.114,5.114,0,0,0,5,5.209,5.114,5.114,0,0,0,5-5.209A5.114,5.114,0,0,0,9,4.167Z"/>
+  </g>
+</svg>

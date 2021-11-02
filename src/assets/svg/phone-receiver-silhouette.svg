@@ -1,0 +1,11 @@
+<svg id="phone-receiver-silhouette" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.4" height="17.642" viewBox="0 0 16.4 17.642">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H16.4V17.642H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Clip_2-2" data-name="Clip 2" d="M0,0H16.4V17.642H0Z" fill="none"/>
+  <g id="phone-receiver-silhouette-2" data-name="phone-receiver-silhouette" clip-path="url(#clip-path)">
+    <path id="Fill_1" data-name="Fill 1" d="M14.6,12.28c-1.065-.911-2.148-1.466-3.2-.555l-.628.552c-.46.4-1.314,2.262-4.622-1.54S4.812,6.346,5.273,5.953L5.905,5.4c1.048-.915.651-2.061-.1-3.244l-.454-.716C4.587.262,3.76-.511,2.712.4L2.144.894A5.333,5.333,0,0,0,.069,4.42c-.38,2.5.814,5.372,3.553,8.519s5.41,4.73,7.944,4.7a5.343,5.343,0,0,0,3.775-1.563l.571-.5c1.045-.911.4-1.836-.673-2.75Z"/>
+  </g>
+</svg>

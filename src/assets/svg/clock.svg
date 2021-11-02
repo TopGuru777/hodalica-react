@@ -1,0 +1,11 @@
+<svg id="clock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H24V24H0Z" transform="translate(0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Clip_2-2" data-name="Clip 2" d="M0,0H24V24H0Z" transform="translate(0)" fill="none"/>
+  <g id="clock-2" data-name="clock" clip-path="url(#clip-path)">
+    <path id="Fill_1" data-name="Fill 1" d="M12,24A12,12,0,1,1,24,12,12.015,12.015,0,0,1,12,24ZM12,5a1,1,0,0,0-1,1v6.5a1,1,0,0,0,.292.707l5,5a1,1,0,0,0,1.414,0,1,1,0,0,0,0-1.414L13,12.086V6A1,1,0,0,0,12,5Z" transform="translate(-0.003)"/>
+  </g>
+</svg>
