@@ -37,8 +37,5 @@ const options: any = {
 };
 
 i18n.use(LanguageDetector).init(options);
-//   .changeLanguage("en", (err: any, t: any) => {
-//     if (err) return console.log("something went wrong loading", err);
-//   });
 
 export default i18n;

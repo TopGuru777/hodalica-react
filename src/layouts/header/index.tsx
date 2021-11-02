@@ -25,13 +25,14 @@ import Button from "components/custom/Button/Button";
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
 
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
   window.onscroll = function () {
     scrollEvent();
   };
 
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
   return (
     <HeaderDiv id="Header">
       <LogoDiv>

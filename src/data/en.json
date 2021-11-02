@@ -1,5 +1,12 @@
 {
-  "header_mark": { "mark_title": "Wiara Care", "mark_subtitle": "by Hodalica" },
+  "header_mark": {
+    "mark_title": "Wiara Care",
+    "mark_subtitle": "by Hodalica"
+  },
+  "footer_mark": {
+    "mark_title": "Hodalica",
+    "mark_subtitle": "Save on the go"
+  },
   "menus": {
     "stats": "Stats",
     "reviews": "Reviews",
@@ -7,5 +14,27 @@
   },
   "buttons": {
     "logout": "Log out"
+  },
+  "footer": {
+    "about_desc": "Hodalica is the first and only mobile app in the region that allows users to get amazing discounts on the spot!",
+    "quick_links": {
+      "title": "QUICK LINKS",
+      "links": {
+        "for_users": "For users",
+        "for_partners": "For partner",
+        "how_it_work": "How it works?",
+        "partners": "Partners",
+        "privacy_policy": "Privacy policy",
+        "cookie_policy": "Cookie policy",
+        "terms_conditions": "Terms & conditions"
+      }
+    },
+    "contact": {
+      "title": "CONTACT",
+      "website": "hodalica.ba",
+      "email": "info@hodalica.com",
+      "phone": "063 124 124",
+      "instagram": "hodalica"
+    }
   }
 }
