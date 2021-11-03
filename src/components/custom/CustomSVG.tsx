@@ -358,3 +358,98 @@ export const InstagramSVG = () => {
     </svg>
   );
 };
+
+export const BeautySVG = () => {
+  return (
+    <svg
+      id="lotus"
+      xmlns="http://www.w3.org/2000/svg"
+      width="23"
+      height="22"
+      viewBox="0 0 23 22"
+    >
+      <path
+        id="Fill_1"
+        data-name="Fill 1"
+        d="M3.147,17.44l.508-.663a13.638,13.638,0,0,0,0-16.127L3.147,0,2.639.649a13.638,13.638,0,0,0,0,16.127Z"
+        transform="translate(8.353)"
+        fill="#fff"
+      />
+      <path
+        id="Fill_2"
+        data-name="Fill 2"
+        d="M18.9,0c-2.838,2.171-5.172,2.253-7.4,2.434A12.826,12.826,0,0,1,4.1,0C1.622.564,0,1.4,0,2.341c0,1.7,5.174,3.07,11.5,3.07S23,4.037,23,2.341C23,1.4,21.377.563,18.9,0Z"
+        transform="translate(0 16.589)"
+        fill="#fff"
+      />
+      <path
+        id="Fill_3"
+        data-name="Fill 3"
+        d="M4.632.577A14.738,14.738,0,0,1,0,11.807C4.244,10.389,7.446,6.067,7.759.878L7.811,0,7.04.06A9.6,9.6,0,0,0,4.632.577Z"
+        transform="translate(15.189 5.085)"
+        fill="#fff"
+      />
+      <path
+        id="Fill_4"
+        data-name="Fill 4"
+        d="M7.812,11.807A14.739,14.739,0,0,1,3.18.577,9.589,9.589,0,0,0,.771.06L0,0,.053.878C.365,6.067,3.568,10.389,7.812,11.807Z"
+        transform="translate(0 5.085)"
+        fill="#fff"
+      />
+      <path
+        id="Fill_5"
+        data-name="Fill 5"
+        d="M0,14.4A13.377,13.377,0,0,0,3.6.835L3.352,0,2.66.392A10.588,10.588,0,0,0,.648,1.89,15.626,15.626,0,0,1,0,14.4Z"
+        transform="translate(14.335 1.311)"
+        fill="#fff"
+      />
+      <path
+        id="Fill_6"
+        data-name="Fill 6"
+        d="M4.151,14.4A15.625,15.625,0,0,1,3.5,1.89,10.585,10.585,0,0,0,1.491.392L.8,0,.552.835A13.38,13.38,0,0,0,4.151,14.4Z"
+        transform="translate(4.515 1.311)"
+        fill="#fff"
+      />
+    </svg>
+  );
+};
+
+export const ClockSVG = () => {
+  return (
+    <svg
+      id="clock"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <defs>
+        <clipPath id="clip-path">
+          <path
+            id="Clip_2"
+            data-name="Clip 2"
+            d="M0,0H24V24H0Z"
+            transform="translate(0)"
+            fill="none"
+          />
+        </clipPath>
+      </defs>
+      <path
+        id="Clip_2-2"
+        data-name="Clip 2"
+        d="M0,0H24V24H0Z"
+        transform="translate(0)"
+        fill="none"
+      />
+      <g id="clock-2" data-name="clock" clipPath="url(#clip-path)">
+        <path
+          id="Fill_1"
+          data-name="Fill 1"
+          d="M12,24A12,12,0,1,1,24,12,12.015,12.015,0,0,1,12,24ZM12,5a1,1,0,0,0-1,1v6.5a1,1,0,0,0,.292.707l5,5a1,1,0,0,0,1.414,0,1,1,0,0,0,0-1.414L13,12.086V6A1,1,0,0,0,12,5Z"
+          transform="translate(-0.003)"
+        />
+      </g>
+    </svg>
+  );
+};

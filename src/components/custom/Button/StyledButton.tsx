@@ -12,7 +12,6 @@ export const ButtonDiv = styled.div<btnProps>`
         : `box-shadow: 0 10px 35px ${c}30;`}
   }
   display: flex;
-  gap: 20px;
   justify-content: center;
   align-items: center;
   margin: 6px 0;
@@ -28,5 +27,9 @@ export const ButtonDiv = styled.div<btnProps>`
   @media screen and (max-width: 1024px) {
     font-size: 16px;
     transition: 0.2s linear;
+  }
+  svg {
+    fill: white;
+    margin-left: 15px;
   }
 `;

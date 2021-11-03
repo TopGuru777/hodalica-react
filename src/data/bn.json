@@ -1,24 +1,25 @@
 {
   "header_mark": {
-    "mark_title": "Wiara Care1",
-    "mark_subtitle": "by Hodalica1"
+    "mark_title": "Wiara Care",
+    "mark_subtitle": "by Hodalica"
   },
   "footer_mark": {
-    "mark_title": "Hodalica1",
-    "mark_subtitle": "Save on the go1"
+    "mark_title": "Hodalica",
+    "mark_subtitle": "Save on the go"
   },
   "menus": {
-    "stats": "Stats1",
-    "reviews": "Reviews1",
-    "profile": "Profile1"
+    "stats": "Stats",
+    "reviews": "Reviews",
+    "profile": "Profile"
   },
   "buttons": {
-    "logout": "Log out1"
+    "logout": "Log out",
+    "lets_go": "Let's go"
   },
   "footer": {
-    "about_desc": "Hodalica is the first and only mobile app in the region that allows users to get amazing discounts on the spot!1111",
+    "about_desc": "Hodalica is the first and only mobile app in the region that allows users to get amazing discounts on the spot!",
     "quick_links": {
-      "title": "QUICK LINKS1",
+      "title": "QUICK LINKS",
       "links": {
         "for_users": "For users",
         "for_partners": "For partner",
@@ -31,10 +32,15 @@
     },
     "contact": {
       "title": "CONTACT",
-      "website": "hodalica.ba1",
-      "email": "info@hodalica.com1",
-      "phone": "063 124 1241",
-      "instagram": "hodalica1"
+      "website": "hodalica.ba",
+      "email": "info@hodalica.com",
+      "phone": "063 124 124",
+      "instagram": "hodalica"
     }
+  },
+  "signin": {
+    "title": "Sign in",
+    "partner_code": "Partner Code",
+    "confirm_partner_code": "Confirm Partner Code"
   }
 }
