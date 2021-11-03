@@ -9,7 +9,7 @@ export const ButtonDiv = styled.div<btnProps>`
     ${({ c }) =>
       c === "1"
         ? "background-color: #000 !important; color: white !important;  !important;box-shadow: 0 10px 20px #00000030;"
-        : `box-shadow: 0 10px 35px ${c}80;`}
+        : `box-shadow: 0 10px 35px ${c}30;`}
   }
   display: flex;
   gap: 20px;

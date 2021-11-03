@@ -34,5 +34,5 @@ export default App;
 
 const MainContainer = styled.div`
   padding-top: 117px;
-  height: 2000px;
+  min-height: calc(100vh - 120px - 303px);
 `;

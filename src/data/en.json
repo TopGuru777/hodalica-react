@@ -13,7 +13,8 @@
     "profile": "Profile"
   },
   "buttons": {
-    "logout": "Log out"
+    "logout": "Log out",
+    "lets_go": "Let's go"
   },
   "footer": {
     "about_desc": "Hodalica is the first and only mobile app in the region that allows users to get amazing discounts on the spot!",
@@ -36,5 +37,10 @@
       "phone": "063 124 124",
       "instagram": "hodalica"
     }
+  },
+  "signin": {
+    "title": "Sign in",
+    "partner_code": "Partner Code",
+    "confirm_partner_code": "Confirm Partner Code"
   }
 }

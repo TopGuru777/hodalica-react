@@ -7,7 +7,7 @@ export const HeaderDiv = styled.div`
   display: flex;
   height: 117px;
   z-index: 1;
-  background-color: white;
+  background-color: #fffaf2;
   align-items: center;
   padding: 0 30px;
   justify-content: space-between;
