@@ -14,3 +14,7 @@ export const PageTitle = styled.div`
   }
   margin-bottom: 70px;
 `;
+
+export const DatePickerDiv = styled.div`
+  margin: 5px 0;
+`;
