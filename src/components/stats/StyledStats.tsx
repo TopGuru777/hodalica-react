@@ -72,7 +72,11 @@ export const ChartDesc = styled.div<chartDescProps>`
   }
 `;
 
-export const StatListPartDiv = styled.div``;
+export const StatListPartDiv = styled.div`
+  & > *:not(:last-child) {
+    margin-bottom: 80px;
+  }
+`;
 
 export const HrDiv = styled.div`
   height: 2px;
@@ -104,5 +108,79 @@ export const TotalText = styled.div`
 
 export const SubTotalText = styled.div`
   font-size: 20px;
+  color: #00000050;
+`;
+
+export const StatListDiv = styled.div``;
+
+export const ListTitle = styled.div`
+  span {
+    font-size: 31px;
+  }
+  font-size: 20px;
+`;
+
+export const ListSubTitle = styled.div`
+  font-size: 20px;
+  margin-top: -5px;
+`;
+
+export const ListContentDiv = styled.div`
+  position: relative;
+  img {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin-right: 26px;
+    left: -52px;
+    cursor: pointer;
+  }
+  display: flex;
+  align-items: center;
+  font-size: 18.75px;
+  color: #00000050;
+  margin-top: 5px;
+`;
+
+export const ListCount = styled.div`
+  font-size: 30px;
+  color: #fc697f;
+`;
+
+export const StatListItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ListDescDiv = styled.div`
+  width: 80%;
+`;
+
+export const PeopleDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 33px;
+  grid-column-gap: 10%;
+  margin-top: 17px;
+`;
+
+export const PeopleInfoDiv = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    width: 66px;
+    margin-right: 14px;
+  }
+`;
+
+export const PeopleInfo = styled.div``;
+
+export const PeopleName = styled.div`
+  font-size: 20px;
+`;
+
+export const PeopleDate = styled.div`
+  font-size: 15px;
   color: #00000050;
 `;
