@@ -12,7 +12,7 @@ export const PageTitle = styled.div`
     height: 42px;
     margin-right: 16.7px;
   }
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 `;
 
 export const DatePickerDiv = styled.div`

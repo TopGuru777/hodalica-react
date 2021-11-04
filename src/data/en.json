@@ -49,5 +49,32 @@
   },
   "review": {
     "title": "Reviews"
+  },
+  "stats": {
+    "title": "Stats",
+    "deals_redeemed": "Deals redeemed",
+    "clients": "Clients",
+    "new_clients": "New clients",
+    "existing_clients": "Existing clients",
+    "bosnian": "Bosnian",
+    "foreigners": "foreigners",
+    "android": "Android",
+    "ios": "iOS",
+    "app_downloads": "App Downloads",
+    "app_signups": "App signups"
+  },
+  "date_selectors": {
+    "custom": "Custom",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "7d": "7D",
+    "30d": "30D",
+    "3m": "3M",
+    "6m": "6M",
+    "1y": "1Y",
+    "fixed": "Fixed",
+    "range": "Range",
+    "cancel": "Cancel",
+    "apply": "Apply"
   }
 }
