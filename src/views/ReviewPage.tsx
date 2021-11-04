@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import avatar1 from "assets/avatar/7.png";
 import avatar2 from "assets/avatar/8.png";
 import avatar3 from "assets/avatar/9.png";
+import Footer from "layouts/footer";
 
 const reviewData = [
   {
@@ -37,18 +38,21 @@ const reviewData = [
 const ReviewPage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <Container>
-      <ReviewsDiv>
-        <PageTitle>
-          <ReviewSVG />
-          {reviewData.length} {t("review.title")}
-        </PageTitle>
-        <DatePickerDiv>
-          <DatePickerGroup />
-        </DatePickerDiv>
-        <ReviewItems data={reviewData} />
-      </ReviewsDiv>
-    </Container>
+    <React.Fragment>
+      <Container>
+        <ReviewsDiv>
+          <PageTitle>
+            <ReviewSVG />
+            {reviewData.length} {t("review.title")}
+          </PageTitle>
+          <DatePickerDiv>
+            <DatePickerGroup />
+          </DatePickerDiv>
+          <ReviewItems data={reviewData} />
+        </ReviewsDiv>
+      </Container>
+      <Footer />
+    </React.Fragment>
   );
 };
 

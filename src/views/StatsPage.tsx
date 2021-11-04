@@ -5,6 +5,7 @@ import DealsPart from "components/stats/DealsPart";
 import StatListPart from "components/stats/StatListPart";
 import StatsTotalPart from "components/stats/StatsTotalPart";
 import { HrDiv, StatsPageDiv } from "components/stats/StyledStats";
+import Footer from "layouts/footer";
 import { Container, PageTitle } from "layouts/StyledLayout";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -12,21 +13,23 @@ import { useTranslation } from "react-i18next";
 const StatsPage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <Container>
-      <StatsPageDiv>
-        <PageTitle>
-          <StatsSVG />
-          {t("stats.title")}
-        </PageTitle>
-        <DatePickerGroup />
-
-        <DealsPart />
-        <ChartsPart />
-        <StatListPart />
-        <HrDiv />
-        <StatsTotalPart />
-      </StatsPageDiv>
-    </Container>
+    <React.Fragment>
+      <Container>
+        <StatsPageDiv>
+          <PageTitle>
+            <StatsSVG />
+            {t("stats.title")}
+          </PageTitle>
+          <DatePickerGroup />
+          <DealsPart />
+          <ChartsPart />
+          <StatListPart />
+          <HrDiv />
+          <StatsTotalPart />
+        </StatsPageDiv>
+      </Container>
+      <Footer />
+    </React.Fragment>
   );
 };
 

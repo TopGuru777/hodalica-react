@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import avatarImg from "assets/avatar/6.png";
 import image from "assets/img/Yume Sushi_0 3.png";
 import ProfileInfo from "components/profile/ProfileInfo";
+import Footer from "layouts/footer";
 
 const ProfilePage: React.FC = () => {
   const profileData: any = {
@@ -32,20 +33,23 @@ const ProfilePage: React.FC = () => {
   };
   const { t } = useTranslation();
   return (
-    <ProfileDiv>
-      <PageTitle>
-        <ProfileSVG />
-        {t("profile.title")}
-      </PageTitle>
-      <ProfileAvatar
-        data={{
-          avatar: profileData.avatar,
-          title: profileData.title,
-          subtitle: profileData.subtitle,
-        }}
-      />
-      <ProfileInfo data={profileData} />
-    </ProfileDiv>
+    <React.Fragment>
+      <ProfileDiv>
+        <PageTitle>
+          <ProfileSVG />
+          {t("profile.title")}
+        </PageTitle>
+        <ProfileAvatar
+          data={{
+            avatar: profileData.avatar,
+            title: profileData.title,
+            subtitle: profileData.subtitle,
+          }}
+        />
+        <ProfileInfo data={profileData} />
+      </ProfileDiv>
+      <Footer />
+    </React.Fragment>
   );
 };
 

@@ -62,7 +62,7 @@ export const DateTypeDiv = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  background: #f3ebde;
+  background: #fff;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   border-bottom: 2px solid #ded4c5;
