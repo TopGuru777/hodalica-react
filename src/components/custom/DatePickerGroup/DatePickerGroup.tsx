@@ -23,7 +23,7 @@ const DatePickerGroup = () => {
   const [state, setState] = useState<any>([
     {
       startDate: new Date(),
-      endDate: null,
+      endDate: new Date(),
       key: "selection",
     },
   ]);
