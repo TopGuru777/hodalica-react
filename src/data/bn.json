@@ -10,12 +10,17 @@
   "menus": {
     "stats": "Stats",
     "reviews": "Reviews",
-    "profile": "Profile"
+    "profile": "Profile",
+    "how_it_works": "How it works",
+    "faq": "FAQ",
+    "news": "News"
   },
   "buttons": {
     "logout": "Log out",
     "lets_go": "Let's go",
-    "beauty": "Beauty"
+    "beauty": "Beauty",
+    "mobile_app": "Mobile_App",
+    "view_more": "View More"
   },
   "footer": {
     "about_desc": "Hodalica is the first and only mobile app in the region that allows users to get amazing discounts on the spot!",
@@ -55,6 +60,103 @@
     "deals_redeemed": "Deals redeemed",
     "clients": "Clients",
     "new_clients": "New clients",
-    "existing_clients": "Existing clients"
+    "existing_clients": "Existing clients",
+    "bosnian": "Bosnian",
+    "foreigners": "foreigners",
+    "android": "Android",
+    "ios": "iOS",
+    "app_downloads": "App Downloads",
+    "app_signups": "App signups"
+  },
+  "date_selectors": {
+    "custom": "Custom",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "7d": "7D",
+    "30d": "30D",
+    "3m": "3M",
+    "6m": "6M",
+    "1y": "1Y",
+    "fixed": "Fixed",
+    "range": "Range",
+    "cancel": "Cancel",
+    "apply": "Apply"
+  },
+  "landing": {
+    "subtitle1": "FOR 59.99 BAM",
+    "title": "SAVE UP TO",
+    "subtitle2": "10.000 + BAM",
+    "app_available": "The app is available on the App Store and Google Play.",
+    "is_the_first_and_only": "is the first and only",
+    "amazing_prefix_text": "in the region that allows users to get",
+    "amazing_discounts": "amazing discounts",
+    "amazing_suffix_text": "on the spot!",
+    "benefits": "Benefits",
+    "for_users": "for users",
+    "for_users_up": "For Users",
+    "for_partners": "for partners",
+    "for_partners_up": "For Partners",
+    "benefits_user_data": {
+      "benefit_1": "Lots of exclusive “pay for one, enjoy for two“ and other offers from 100+ partners.",
+      "benefit_2": "Discounts throughout the year with selected partners.",
+      "benefit_3": "You save right on the spot.",
+      "benefit_4": "You save all over BiH, and soon in the region.",
+      "benefit_5": "Your favorite places in one app."
+    },
+    "benefits_partner_data": {
+      "benefit_1": "Free business statistics trough Hodalica app.",
+      "benefit_2": "Access to the international market.",
+      "benefit_3": "Unique service positioning.",
+      "benefit_4": "100% free reqistration.",
+      "benefit_5": "New clients."
+    },
+    "how_data": {
+      "how": "How",
+      "it_works": "it works",
+      "how_1": "Download the app from Google Play or Play Store",
+      "how_2": "Create your account and select the package you want to use",
+      "how_3": "Browse our partners and choose the discount you like",
+      "how_4": "Look for Hodalica flyer with a QR code in our partner location and scan it to redeem the offer.",
+      "how_5": "You will receive a receipt with reflected discount, and you can make the payment directly at the partner location.",
+      "start_saving": "Start Saving On The",
+      "go": "Go"
+    },
+    "faq_title": "Frequently asked questions",
+    "faq_user_data": {
+      "question_1": "Do I have to pay to use the app?",
+      "answer_1": "Downloading the app and browsing through partners and their offers is free. If you'd like to start redeeming offers, you need to register and make a payment.",
+      "question_2": "What packages can I buy within the app?",
+      "answer_2_1": "Available packages are:",
+      "answer_2_2": "All-in-one, 59.99 BAM",
+      "answer_2_3": "Tourism, 39.99 BAM",
+      "answer_2_4": "You can check out some of our partners",
+      "here": "here",
+      "question_3": "Can I track my savings?",
+      "answer_3": "Hodalica is the first and only mobile application in the region that allows you to get a discount on the spot and track your savings. With the calculator available on the app, you can track your savings in real time, after each purchase.",
+      "question_4": "Do I pay immediately for the use of the app?",
+      "answer_4": "You pay once a year for a package that gives you access to our partners' offers.",
+      "question_5": "What if I no longer want to use the app?",
+      "answer_5": "If you no longer wish to use Hodalica, you can simply choose to not renew your payment after your active package expires.",
+      "question_6": "Who should I contact if have additional questions or technical difficulties?",
+      "answer_6": "For all questions you can drop us a line at info@hodalica.com or call us at +387 61 572 759."
+    },
+    "faq_parter_data": {
+      "question_1": "How do I become a Hodalica partner?",
+      "answer_1": "You can contact us via e-mail address partneri@hodalica.com and provide basic information: name of your business, address, name, last name, and phone number. After we receive your email, we'll reach out to set up a meeting.",
+      "question_2": "Can I keep track of the number of new customers who come to me through the app",
+      "answer_2_1": "Through a specially created free platform, you can:",
+      "answer_2_2": "1. Track the number of new clients who have reached you trough Hodalica app",
+      "answer_2_3": "2. Compare the popularity of your offers",
+      "answer_2_4": "3. Categorize your clients by age and gender",
+      "here": "here",
+      "question_3": "Do I have to pay to become a Hodalica partner?",
+      "answer_3": "No, registration for partners on the application is completely free. Hodalica does not take a percentage of the services or products sold - all exclusive discounts are given directly to the app users.",
+      "question_4": "What if at some point I want to stop being a Hodalica partner?",
+      "answer_4": "The partnership can be terminated by the terms and conditions set out in the Partnership Agreement that you sign when accessing the application.",
+      "question_5": "Does the partnership last for an unlimited period of time?",
+      "answer_5": "The partnership with Hodalica is concluded for one year. After that you can either choose to renew or terminate the partnership."
+    },
+    "videopart_title": "Hodalica For Partners",
+    "partners": "Partners"
   }
 }

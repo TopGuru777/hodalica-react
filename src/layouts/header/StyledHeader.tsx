@@ -6,11 +6,12 @@ export const HeaderDiv = styled.div`
   top: 0;
   display: flex;
   height: 117px;
-  z-index: 1;
+  z-index: 2;
   background-color: #fffaf2;
   align-items: center;
   padding: 0 30px;
   justify-content: space-between;
+  transition: 0.2s linear;
 `;
 
 export const scrollEvent = () => {
@@ -18,9 +19,11 @@ export const scrollEvent = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     scrollmove.style.boxShadow = "0 3px 21px #00000040";
     scrollmove.style.backgroundColor = "#FDF5E9";
+    scrollmove.style.height = "80px";
   } else {
     scrollmove.style.boxShadow = "none";
     scrollmove.style.backgroundColor = "#fffaf2";
+    scrollmove.style.height = "117px";
   }
 };
 

@@ -50,7 +50,7 @@ const FaqUserPart = () => {
             <ListContent>{t("landing.faq_user_data.answer_5")}</ListContent>
           </FaqListItem>
           <FaqListItem>
-            <ListTitle>{t("landing.faq_user_data. ")}</ListTitle>
+            <ListTitle>{t("landing.faq_user_data.question_6")}</ListTitle>
             <ListContent>{t("landing.faq_user_data.answer_6")}</ListContent>
           </FaqListItem>
         </FaqList>

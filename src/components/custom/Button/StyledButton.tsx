@@ -17,7 +17,7 @@ export const ButtonDiv = styled.div<btnProps>`
   margin: 6px 0;
   /* font-size: 20px; */
   font-weight: 500;
-  border-radius: 29.4px;
+  border-radius: 50px;
   padding: 8px;
   text-decoration: none;
   border-width: 1.68px;

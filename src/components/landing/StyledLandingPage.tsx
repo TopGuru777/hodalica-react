@@ -1,21 +1,8 @@
 import styled from "styled-components";
 import dashedBorder from "assets/svg/Line.svg";
 
-export const LandingPageDiv = styled.div``;
-
-export const LandingTitleDiv = styled.div`
-  text-align: center;
-  & > *:not(:last-child) {
-    margin-bottom: 10px;
-  }
-`;
-
-export const LandingSubTitle = styled.div`
-  font-size: 49px;
-`;
-
-export const LandingTitle = styled.div`
-  font-size: 82px;
+export const LandingPageDiv = styled.div`
+  margin-top: 100px;
 `;
 
 export const ForPartnerDiv = styled.div`
@@ -32,6 +19,15 @@ export const DashBorder = styled.div`
   background-image: url(${dashedBorder});
   background-size: 100%;
   background-repeat: repeat-x;
+`;
+
+export const TitleDiv = styled.div`
+  display: flex;
+  align-items: end;
+  .small-title {
+    font-size: 24.6px;
+    padding-bottom: 9px;
+  }
 `;
 
 export const LandingPartTitle = styled.div`
