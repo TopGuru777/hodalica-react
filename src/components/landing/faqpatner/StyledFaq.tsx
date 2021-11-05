@@ -11,6 +11,7 @@ export const FaqUserDiv = styled.div`
 export const FaqSubtitle = styled.div`
   font-size: 41px;
   margin-top: -10px;
+  font-weight: 700;
 `;
 
 export const FaqList = styled.div`
@@ -25,10 +26,12 @@ export const FaqListItem = styled.div``;
 export const ListTitle = styled.div`
   font-size: 40px;
   margin-bottom: 10px;
+  font-weight: 700;
 `;
 
 export const ListContent = styled.div`
   font-size: 25px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   div {

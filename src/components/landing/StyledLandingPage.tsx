@@ -27,10 +27,12 @@ export const TitleDiv = styled.div`
   .small-title {
     font-size: 24.6px;
     padding-bottom: 9px;
+    font-weight: 500;
   }
 `;
 
 export const LandingPartTitle = styled.div`
+  font-weight: 900;
   display: flex;
   align-items: center;
   font-size: 58px;

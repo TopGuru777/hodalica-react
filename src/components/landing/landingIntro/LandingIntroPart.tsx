@@ -29,7 +29,13 @@ const LandingIntroPart = () => {
       </LandingTitleDiv>
       <IntroAnimPart />
       <LandingIntroDescDiv>
-        <IntroText>{t("landing.app_available")}</IntroText>
+        <IntroText>
+          {t("landing.app_available_prefix")}
+          <br />
+          <span>{t("landing.app_store")}</span>&nbsp;
+          {t("landing.and")}&nbsp;
+          <span>{t("landing.google_play")}</span>
+        </IntroText>
         <AppAvailableDiv>
           <img src={googleSvg} alt="googleSvg" />
           <img src={appstoreSvg} alt="appstoreSvg" />

@@ -53,6 +53,7 @@ export const QuickLinkItem = styled.div`
   margin-top: 6.7px;
   cursor: pointer;
   transition: 0.2s linear;
+  font-weight: 600;
   :hover {
     color: #fc5f77;
     transition: 0.2s linear;
@@ -62,6 +63,7 @@ export const QuickLinkItem = styled.div`
 export const FooterSubTitle = styled.div`
   font-size: 16.5px;
   margin-bottom: 1px;
+  font-weight: 900;
 `;
 
 export const ContactDiv = styled.div``;
@@ -70,6 +72,7 @@ export const ContactItem = styled.div`
   display: flex;
   align-items: center;
   margin-top: 12.5px;
+  font-weight: 600;
   img {
     margin-right: 9px;
   }
@@ -82,6 +85,7 @@ export const FooterMarkDiv = styled.div`
 
 export const AboutDesc = styled.div`
   margin-top: 16.5px;
+  font-weight: 600;
   font-size: 16.5px;
 `;
 
@@ -95,10 +99,11 @@ export const MarkText = styled.div`
 `;
 
 export const MarkTitle = styled.div`
-  font-weight: 500;
+  font-weight: 900;
   font-size: 37px;
 `;
 
 export const MarkSubTitle = styled.div`
   font-size: 18px;
+  font-weight: 700;
 `;

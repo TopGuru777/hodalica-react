@@ -38,7 +38,8 @@ const MobileAppIntroDiv = () => {
             />
           </MABtnDiv>
           <MADesc>
-            {t("landing.amazing_prefix_text")}&nbsp;
+            {t("landing.amazing_prefix_text")}
+            &nbsp;
             <span>{t("landing.amazing_discounts")}</span>
             &nbsp;{t("landing.amazing_suffix_text")}
           </MADesc>

@@ -16,6 +16,7 @@ export const Container = styled.div`
 `;
 
 export const PageTitle = styled.div`
+  font-weight: 900;
   font-size: 58.8px;
   svg {
     width: 54px;

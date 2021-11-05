@@ -20,7 +20,7 @@
     "logout": "Log out",
     "lets_go": "Let's go",
     "beauty": "Beauty",
-    "mobile_app": "Mobile_App",
+    "mobile_app": "Mobile App",
     "view_more": "View More"
   },
   "footer": {
@@ -87,7 +87,10 @@
     "subtitle1": "FOR 59.99 BAM",
     "title": "SAVE UP TO",
     "subtitle2": "10.000 + BAM",
-    "app_available": "The app is available on the App Store and Google Play.",
+    "app_available_prefix": "The app is available on the",
+    "app_store": "App Store",
+    "google_play": "Google Play.",
+    "and": "and",
     "is_the_first_and_only": "is the first and only",
     "amazing_prefix_text": "in the region that allows users to get",
     "amazing_discounts": "amazing discounts",

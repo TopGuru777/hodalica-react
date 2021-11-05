@@ -26,20 +26,22 @@ export const ReviewAvatarDiv = styled.div`
     margin-right: 14px;
   }
   span {
+    font-weight: 500;
     font-size: 17px;
     color: #00000050;
     margin-left: 10px;
-    width: 50px;
   }
 `;
 
 export const ReviewUserName = styled.div`
   font-size: 20px;
+  font-weight: 900;
 `;
 
 export const ReviewDesc = styled.div`
   font-size: 18px;
   margin-top: 12px;
+  font-weight: 500;
 `;
 
 export const ReviewShowDiv = styled.div``;

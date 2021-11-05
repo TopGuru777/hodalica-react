@@ -12,6 +12,7 @@ export const Benefits = styled.div`
 `;
 
 export const BenefitItem = styled.div`
+  font-weight: 500;
   display: flex;
   align-items: center;
   font-size: 25px;

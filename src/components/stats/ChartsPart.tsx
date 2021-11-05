@@ -62,7 +62,7 @@ export const ChartGenerator = ({ dt }: any) => {
         label={(data: LabelRenderProps) =>
           parseInt(Math.round(data.dataEntry.value).toFixed()) + "%"
         }
-        labelStyle={{ fontSize: "8px", fill: "white" }}
+        labelStyle={{ fontSize: "8px", fill: "white", fontWeight: 500 }}
       />
       <ChartDescDiv>
         {dt.map((item: any, key: any) => (

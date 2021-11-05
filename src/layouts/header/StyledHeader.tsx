@@ -67,17 +67,19 @@ export const MarkImg = styled.img`
 `;
 
 export const MarkTitle = styled.div`
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
   color: #fc5f77;
 `;
 
 export const MarkSubTitle = styled.div`
   font-size: 14px;
+  font-weight: 500;
   color: #fc5f7780;
 `;
 
 export const MarkBigTitle = styled.div`
+  font-weight: 900;
   font-size: 36.9px;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
@@ -116,6 +118,7 @@ type activeProps = {
 };
 
 export const MenuItem = styled.div<activeProps>`
+  font-weight: 600;
   svg {
     margin-right: 9px;
     transition: 0.2s linear;
@@ -125,7 +128,6 @@ export const MenuItem = styled.div<activeProps>`
   color: ${({ active }) => (active ? "#fc5f77" : "#000000")};
   /* color: #000000; */
   font-size: 18px;
-  font-weight: 500;
   transition: 0.2s linear;
   :hover {
     color: #fc5f77;
@@ -139,6 +141,7 @@ export const MenuItem = styled.div<activeProps>`
 
 export const LogDiv = styled.div`
   display: flex;
+  font-weight: 700;
   align-items: center;
   padding: 0 33px;
   width: 173px;
@@ -185,6 +188,7 @@ export const SideMenuDiv = styled.div`
 
 export const SideMenu = styled.div<activeProps>`
   display: flex;
+  font-weight: 600;
   align-items: center;
   padding: 15px 30px;
   color: white;

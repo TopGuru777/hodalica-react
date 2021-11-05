@@ -32,6 +32,7 @@ export const SelectButton = styled.div<SelectButtonProps>`
     width: 29px;
     height: 29px;
   }
+  font-weight: 600;
   justify-content: center;
   width: 100%;
   font-size: 18px;

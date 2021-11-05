@@ -50,9 +50,11 @@ export const AvatarDesc = styled.div``;
 export const BeautyButtonDiv = styled.div`
   width: 150px;
   font-size: 18px;
+  font-weight: 600;
 `;
 
 export const AvatarTitle = styled.div`
+  font-weight: 900;
   font-size: 40px;
   transition: 0.2s linear;
   @media screen and (max-width: 768px) {
@@ -66,6 +68,7 @@ export const AvatarTitle = styled.div`
 `;
 
 export const AvatarSubTitle = styled.div`
+  font-weight: 500;
   font-size: 25px;
   transition: 0.2s linear;
   @media screen and (max-width: 768px) {
@@ -93,6 +96,7 @@ export const DetailInfoGroup = styled.div`
 `;
 
 export const DetailInfo = styled.div`
+  font-weight: 500;
   display: flex;
   align-items: center;
   img {
@@ -112,6 +116,7 @@ export const ProfileDesc = styled.div`
   font-size: 18px;
   margin-bottom: 24px;
   transition: 0.2s linear;
+  font-weight: 500;
   @media screen and (max-width: 375px) {
     font-size: 16px;
     transition: 0.2s linear;
@@ -143,6 +148,11 @@ export const Schedules = styled.div`
   }
 `;
 
-export const DayDiv = styled.div``;
+export const DayDiv = styled.div`
+  font-weight: 600;
+`;
 
-export const TimeDiv = styled.div``;
+export const TimeDiv = styled.div`
+  font-weight: 500;
+  color: #00000058;
+`;

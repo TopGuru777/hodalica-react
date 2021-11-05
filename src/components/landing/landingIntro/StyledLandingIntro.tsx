@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const LandingIntroDiv = styled.div``;
 
 export const LandingTitleDiv = styled.div`
+  font-weight: 900;
   text-align: center;
   & > *:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: -10px;
   }
 `;
 
@@ -18,14 +19,21 @@ export const LandingSubTitle = styled.div`
 `;
 
 export const LandingIntroDescDiv = styled.div`
-  width: 340px;
+  width: 360px;
   margin: auto;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const IntroText = styled.div`
+  font-weight: 500;
   font-size: 24.6px;
   text-align: center;
+  span {
+    font-weight: 700;
+  }
 `;
 
 export const AppAvailableDiv = styled.div`
@@ -108,11 +116,14 @@ export const MobileAppDesc = styled.div`
 export const MABtnDiv = styled.div`
   width: 492px;
   font-size: 44px;
+  font-weight: 900 !important;
 `;
 
 export const MADesc = styled.div`
+  font-weight: 500;
   font-size: 24.6px;
   span {
+    font-weight: 900;
     font-size: 37px;
     text-decoration: underline;
   }

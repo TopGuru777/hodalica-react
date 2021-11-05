@@ -21,20 +21,34 @@ export const DealsRedeemedDiv = styled.div`
 `;
 
 export const DRTitle = styled.div`
-  font-size: 31.2px;
+  font-size: 31px;
+  font-weight: 900;
 `;
 
 export const DRValue = styled.div`
-  font-size: 31.2px;
+  font-size: 31px;
   color: #fc5f77;
+  font-weight: 900;
+`;
+
+export const DHeavyTitle = styled.div`
+  font-size: 20px;
+  font-weight: 900;
+`;
+
+export const DHeavyValue = styled.div`
+  font-size: 20px;
+  font-weight: 900;
 `;
 
 export const DTitle = styled.div`
   font-size: 20px;
+  font-weight: 500;
 `;
 
 export const DValue = styled.div`
   font-size: 20px;
+  font-weight: 500;
 `;
 
 export const ChartPartDiv = styled.div`
@@ -72,6 +86,7 @@ type chartDescProps = {
 
 export const ChartDesc = styled.div<chartDescProps>`
   display: flex;
+  font-weight: 500;
   color: ${({ color }) => color};
   div {
     width: 20px;
@@ -114,9 +129,11 @@ export const StateCountDiv = styled.div`
 
 export const TotalText = styled.div`
   font-size: 31px;
+  font-weight: 900;
 `;
 
 export const SubTotalText = styled.div`
+  font-weight: 500;
   font-size: 20px;
   color: #00000050;
 `;
@@ -128,6 +145,7 @@ export const StatListDiv = styled.div`
 `;
 
 export const ListTitle = styled.div`
+  font-weight: 900;
   span {
     font-size: 31px;
   }
@@ -137,6 +155,7 @@ export const ListTitle = styled.div`
 export const ListSubTitle = styled.div`
   font-size: 20px;
   margin-top: -5px;
+  font-weight: 700;
 `;
 
 export const ListContentDiv = styled.div`
@@ -152,6 +171,7 @@ export const ListContentDiv = styled.div`
   display: flex;
   align-items: center;
   font-size: 18.75px;
+  font-weight: 500;
   color: #00000050;
   margin-top: 5px;
 `;
@@ -159,6 +179,7 @@ export const ListContentDiv = styled.div`
 export const ListCount = styled.div`
   font-size: 30px;
   color: #fc697f;
+  font-weight: 700;
 `;
 
 export const StatListItem = styled.div`
@@ -168,7 +189,7 @@ export const StatListItem = styled.div`
 `;
 
 export const ListDescDiv = styled.div`
-  width: 80%;
+  width: 70%;
 `;
 
 export const PeopleDiv = styled.div`
@@ -197,10 +218,12 @@ export const PeopleInfoDiv = styled.div`
 export const PeopleInfo = styled.div``;
 
 export const PeopleName = styled.div`
+  font-weight: 700;
   font-size: 20px;
 `;
 
 export const PeopleDate = styled.div`
   font-size: 15px;
   color: #00000050;
+  font-weight: 500;
 `;

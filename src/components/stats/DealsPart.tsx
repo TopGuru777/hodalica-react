@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import {
   DealsPartDiv,
   DealsRedeemedDiv,
+  DHeavyTitle,
+  DHeavyValue,
   DRTitle,
   DRValue,
   DTitle,
@@ -18,8 +20,8 @@ const DealsPart = () => {
         <DRValue>16</DRValue>
       </DealsRedeemedDiv>
       <DealsRedeemedDiv>
-        <DTitle>{t("stats.clients")}</DTitle>
-        <DValue>14</DValue>
+        <DHeavyTitle>{t("stats.clients")}</DHeavyTitle>
+        <DHeavyValue>14</DHeavyValue>
       </DealsRedeemedDiv>
       <DealsRedeemedDiv>
         <DTitle>{t("stats.new_clients")}</DTitle>
