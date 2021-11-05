@@ -5,6 +5,7 @@ export const DatePickerGroupDiv = styled.div`
 `;
 
 export const SelectButtonDiv = styled.div`
+  overflow: auto;
   display: flex;
   border: 1px solid #ded4c5;
   border-radius: 15px;
@@ -56,6 +57,8 @@ export const CalendarModalDiv = styled.div`
     display: none;
   }
   border: 2px solid #ded4c5;
+  max-width: 355px;
+  width: 100%;
 `;
 
 export const DateTypeDiv = styled.div`
@@ -85,13 +88,16 @@ export const DateTab = styled.div<TabProps>`
 export const CalendarDiv = styled.div`
   border-top: none;
   max-height: 400px;
+
+  overflow: auto;
   overflow: auto;
   ::-webkit-scrollbar {
     width: 3px;
+    height: 3px;
   }
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px lightgrey;
-    border-radius: 10px;
+    border-radius: 1px;
   }
   ::-webkit-scrollbar-thumb {
     background: darkgray;

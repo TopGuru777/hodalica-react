@@ -8,8 +8,8 @@ export const ButtonDiv = styled.div<btnProps>`
   :hover {
     ${({ c }) =>
       c === "1"
-        ? "background-color: #000 !important; color: white !important;  !important;box-shadow: 0 10px 20px #00000030;"
-        : `box-shadow: 0 10px 35px ${c}30;`}
+        ? "background-color: #000 !important; color: white !important;  !important;box-shadow: 0 10px 20px #00000050;"
+        : `box-shadow: 0 10px 35px ${c}50;`}
   }
   display: flex;
   justify-content: center;
@@ -22,12 +22,8 @@ export const ButtonDiv = styled.div<btnProps>`
   text-decoration: none;
   border-width: 1.68px;
   cursor: pointer;
-  width: calc(100% - 29px);
+  width: calc(100% - 20px);
   transition: 0.2s linear;
-  @media screen and (max-width: 1024px) {
-    font-size: 16px;
-    transition: 0.2s linear;
-  }
   svg {
     fill: white;
     margin-left: 15px;

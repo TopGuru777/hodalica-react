@@ -49,11 +49,13 @@ const DatePickerGroup = () => {
   };
 
   const handleDateChange = (date: any) => {
-    setState({
-      startDate: date,
-      endDate: date,
-      key: "selection",
-    });
+    setState([
+      {
+        startDate: date,
+        endDate: date,
+        key: "selection",
+      },
+    ]);
   };
 
   useEffect(() => {
@@ -145,10 +147,10 @@ const DatePickerGroup = () => {
                 months={2}
                 direction="vertical"
                 showPreview={false}
-                showMonthAndYearPickers={false}
+                // showMonthAndYearPickers={false}
               />
             ) : (
-              <Calendar date={state.startDate} onChange={handleDateChange} />
+              <Calendar date={state[0].startDate} onChange={handleDateChange} />
             )}
           </CalendarDiv>
 

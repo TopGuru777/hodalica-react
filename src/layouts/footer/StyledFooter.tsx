@@ -1,10 +1,40 @@
 import styled from "styled-components";
 
 export const FooterDiv = styled.div`
-  margin-bottom: 80px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-column-gap: 20%;
+  margin-bottom: 80px;
+  @media screen and (max-width: 1100px) {
+    grid-column-gap: 15%;
+    transition: 0.2s linear;
+  }
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    transition: 0.2s linear;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    transition: 0.2s linear;
+  }
+`;
+
+export const LinksPart = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 375px) {
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    transition: 0.2s linear;
+    & > *:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 `;
 
 export const AboutDescDiv = styled.div`

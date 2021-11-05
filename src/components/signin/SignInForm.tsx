@@ -40,7 +40,11 @@ const SignInForm = () => {
       <SignInButton>
         <Button
           value={t("buttons.lets_go")}
-          onClick={() => {}}
+          onClick={() => {
+            window.location.href = "/stats";
+            localStorage.setItem("currentUrl", "stats");
+            localStorage.setItem("isAuth", "true");
+          }}
           color="#FC5F77"
           borderLine="#FC5F77"
           font="#ffffff"

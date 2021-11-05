@@ -1,17 +1,31 @@
 import styled from "styled-components";
 
-export const HeaderDiv = styled.div`
+export const HeaderBar = styled.div`
   position: fixed;
-  width: calc(100% - 60px);
+  width: 100%;
   top: 0;
-  display: flex;
+
   height: 117px;
   z-index: 2;
   background-color: #fffaf2;
-  align-items: center;
-  padding: 0 30px;
-  justify-content: space-between;
+
   transition: 0.2s linear;
+  @media screen and (max-width: 425px) {
+    height: 80px;
+  }
+`;
+
+export const HeaderDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+`;
+
+export const HeaderContainer = styled.div`
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
 `;
 
 export const scrollEvent = () => {
@@ -21,9 +35,13 @@ export const scrollEvent = () => {
     scrollmove.style.backgroundColor = "#FDF5E9";
     scrollmove.style.height = "80px";
   } else {
+    if (window.innerWidth <= 425) {
+      scrollmove.style.height = "80px";
+    } else {
+      scrollmove.style.height = "117px";
+    }
     scrollmove.style.boxShadow = "none";
     scrollmove.style.backgroundColor = "#fffaf2";
-    scrollmove.style.height = "117px";
   }
 };
 
@@ -39,6 +57,13 @@ export const MarkImg = styled.img`
   width: 46px;
   height: 48px;
   margin-right: 20px;
+  transition: all 0.2s linear;
+  @media screen and (max-width: 425px) {
+    width: 36px;
+    height: 38px;
+    margin-right: 10px;
+    transition: all 0.2s linear;
+  }
 `;
 
 export const MarkTitle = styled.div`
@@ -52,6 +77,15 @@ export const MarkSubTitle = styled.div`
   color: #fc5f7780;
 `;
 
+export const MarkBigTitle = styled.div`
+  font-size: 36.9px;
+  transition: 0.2s linear;
+  @media screen and (max-width: 425px) {
+    font-size: 26px;
+    transition: 0.2s linear;
+  }
+`;
+
 export const MenuItemDiv = styled.div`
   display: flex;
 `;
@@ -59,14 +93,37 @@ export const MenuItemDiv = styled.div`
 export const Menus = styled.div`
   display: flex;
   align-items: center;
+  & > *:not(:last-child) {
+    margin-right: 40px;
+  }
 `;
 
-export const MenuItem = styled.div`
+export const MenuShowBtn = styled.div`
+  margin-left: 20px;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s linear;
+  @media screen and (max-width: 425px) {
+    margin-left: 10px;
+    transition: 0.2s linear;
+  }
+`;
+
+type activeProps = {
+  active: boolean;
+};
+
+export const MenuItem = styled.div<activeProps>`
   svg {
     margin-right: 9px;
     transition: 0.2s linear;
+    fill: #000000;
+    ${({ active }) => active && "fill: #fc5f77;"};
   }
-  margin: 0 25px;
+  color: ${({ active }) => (active ? "#fc5f77" : "#000000")};
+  /* color: #000000; */
   font-size: 18px;
   font-weight: 500;
   transition: 0.2s linear;
@@ -93,8 +150,63 @@ export const TransDiv = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 18px;
   align-items: center;
+  transition: 0.2s linear;
   img {
     width: 34.5px;
     cursor: pointer;
   }
+  @media screen and (max-width: 425px) {
+    grid-gap: 10px;
+    transition: 0.2s linear;
+  }
+`;
+
+type MenuProps = {
+  flag: boolean;
+};
+export const MobileMenuDiv = styled.div<MenuProps>`
+  ${({ flag }) => (!flag ? "left: -290px;" : "left: 0;")};
+  transition: 0.2s linear;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px #000000;
+  z-index: 2;
+`;
+
+export const SideMenuDiv = styled.div`
+  margin-top: 50px;
+`;
+
+export const SideMenu = styled.div<activeProps>`
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.2s linear;
+  svg {
+    margin-right: 9px;
+    transition: 0.2s linear;
+    fill: #fff;
+    ${({ active }) => active && "fill: #fc5f77;"};
+  }
+  color: ${({ active }) => (active ? "#fc5f77" : "white")};
+  :hover {
+    color: #fc5f77;
+    svg {
+      fill: #fc5f77;
+      transition: 0.2s linear;
+    }
+  }
+`;
+
+export const SideBottomDiv = styled.div`
+  margin-bottom: 50px;
 `;

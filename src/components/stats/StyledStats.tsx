@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const StatsPageDiv = styled.div`
   margin: 100px 0 200px 0;
+  @media screen and (max-width: 425px) {
+    margin: 0 0 100px 0;
+  }
 `;
 
 export const DealsPartDiv = styled.div`
@@ -38,6 +41,13 @@ export const ChartPartDiv = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 88px;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    & > *:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
 `;
 
 export const ChartDiv = styled.div`
@@ -111,7 +121,11 @@ export const SubTotalText = styled.div`
   color: #00000050;
 `;
 
-export const StatListDiv = styled.div``;
+export const StatListDiv = styled.div`
+  @media screen and (max-width: 768px) {
+    padding-left: 50px;
+  }
+`;
 
 export const ListTitle = styled.div`
   span {
@@ -163,6 +177,12 @@ export const PeopleDiv = styled.div`
   grid-row-gap: 33px;
   grid-column-gap: 10%;
   margin-top: 17px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const PeopleInfoDiv = styled.div`

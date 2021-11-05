@@ -12,7 +12,7 @@ import rectImg from "assets/rect/Rectangle-yellow.svg";
 const ForPartnerVideoPart = () => {
   const { t } = useTranslation();
   return (
-    <ForPartnerVideoDiv>
+    <ForPartnerVideoDiv id="news">
       <LandingPartTitle>
         <img src={logo} alt="video_title" />
         {t("landing.videopart_title")}

@@ -1,6 +1,6 @@
 import { Container } from "layouts/StyledLayout";
 import React from "react";
-import { FooterDiv } from "./StyledFooter";
+import { FooterDiv, LinksPart } from "./StyledFooter";
 
 import AboutDescPart from "./AboutDescPart";
 import QuickLinkPart from "./QuickLinkPart";
@@ -11,8 +11,10 @@ const Footer: React.FC = () => {
     <Container>
       <FooterDiv>
         <AboutDescPart />
-        <QuickLinkPart />
-        <ContactPart />
+        <LinksPart>
+          <QuickLinkPart />
+          <ContactPart />
+        </LinksPart>
       </FooterDiv>
     </Container>
   );

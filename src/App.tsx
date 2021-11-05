@@ -21,7 +21,7 @@ const App: React.FC = () => {
           <Route exact path="/signin" component={SignInPage} />
           <Route exact path="/stats" component={StatsPage} />
           <Route exact path="/profile" component={ProfilePage} />
-          <Route exact path="/review" component={ReviewPage} />
+          <Route exact path="/reviews" component={ReviewPage} />
         </MainContainer>
       </Router>
     </I18nextProvider>
@@ -32,5 +32,6 @@ export default App;
 
 const MainContainer = styled.div`
   padding-top: 117px;
-  /* min-height: calc(100vh - 120px); */
+  /* height: 2000px;
+  min-height: calc(100vh - 120px); */
 `;

@@ -13,7 +13,7 @@ import { HowDiv } from "./StyledHow";
 const HowitworksPart = () => {
   const { t } = useTranslation();
   return (
-    <HowDiv>
+    <HowDiv id="how">
       <Container>
         <LandingPartTitle>
           <span>{t("landing.how_data.how")}</span>

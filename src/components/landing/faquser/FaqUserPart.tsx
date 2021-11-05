@@ -16,7 +16,7 @@ const FaqUserPart = () => {
   const { t } = useTranslation();
   return (
     <Container>
-      <FaqUserDiv>
+      <FaqUserDiv id="faq">
         <LandingPartTitle>{t("landing.faq_title")}</LandingPartTitle>
         <FaqSubtitle>{t("landing.for_users_up")}</FaqSubtitle>
         <FaqList>

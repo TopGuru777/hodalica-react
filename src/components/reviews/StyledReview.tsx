@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const ReviewsDiv = styled.div`
   margin: 100px auto 200px auto;
+  transition: 0.2s linear;
+  @media screen and (max-width: 425px) {
+    margin: 0 auto 100px auto;
+    transition: 0.2s linear;
+  }
 `;
 
 export const ReviewItemGroup = styled.div`
