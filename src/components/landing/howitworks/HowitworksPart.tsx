@@ -19,13 +19,13 @@ const HowitworksPart = () => {
           <span>{t("landing.how_data.how")}</span>
           &nbsp;{t("landing.how_data.it_works")}
         </LandingPartTitle>
-        <HowPart1 />
-        <HowPart2 />
-        <HowPart3 />
-        <HowPart4 />
-        <HowPart5 />
-        <StartSavingPart />
       </Container>
+      <HowPart1 />
+      <HowPart2 />
+      <HowPart3 />
+      <HowPart4 />
+      <HowPart5 />
+      <StartSavingPart />
     </HowDiv>
   );
 };

@@ -20,7 +20,7 @@ const LandingPage: React.FC = () => {
     <LandingPageDiv>
       <LandingIntroPart />
       <BenefitUserPart />
-      {/* <HowitworksPart /> */}
+      <HowitworksPart />
       <FaqUserPart />
       <ForPartnerDiv>
         <DashBorder />

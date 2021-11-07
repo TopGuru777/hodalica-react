@@ -9,10 +9,15 @@ const HowPart1 = () => {
   const { t } = useTranslation();
   return (
     <Container>
-      <HowPart1Div>
+      <HowPart1Div mg="45px 0 0 0">
         <HowTitleDiv>
           <span>1</span>
-          {t("landing.how_data.how_1")}
+          <div>
+            {t("landing.how_data.how_1_prefix")}
+            <b>{t("landing.google_play")}</b>&nbsp;
+            {t("landing.how_data.or")}&nbsp;
+            <b>{t("landing.app_store")}</b>
+          </div>
         </HowTitleDiv>
         <AppAvailableDiv>
           <img src={googleSvg} alt="googleSvg" />
