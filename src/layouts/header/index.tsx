@@ -102,12 +102,10 @@ const Header: React.FC = () => {
 
   const handleLogout = async () => {
     setloading(true);
-    const res: any = await logoutAction();
+    await logoutAction();
     setloading(false);
-    if (res) {
-      localStorage.removeItem("isAuth");
-      window.location.href = "/";
-    }
+    localStorage.removeItem("isAuth");
+    window.location.href = "/";
   };
 
   const RenderAuthMenu = () => {
