@@ -48,6 +48,8 @@
   "signin": {
     "title": "Sign in",
     "partner_code": "Partner Code",
+    "username": "Username",
+    "password": "Password",
     "confirm_partner_code": "Confirm Partner Code"
   },
   "profile": {

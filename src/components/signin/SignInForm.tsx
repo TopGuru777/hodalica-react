@@ -1,3 +1,4 @@
+import { signinAction } from "action/action";
 import Button from "components/custom/Button/Button";
 import FormInput from "components/custom/FormInput/FormInput";
 import React, { useState } from "react";
@@ -8,47 +9,102 @@ import {
   SignInFormGroup,
   SignInTitle,
 } from "./StyledSignIn";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import btnSpinner from "assets/svg/spinnerButton.svg";
 
 const SignInForm = () => {
   const { t } = useTranslation();
-  const [partnerCode, setPartnerCode] = useState("");
-  const [confirmCode, setConfirmCode] = useState("");
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
+  const [errors, setErrors] = useState<any>({});
+  const [loading, setloading] = useState(false);
+
+  const handleLogIn = async () => {
+    if (username === "") {
+      setErrors((prev: any) => ({
+        ...prev,
+        username: "Username Field is required.",
+      }));
+    } else {
+      setErrors((prev: any) => ({
+        ...prev,
+        username: "",
+      }));
+    }
+    if (password === "") {
+      setErrors((prev: any) => ({
+        ...prev,
+        password: "Password Field is required.",
+      }));
+    } else {
+      setErrors((prev: any) => ({
+        ...prev,
+        password: "",
+      }));
+    }
+    if (username !== "" && password !== "") {
+      const data: any = {
+        username: username,
+        password: password,
+      };
+      setloading(true);
+      const res = await signinAction(data);
+      setloading(false);
+      // if (res.success) {
+      window.location.href = "/stats";
+      localStorage.setItem("currentUrl", "stats");
+      localStorage.setItem("isAuth", "true");
+      // } else {
+      //   toast.error(res.error, { autoClose: 3000 });
+      // }
+    }
+  };
 
   return (
     <SignInFormDiv>
+      <ToastContainer />
       <SignInTitle>{t("signin.title")}</SignInTitle>
       <SignInFormGroup>
         <FormInput
           type="text"
           onChange={(e: any) => {
-            setPartnerCode(e.target.value);
+            setusername(e.target.value);
           }}
-          name="partnerCode"
-          value={partnerCode}
-          placeholder={t("signin.partner_code")}
+          name="username"
+          value={username}
+          placeholder={t("signin.username")}
+          error={errors.username}
         />
         <FormInput
-          type="text"
+          type="password"
           onChange={(e: any) => {
-            setConfirmCode(e.target.value);
+            setpassword(e.target.value);
           }}
-          name="confirmCode"
-          value={confirmCode}
-          placeholder={t("signin.confirm_partner_code")}
+          name="password"
+          value={password}
+          placeholder={t("signin.password")}
+          error={errors.password}
         />
       </SignInFormGroup>
       <SignInButton>
-        <Button
-          value={t("buttons.lets_go")}
-          onClick={() => {
-            window.location.href = "/stats";
-            localStorage.setItem("currentUrl", "stats");
-            localStorage.setItem("isAuth", "true");
-          }}
-          color="#FC5F77"
-          borderLine="#FC5F77"
-          font="#ffffff"
-        />
+        {loading ? (
+          <Button
+            value={<img src={btnSpinner} alt="spinner" />}
+            onClick={() => {}}
+            color="#FC5F77"
+            borderLine="#FC5F77"
+            font="#ffffff"
+          />
+        ) : (
+          <Button
+            value={t("buttons.lets_go")}
+            onClick={handleLogIn}
+            color="#FC5F77"
+            borderLine="#FC5F77"
+            font="#ffffff"
+          />
+        )}
       </SignInButton>
     </SignInFormDiv>
   );

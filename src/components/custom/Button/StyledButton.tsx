@@ -5,6 +5,9 @@ type btnProps = {
 };
 
 export const ButtonDiv = styled.div<btnProps>`
+  img {
+    width: 25px;
+  }
   :hover {
     ${({ c }) =>
       c === "1"

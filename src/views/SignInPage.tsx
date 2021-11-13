@@ -9,7 +9,14 @@ const SignInPage: React.FC = () => {
   return (
     <React.Fragment>
       <SignInDiv>
-        <LogoImg src={logoImg} alt="logo Image" />
+        <LogoImg
+          src={logoImg}
+          alt="logo Image"
+          onClick={() => {
+            localStorage.setItem("currentUrl", "/stats");
+            window.location.href = "/";
+          }}
+        />
         <SignInForm />
       </SignInDiv>
       <Footer />

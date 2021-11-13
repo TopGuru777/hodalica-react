@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const InputDiv = styled.div`
   width: 100%;
+  span {
+    color: red;
+    font-size: 12px;
+  }
 `;
 
 export const Input = styled.input`
