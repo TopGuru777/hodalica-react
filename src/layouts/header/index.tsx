@@ -30,6 +30,7 @@ import en_img from "assets/icons/English.png";
 import bn_img from "assets/icons/bosnian.png";
 import { ProfileSVG, ReviewSVG, StatsSVG } from "components/custom/CustomSVG";
 import Button from "components/custom/Button/Button";
+import btnSpinner from "assets/svg/spinnerButton.svg";
 
 import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
@@ -44,6 +45,7 @@ const Header: React.FC = () => {
   const [menuflag, setMenuflag] = useState(false);
   const menuRef = useRef<any>(null);
   const [current, setCurrent] = useState("");
+  const [loading, setloading] = useState(false);
 
   useEffect(() => {
     setIsAuth(localStorage.getItem("isAuth") === "true" ? true : false);
@@ -99,7 +101,9 @@ const Header: React.FC = () => {
   };
 
   const handleLogout = async () => {
+    setloading(true);
     const res: any = await logoutAction();
+    setloading(false);
     if (res) {
       localStorage.removeItem("isAuth");
       window.location.href = "/";
@@ -173,13 +177,23 @@ const Header: React.FC = () => {
             </Link>
           </Menus>
           <LogDiv>
-            <Button
-              value={t("buttons.logout")}
-              onClick={handleLogout}
-              color="#ffffff00"
-              borderLine="#000000"
-              font="#000000"
-            />
+            {loading ? (
+              <Button
+                value={<img src={btnSpinner} alt="spinner" />}
+                onClick={() => {}}
+                color="#ffffff00"
+                borderLine="#000000"
+                font="#000000"
+              />
+            ) : (
+              <Button
+                value={t("buttons.logout")}
+                onClick={handleLogout}
+                color="#ffffff00"
+                borderLine="#000000"
+                font="#000000"
+              />
+            )}
           </LogDiv>
         </React.Fragment>
       );

@@ -51,13 +51,13 @@ const SignInForm = () => {
       setloading(true);
       const res = await signinAction(data);
       setloading(false);
-      // if (res.success) {
-      window.location.href = "/stats";
-      localStorage.setItem("currentUrl", "stats");
-      localStorage.setItem("isAuth", "true");
-      // } else {
-      //   toast.error(res.error, { autoClose: 3000 });
-      // }
+      if (res.success) {
+        window.location.href = "/stats";
+        localStorage.setItem("currentUrl", "stats");
+        localStorage.setItem("isAuth", "true");
+      } else {
+        toast.error(res.error, { autoClose: 3000 });
+      }
     }
   };
 

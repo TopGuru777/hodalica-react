@@ -11,6 +11,7 @@ export const signinAction = async (data) => {
     console.log(user);
     return { success: true };
   } catch (error) {
+    console.log(error.message);
     return { error: error.message };
   }
 };
