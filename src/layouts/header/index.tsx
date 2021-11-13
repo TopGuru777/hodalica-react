@@ -33,6 +33,7 @@ import Button from "components/custom/Button/Button";
 
 import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { logoutAction } from "action/action";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -95,6 +96,14 @@ const Header: React.FC = () => {
         </MarkText>
       </LogoDiv>
     );
+  };
+
+  const handleLogout = async () => {
+    const res: any = await logoutAction();
+    if (res) {
+      localStorage.removeItem("isAuth");
+      window.location.href = "/";
+    }
   };
 
   const RenderAuthMenu = () => {
@@ -166,10 +175,7 @@ const Header: React.FC = () => {
           <LogDiv>
             <Button
               value={t("buttons.logout")}
-              onClick={() => {
-                localStorage.removeItem("isAuth");
-                window.location.href = "/";
-              }}
+              onClick={handleLogout}
               color="#ffffff00"
               borderLine="#000000"
               font="#000000"

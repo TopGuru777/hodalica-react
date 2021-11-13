@@ -14,3 +14,11 @@ export const signinAction = async (data) => {
     return { error: error.message };
   }
 };
+
+export const logoutAction = async () => {
+  Parse.User.logOut().then(() => {
+    const currentUser = Parse.User.current();
+    console.log(currentUser);
+    return true;
+  });
+};
