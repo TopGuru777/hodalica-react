@@ -23,3 +23,19 @@ export const logoutAction = async () => {
     return true;
   });
 };
+
+export const getProfileAction = async () => {
+  const Partner = Parse.Object.extend("Partner");
+  const queryPartner = new Parse.Query(Partner);
+  queryPartner.equalTo("objectId", Parse.User.current().get("partner").id);
+  queryPartner.include("city");
+  queryPartner.include("category");
+
+  try {
+    const partner = await queryPartner.first();
+    console.log(partner);
+    return partner;
+  } catch (error) {
+    return { error: error.message };
+  }
+};

@@ -31,6 +31,7 @@ export const AvatarDiv = styled.div`
   img {
     width: 92px;
     margin-right: 24px;
+    border-radius: 50%;
     @media screen and (max-width: 768px) {
       width: 85px;
       transition: 0.2s linear;
@@ -84,8 +85,9 @@ export const AvatarSubTitle = styled.div`
 export const ProfileInfoDiv = styled.div``;
 
 export const DetailInfoGroup = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  /* grid-template-rows: 1fr 1fr; */
+  flex-direction: column;
   grid-gap: 28px;
   font-size: 18px;
   transition: 0.2s linear;
@@ -109,6 +111,7 @@ export const ProfileImageDiv = styled.div`
   img {
     max-width: 503px;
     width: 100%;
+    border-radius: 25px;
   }
 `;
 
