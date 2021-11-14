@@ -34,7 +34,7 @@ import btnSpinner from "assets/svg/spinnerButton.svg";
 
 import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
-import { logoutAction } from "action/action";
+import { getProfileAction, logoutAction } from "action/action";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -46,8 +46,17 @@ const Header: React.FC = () => {
   const menuRef = useRef<any>(null);
   const [current, setCurrent] = useState("");
   const [loading, setloading] = useState(false);
+  const [profile, setProfile] = useState<any>({});
 
   useEffect(() => {
+    const getProfileFunc = async () => {
+      const res = await getProfileAction();
+      setProfile(res);
+    };
+    if (isAuth) {
+      getProfileFunc();
+    }
+
     setIsAuth(localStorage.getItem("isAuth") === "true" ? true : false);
     const setResponsiveness = () => {
       return window.innerWidth <= 850
@@ -89,7 +98,12 @@ const Header: React.FC = () => {
         <MarkText>
           {isAuth ? (
             <React.Fragment>
-              <MarkTitle>{t("header_mark.mark_title")}</MarkTitle>
+              <MarkTitle>
+                {localStorage.getItem("i18nextLng") === "en" ||
+                localStorage.getItem("i18nextLng") === "en-US"
+                  ? profile?.attributes?.name
+                  : profile?.attributes?.nameBS}
+              </MarkTitle>
               <MarkSubTitle>{t("header_mark.mark_subtitle")}</MarkSubTitle>
             </React.Fragment>
           ) : (
