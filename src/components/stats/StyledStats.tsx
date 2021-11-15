@@ -93,6 +93,24 @@ export const ChartDiv = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
   }
+  .state_chats {
+    @media screen and (max-width: 768px) {
+      max-width: 300px;
+    }
+  }
+  /* width: 100%;
+    * {
+      max-width: 300px;
+      width: 300px !important;
+    }
+    svg {
+      width: 300;
+    }
+    rect {
+      width: 300;
+    } */
+  /* aspect-ratio: 1/1; */
+  /* } */
 `;
 
 export const ChartDescDiv = styled.div`
