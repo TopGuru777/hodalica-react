@@ -1,5 +1,7 @@
+import { getStats } from "action/action";
 import { StatsSVG } from "components/custom/CustomSVG";
 import DatePickerGroup from "components/custom/DatePickerGroup/DatePickerGroup";
+import Spinner from "components/custom/Spinner/Spinner";
 import ChartsPart from "components/stats/ChartsPart";
 import DealsPart from "components/stats/DealsPart";
 import StatListPart from "components/stats/StatListPart";
@@ -7,11 +9,31 @@ import StatsTotalPart from "components/stats/StatsTotalPart";
 import { HrDiv, StatsPageDiv } from "components/stats/StyledStats";
 import Footer from "layouts/footer";
 import { Container, PageTitle } from "layouts/StyledLayout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const StatsPage: React.FC = () => {
+  const [statsData, setStatsData] = useState<any>([]);
+  const [redeemedData, setRedeemedData] = useState<any>({});
+  const [chartData, setChartData] = useState<any>({});
+  const [loading, setLoading] = useState(false);
+
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const getData = async () => {
+      setLoading(true);
+
+      const res: any = await getStats();
+      setStatsData(res.stats);
+      setRedeemedData(res.redeemed);
+      setChartData(res.charts);
+      setLoading(false);
+    };
+
+    getData();
+  }, []);
+
   return (
     <React.Fragment>
       <Container>
@@ -21,11 +43,17 @@ const StatsPage: React.FC = () => {
             {t("stats.title")}
           </PageTitle>
           <DatePickerGroup />
-          <DealsPart />
-          <ChartsPart />
-          <StatListPart />
-          <HrDiv />
-          <StatsTotalPart />
+          {loading ? (
+            <Spinner />
+          ) : (
+            <React.Fragment>
+              <DealsPart data={redeemedData} />
+              <ChartsPart data={chartData} />
+              <StatListPart data={statsData} />
+              <HrDiv />
+              <StatsTotalPart />
+            </React.Fragment>
+          )}
         </StatsPageDiv>
       </Container>
       <Footer />

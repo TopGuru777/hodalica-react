@@ -53,7 +53,7 @@ const Header: React.FC = () => {
       const res = await getProfileAction();
       setProfile(res);
     };
-    if (isAuth) {
+    if (localStorage.getItem("isAuth") === "true") {
       getProfileFunc();
     }
 

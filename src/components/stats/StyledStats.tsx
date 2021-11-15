@@ -211,7 +211,10 @@ export const PeopleInfoDiv = styled.div`
   align-items: center;
   img {
     width: 66px;
+    height: 66px;
     margin-right: 14px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 `;
 

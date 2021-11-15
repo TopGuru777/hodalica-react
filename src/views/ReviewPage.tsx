@@ -39,7 +39,8 @@ const ReviewPage: React.FC = () => {
         <ReviewsDiv>
           <PageTitle>
             <ReviewSVG />
-            {reviewdata.length} {t("review.title")}
+            {reviewdata.length > 0 ? reviewdata.length : "No"}{" "}
+            {t("review.title")}
           </PageTitle>
 
           <DatePickerDiv>

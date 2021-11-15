@@ -4,34 +4,78 @@ import { PieChart } from "react-minimal-pie-chart";
 import { LabelRenderProps } from "react-minimal-pie-chart/types/Label";
 import { ChartDesc, ChartDescDiv, ChartDiv, ChartPartDiv } from "./StyledStats";
 
-const ChartsPart = () => {
+const ChartsPart = ({ data }: any) => {
   const { t } = useTranslation();
+
+  let chart1total = data?.chart1?.bosnian + data?.chart1?.foreigner;
+  let chart2total = data?.chart2?.ios + data?.chart2?.android;
+  let chart3total =
+    data?.chart3?.age12_18 +
+    data?.chart3?.age19_25 +
+    data?.chart3?.age26_35 +
+    data?.chart3?.age35_plus;
+
   return (
     <ChartPartDiv>
       <ChartGenerator
         dt={[
-          { title: t("stats.bosnian"), total: 14, value: 10, color: "#FC5F77" },
+          {
+            title: t("stats.bosnian"),
+            total: chart1total,
+            value: data?.chart1?.bosnian,
+            color: "#FC5F77",
+          },
           {
             title: t("stats.foreigners"),
-            total: 14,
-            value: 4,
+            total: chart1total,
+            value: data?.chart1?.foreigner,
             color: "#FBA3B1",
           },
         ]}
       />
       <ChartGenerator
         dt={[
-          { title: t("stats.android"), total: 12, value: 8, color: "#8CA4FF" },
-          { title: t("stats.ios"), total: 12, value: 4, color: "#B1C1FF" },
+          {
+            title: t("stats.android"),
+            total: chart2total,
+            value: data?.chart2?.android,
+            color: "#8CA4FF",
+          },
+          {
+            title: t("stats.ios"),
+            total: chart2total,
+            value: data?.chart2?.ios,
+            color: "#B1C1FF",
+          },
         ]}
       />
 
       <ChartGenerator
         dt={[
-          { title: "12-18", total: 12, value: 1, color: "#FF8B7F" },
-          { title: "18-25", total: 12, value: 4, color: "#FCD161" },
-          { title: "26-35", total: 12, value: 5, color: "#FBB700" },
-          { title: "35+", total: 12, value: 2, color: "#FCA266" },
+          {
+            title: "12-18",
+            total: chart3total,
+            value: data?.chart3?.age12_18,
+            color: "#FF8B7F",
+          },
+          {
+            title: "18-25",
+            total: chart3total,
+            value: data?.chart3?.age19_25,
+            color: "#FCD161",
+          },
+          {
+            title: "26-35",
+            total: chart3total,
+            value: data?.chart3?.age26_35,
+            color: "#FBB700",
+          },
+          {
+            title: "35+",
+            total: chart3total,
+            value: data?.chart3?.age35_plus,
+            color: "#FCA266",
+          },
         ]}
       />
     </ChartPartDiv>
