@@ -14,7 +14,7 @@ const Button = ({ value, onClick, color, borderLine, font }: ButtonProps) => {
     <ButtonDiv
       onClick={onClick}
       style={{
-        border: `1.68px solid ${borderLine}`,
+        border: `2px solid ${borderLine}`,
         background: color,
         color: font,
       }}

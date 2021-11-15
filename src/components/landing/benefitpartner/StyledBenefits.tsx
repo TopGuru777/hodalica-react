@@ -41,7 +41,7 @@ export const BenefitItem = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 425px) {
-    font-size: 16px;
+    font-size: 15px;
     img {
       margin-right: 25px;
       width: 40px;

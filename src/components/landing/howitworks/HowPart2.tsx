@@ -10,10 +10,11 @@ import {
 } from "./StyledHow";
 
 import { useTranslation } from "react-i18next";
-import packImg from "assets/img/pack.png";
+import packImg from "assets/svg/pack.svg";
 import mob1 from "assets/mobiles/6.png";
 import mob2 from "assets/mobiles/5.png";
 
+import rect11 from "assets/rect/Rectangle-green2.svg";
 import rect1 from "assets/rect/Rectangle-green.svg";
 
 const HowPart2 = () => {
@@ -30,10 +31,7 @@ const HowPart2 = () => {
           className="top-animation-video-1 grid__item small-video"
           poster={mob1}
         >
-          <source
-            src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-            type="video/mp4"
-          />
+          <source src="" type="video/mp4" />
         </How2Video>
         <How2Video
           no={2}
@@ -44,13 +42,11 @@ const HowPart2 = () => {
           className="top-animation-video-1 grid__item small-video"
           poster={mob2}
         >
-          <source
-            src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-            type="video/mp4"
-          />
+          <source src="" type="video/mp4" />
         </How2Video>
+
         <Rect src={rect1} no={1} alt="rect1" />
-        <Rect src={rect1} no={2} alt="rect2" />
+        <Rect src={rect11} no={2} alt="rect2" />
       </How2VideoDiv>
       <How2TextDiv dir="rtl">
         <BoxImg src={packImg} alt="pack" />

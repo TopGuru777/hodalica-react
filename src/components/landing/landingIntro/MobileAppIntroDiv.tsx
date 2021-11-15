@@ -12,7 +12,7 @@ import {
 } from "./StyledLandingIntro";
 
 import mobimg from "assets/mobiles/10.png";
-import bigLogo from "assets/svg/big-logo.svg";
+import bigLogo from "assets/icons/logoColor.png";
 
 const MobileAppIntroDiv = () => {
   const { t } = useTranslation();

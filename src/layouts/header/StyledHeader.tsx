@@ -80,7 +80,7 @@ export const MarkSubTitle = styled.div`
 
 export const MarkBigTitle = styled.div`
   font-weight: 900;
-  font-size: 36.9px;
+  font-size: 36px;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
     font-size: 26px;

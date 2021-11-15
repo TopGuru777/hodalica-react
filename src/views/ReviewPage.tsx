@@ -39,18 +39,14 @@ const ReviewPage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
-      <Container>
-        <ReviewsDiv>
-          <PageTitle>
-            <ReviewSVG />
-            {reviewData.length} {t("review.title")}
-          </PageTitle>
-          <DatePickerDiv>
-            <DatePickerGroup />
-          </DatePickerDiv>
-          <ReviewItems data={reviewData} />
-        </ReviewsDiv>
-      </Container>
+      <ReviewsDiv>
+        <PageTitle>
+          <ReviewSVG />
+          {reviewData.length} {t("review.title")}
+        </PageTitle>
+        <DatePickerGroup />
+        <ReviewItems data={reviewData} />
+      </ReviewsDiv>
       <Footer />
     </React.Fragment>
   );

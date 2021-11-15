@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const StatsPageDiv = styled.div`
-  margin: 100px 0 200px 0;
+  max-width: 900px;
+  width: 80%;
+  margin: 50px auto 200px auto;
+  transition: 0.2s linear;
   @media screen and (max-width: 425px) {
-    margin: 0 0 100px 0;
+    width: calc(100% - 30px);
+    margin: 0 auto 100px auto;
+    transition: 0.2s linear;
   }
 `;
 
@@ -170,7 +175,7 @@ export const ListContentDiv = styled.div`
   }
   display: flex;
   align-items: center;
-  font-size: 18.75px;
+  font-size: 18px;
   font-weight: 500;
   color: #00000050;
   margin-top: 5px;

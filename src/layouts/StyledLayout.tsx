@@ -17,13 +17,13 @@ export const Container = styled.div`
 
 export const PageTitle = styled.div`
   font-weight: 900;
-  font-size: 58.8px;
+  font-size: 58px;
   svg {
     width: 54px;
     height: 42px;
     margin-right: 16.7px;
   }
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   transition: 0.2s linear;
   @media screen and (max-width: 768px) {
     font-size: 50px;

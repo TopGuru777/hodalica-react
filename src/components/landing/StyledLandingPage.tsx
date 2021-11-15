@@ -14,6 +14,7 @@ export const ForPartnerDiv = styled.div`
   background-color: #fbf2e480;
   position: relative;
   padding-top: 180px;
+  padding-bottom: 15px;
   @media screen and (max-width: 768px) {
     transition: 0.2s linear;
     padding-top: 100px;
@@ -34,7 +35,7 @@ export const TitleDiv = styled.div`
   display: flex;
   align-items: end;
   .small-title {
-    font-size: 24.6px;
+    font-size: 24px;
     padding-bottom: 9px;
     font-weight: 500;
     @media screen and (max-width: 768px) {
@@ -43,7 +44,7 @@ export const TitleDiv = styled.div`
       padding-bottom: 6px;
     }
     @media screen and (max-width: 500px) {
-      font-size: 16px;
+      font-size: 15px;
       transition: 0.2s linear;
     }
   }

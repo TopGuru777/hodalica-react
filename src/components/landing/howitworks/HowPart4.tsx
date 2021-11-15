@@ -11,10 +11,10 @@ import {
 } from "./StyledHow";
 
 import mob from "assets/mobiles/4.png";
-import qrcode from "assets/img/qr-code.png";
+import qrcode from "assets/svg/qrCode.svg";
 import rect1 from "assets/rect/Rectangle-yellow.svg";
-import rect2 from "assets/rect/Rectangle-gray.svg";
-import arrow from "assets/img/arrow2.png";
+import rect11 from "assets/rect/Rectangle-yellow2.svg";
+import arrow from "assets/svg/arrow2.svg";
 
 const HowPart4 = () => {
   const { t } = useTranslation();
@@ -37,8 +37,7 @@ const HowPart4 = () => {
           </video>
           <Arrow4Img src={arrow} alt="arrow" />
           <Rect4 no={1} src={rect1} alt="rect1" />
-          <Rect4 no={2} src={rect1} alt="rect2" />
-          <Rect4 no={3} src={rect2} alt="rect3" />
+          <Rect4 no={2} src={rect11} alt="rect2" />
           <QrImg src={qrcode} alt="qrcode" />
         </How4VideoPart>
         <How4TextPart>

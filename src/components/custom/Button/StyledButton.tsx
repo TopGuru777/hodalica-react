@@ -19,7 +19,8 @@ export const ButtonDiv = styled.div<btnProps>`
   border-radius: 50px;
   padding: 8px;
   text-decoration: none;
-  border-width: 1.68px;
+  border-width: 2px;
+  min-height: 28px;
   cursor: pointer;
   width: calc(100% - 20px);
   transition: 0.2s linear;

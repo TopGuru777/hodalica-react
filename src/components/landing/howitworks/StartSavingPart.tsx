@@ -1,11 +1,11 @@
 import React from "react";
 import { ArrowImg, LogoImg, StartSavingDiv } from "./StyledHow";
 
-import logoImg from "assets/svg/logo.svg";
+import logoImg from "assets/icons/logoBlack.svg";
 import { Container } from "layouts/StyledLayout";
 import { useTranslation } from "react-i18next";
 
-import arrow from "assets/img/arrow1.png";
+import arrow from "assets/svg/arrow1.svg";
 
 const StartSavingPart = () => {
   const { t } = useTranslation();

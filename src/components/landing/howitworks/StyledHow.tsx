@@ -21,7 +21,7 @@ export const HowPart1Div = styled.div<TextPartProps>`
 export const HowTitleDiv = styled.div`
   display: flex;
   width: 100%;
-  font-size: 24.6px;
+  font-size: 24px;
   font-weight: 500;
   span {
     margin-top: -10px !important;
@@ -38,7 +38,7 @@ export const HowTitleDiv = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 320px) {
-    font-size: 16px;
+    font-size: 15px;
     span {
       font-size: 36px;
     }
@@ -48,10 +48,10 @@ export const HowTitleDiv = styled.div`
 
 export const CompassSvg = styled.img`
   width: 98px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   @media screen and (max-width: 768px) {
     width: 80px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     transition: 0.2s linear;
   }
   @media screen and (max-width: 320px) {
@@ -279,7 +279,7 @@ export const How4VideoPart = styled.div`
 export const How4TextPart = styled.div`
   display: flex;
   width: 100%;
-  font-size: 24.6px;
+  font-size: 24px;
   font-weight: 500;
   margin-left: -20%;
   span {
@@ -298,7 +298,7 @@ export const How4TextPart = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 320px) {
-    font-size: 16px;
+    font-size: 15px;
     span {
       font-size: 36px;
     }

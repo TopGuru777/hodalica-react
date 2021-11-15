@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { LandingPartTitle } from "../StyledLandingPage";
 import { ForPartnerVideoDiv, Video, VideoDiv, VideoPlayBtn } from "./StyledFPV";
-import logo from "assets/icons/logo.png";
+import logo from "assets/icons/logoBlack.svg";
 
 import videoImg from "assets/img/video.png";
 

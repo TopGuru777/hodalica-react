@@ -34,9 +34,10 @@ export const PartnersGroup = styled.div`
 `;
 
 export const ViewMoreBtn = styled.div`
-  max-width: 267px;
+  max-width: 220px;
   width: 100%;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 18px;
   margin: auto;
   z-index: 1;
 `;

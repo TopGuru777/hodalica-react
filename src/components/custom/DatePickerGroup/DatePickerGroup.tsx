@@ -109,12 +109,7 @@ const DatePickerGroup = () => {
         >
           {t("date_selectors.3m")}
         </SelectButton>
-        <SelectButton
-          active={selected === "6m" ? true : false}
-          onClick={() => handleSelected("6m")}
-        >
-          {t("date_selectors.6m")}
-        </SelectButton>
+
         <SelectButton
           active={selected === "1y" ? true : false}
           onClick={() => handleSelected("1y")}

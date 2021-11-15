@@ -53,7 +53,7 @@ export const LandingIntroDescDiv = styled.div`
 
 export const IntroText = styled.div`
   font-weight: 500;
-  font-size: 24.6px;
+  font-size: 24px;
   text-align: center;
   span {
     font-weight: 700;
@@ -196,7 +196,7 @@ export const MABtnDiv = styled.div`
 
 export const MADesc = styled.div`
   font-weight: 500;
-  font-size: 24.6px;
+  font-size: 24px;
   span {
     font-weight: 900;
     font-size: 37px;
@@ -217,7 +217,7 @@ export const MADesc = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 500px) {
-    font-size: 16px;
+    font-size: 15px;
     span {
       font-size: 22px;
     }

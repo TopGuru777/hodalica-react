@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const ReviewsDiv = styled.div`
-  margin: 100px auto 200px auto;
+  max-width: 900px;
+  width: 80%;
+  margin: 50px auto 200px auto;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
+    width: calc(100% - 30px);
     margin: 0 auto 100px auto;
     transition: 0.2s linear;
   }
@@ -15,7 +18,7 @@ export const ReviewItemGroup = styled.div`
 `;
 
 export const ReviewItemDiv = styled.div`
-  margin-top: 35px;
+  margin-top: 60px;
 `;
 
 export const ReviewAvatarDiv = styled.div`

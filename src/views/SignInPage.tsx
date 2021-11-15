@@ -1,7 +1,7 @@
 import { LogoImg, SignInDiv } from "components/signin/StyledSignIn";
 import React from "react";
 
-import logoImg from "assets/icons/logo.png";
+import logoImg from "assets/icons/logoBlack.svg";
 import SignInForm from "components/signin/SignInForm";
 import Footer from "layouts/footer";
 

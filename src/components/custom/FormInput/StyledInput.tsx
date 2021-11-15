@@ -9,7 +9,7 @@ export const Input = styled.input`
   width: calc(100% - 23.5px * 2);
   border-radius: 31.75px;
   padding: 15px 23.5px;
-  font-size: 16.8px;
+  font-size: 15px;
   border: 0.95px solid #ddd;
   outline: none;
   color: #adadad;
@@ -25,7 +25,7 @@ export const TextArea = styled.textarea`
   min-height: 185.91px;
   border-radius: 31.75px;
   padding: 15px 23.5px;
-  font-size: 16.8px;
+  font-size: 15px;
   border: 0.95px solid #ddd;
   margin-bottom: 11px;
   outline: none;

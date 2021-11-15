@@ -5,7 +5,7 @@ import { PageTitle } from "layouts/StyledLayout";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import avatarImg from "assets/avatar/6.png";
-import image from "assets/img/Yume Sushi_0 3.png";
+import image from "assets/img/cover.png";
 import ProfileInfo from "components/profile/ProfileInfo";
 import Footer from "layouts/footer";
 

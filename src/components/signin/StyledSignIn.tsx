@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SignInDiv = styled.div`
   max-width: 348px;
   width: 80%;
-  margin: 100px auto 200px auto;
+  margin: 50px auto 200px auto;
   display: flex;
   flex-direction: column;
   transition: 0.2s linear;
@@ -26,8 +26,8 @@ export const SignInFormDiv = styled.div``;
 
 export const SignInTitle = styled.div`
   font-weight: 900;
-  font-size: 58.9px;
-  margin: 28px 0 16px 0;
+  font-size: 58px;
+  margin: 28px 0 15px 0;
   @media screen and (max-width: 425px) {
     font-size: 50px;
     transition: 0.2s linear;

@@ -24,9 +24,9 @@ import {
 
 import { useTranslation } from "react-i18next";
 
-import LogoIMG from "assets/icons/color-logo1.png";
-import Logo1IMG from "assets/icons/logo.png";
-import en_img from "assets/icons/English.png";
+import LogoIMG from "assets/icons/logoColor.png";
+import Logo1IMG from "assets/icons/logoBlack.svg";
+import en_img from "assets/icons/english.png";
 import bn_img from "assets/icons/bosnian.png";
 import { ProfileSVG, ReviewSVG, StatsSVG } from "components/custom/CustomSVG";
 import Button from "components/custom/Button/Button";

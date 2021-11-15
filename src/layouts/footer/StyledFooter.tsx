@@ -45,7 +45,7 @@ export const AboutDescDiv = styled.div`
 export const QuickLinkDiv = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 16.5px;
+  font-size: 15px;
 `;
 
 export const QuickLinkItem = styled.div`
@@ -61,7 +61,7 @@ export const QuickLinkItem = styled.div`
 `;
 
 export const FooterSubTitle = styled.div`
-  font-size: 16.5px;
+  font-size: 15px;
   margin-bottom: 1px;
   font-weight: 900;
 `;
@@ -86,7 +86,7 @@ export const FooterMarkDiv = styled.div`
 export const AboutDesc = styled.div`
   margin-top: 16.5px;
   font-weight: 600;
-  font-size: 16.5px;
+  font-size: 15px;
 `;
 
 export const MarkImg = styled.img`

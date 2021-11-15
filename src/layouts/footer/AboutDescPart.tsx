@@ -10,7 +10,7 @@ import {
   MarkTitle,
 } from "./StyledFooter";
 
-import LogoIMG from "assets/icons/color-logo1.png";
+import LogoIMG from "assets/icons/logoColor.png";
 
 function AboutDescPart() {
   const { t } = useTranslation();

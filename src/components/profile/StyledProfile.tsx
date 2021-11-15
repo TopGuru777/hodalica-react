@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProfileDiv = styled.div`
   max-width: 900px;
   width: 80%;
-  margin: 100px auto 200px auto;
+  margin: 50px auto 200px auto;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
     width: calc(100% - 30px);
@@ -76,7 +76,7 @@ export const AvatarSubTitle = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 375px) {
-    font-size: 16px;
+    font-size: 15px;
     transition: 0.2s linear;
   }
 `;
@@ -118,7 +118,7 @@ export const ProfileDesc = styled.div`
   transition: 0.2s linear;
   font-weight: 500;
   @media screen and (max-width: 375px) {
-    font-size: 16px;
+    font-size: 15px;
     transition: 0.2s linear;
   }
 `;
