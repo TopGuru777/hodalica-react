@@ -16,6 +16,16 @@ import phoneSvg from "assets/svg/phone.svg";
 import locationSvg from "assets/svg/location-pin.svg";
 import clockSvg from "assets/svg/clock.svg";
 
+const dayofweek = [
+  "Sunday",
+  "Monnday",
+  "Tuesday",
+  "Wednesday",
+  "Thirsday",
+  "Friday",
+  "Saturday",
+];
+
 type InfoData = {
   data: any;
 };
@@ -24,28 +34,34 @@ const ProfileInfo = ({ data }: InfoData) => {
   return (
     <ProfileInfoDiv>
       <DetailInfoGroup>
-        <DetailInfo>
-          <img src={phoneSvg} alt="phone" />
-          {data?.phone}
-        </DetailInfo>
+        {data?.phone !== undefined && (
+          <DetailInfo>
+            <img src={phoneSvg} alt="phone" />
+            {data?.phone}
+          </DetailInfo>
+        )}
+
         <DetailInfo>
           <img src={locationSvg} alt="location" />
-          {data?.location}
+          {data?.address}
         </DetailInfo>
       </DetailInfoGroup>
       <ProfileImageDiv>
-        <img src={data?.image} alt="profile" />
+        <img src={data?.cover._url} alt="profile" />
       </ProfileImageDiv>
-      {data?.Bio.map((item: any, key: any) => (
-        <ProfileDesc key={key}>{item}</ProfileDesc>
-      ))}
+      <ProfileDesc>
+        {localStorage.getItem("i18nextLng") === "en" ||
+        localStorage.getItem("i18nextLng") === "en-US"
+          ? data?.description
+          : data?.descriptionBS}
+      </ProfileDesc>
       <ScheduleDiv>
         <img src={clockSvg} alt="clock svg" />
         <SchduleGroup>
-          {data?.schedule.map((item: any, key: any) => (
+          {data?.openingHours.map((item: any, key: any) => (
             <Schedules key={key}>
-              <DayDiv>{item.day}</DayDiv>
-              <TimeDiv>{item.time}</TimeDiv>
+              <DayDiv>{dayofweek[key]}</DayDiv>
+              <TimeDiv>{item[0] + ":00 - " + item[1] + ":00"}</TimeDiv>
             </Schedules>
           ))}
         </SchduleGroup>

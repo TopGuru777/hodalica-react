@@ -30,9 +30,11 @@ import en_img from "assets/icons/english.png";
 import bn_img from "assets/icons/bosnian.png";
 import { ProfileSVG, ReviewSVG, StatsSVG } from "components/custom/CustomSVG";
 import Button from "components/custom/Button/Button";
+import btnSpinner from "assets/svg/spinnerButton.svg";
 
 import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { getProfileAction, logoutAction } from "action/action";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -43,8 +45,18 @@ const Header: React.FC = () => {
   const [menuflag, setMenuflag] = useState(false);
   const menuRef = useRef<any>(null);
   const [current, setCurrent] = useState("");
+  const [loading, setloading] = useState(false);
+  const [profile, setProfile] = useState<any>({});
 
   useEffect(() => {
+    const getProfileFunc = async () => {
+      const res = await getProfileAction();
+      setProfile(res);
+    };
+    if (localStorage.getItem("isAuth") === "true") {
+      getProfileFunc();
+    }
+
     setIsAuth(localStorage.getItem("isAuth") === "true" ? true : false);
     const setResponsiveness = () => {
       return window.innerWidth <= 850
@@ -86,7 +98,12 @@ const Header: React.FC = () => {
         <MarkText>
           {isAuth ? (
             <React.Fragment>
-              <MarkTitle>{t("header_mark.mark_title")}</MarkTitle>
+              <MarkTitle>
+                {localStorage.getItem("i18nextLng") === "en" ||
+                localStorage.getItem("i18nextLng") === "en-US"
+                  ? profile?.attributes?.name
+                  : profile?.attributes?.nameBS}
+              </MarkTitle>
               <MarkSubTitle>{t("header_mark.mark_subtitle")}</MarkSubTitle>
             </React.Fragment>
           ) : (
@@ -95,6 +112,14 @@ const Header: React.FC = () => {
         </MarkText>
       </LogoDiv>
     );
+  };
+
+  const handleLogout = async () => {
+    setloading(true);
+    await logoutAction();
+    setloading(false);
+    localStorage.removeItem("isAuth");
+    window.location.href = "/";
   };
 
   const RenderAuthMenu = () => {
@@ -164,16 +189,23 @@ const Header: React.FC = () => {
             </Link>
           </Menus>
           <LogDiv>
-            <Button
-              value={t("buttons.logout")}
-              onClick={() => {
-                localStorage.removeItem("isAuth");
-                window.location.href = "/";
-              }}
-              color="#ffffff00"
-              borderLine="#000000"
-              font="#000000"
-            />
+            {loading ? (
+              <Button
+                value={<img src={btnSpinner} alt="spinner" />}
+                onClick={() => {}}
+                color="#ffffff00"
+                borderLine="#000000"
+                font="#000000"
+              />
+            ) : (
+              <Button
+                value={t("buttons.logout")}
+                onClick={handleLogout}
+                color="#ffffff00"
+                borderLine="#000000"
+                font="#000000"
+              />
+            )}
           </LogDiv>
         </React.Fragment>
       );

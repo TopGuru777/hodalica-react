@@ -25,7 +25,10 @@ export const ReviewAvatarDiv = styled.div`
   display: flex;
   align-items: center;
   img {
+    border-radius: 50%;
     width: 59px;
+    height: 59px;
+    object-fit: cover;
     margin-right: 14px;
   }
   span {
@@ -50,7 +53,7 @@ export const ReviewDesc = styled.div`
 export const ReviewShowDiv = styled.div``;
 
 export const Reviews = styled.div`
-  width: 90%;
+  width: 105px;
   svg {
     width: 15px;
     height: 15px;

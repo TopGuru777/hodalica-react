@@ -1,7 +1,5 @@
-import Button from "components/custom/Button/Button";
-import { BeautySVG } from "components/custom/CustomSVG";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import Button from "components/custom/Button/Button";
 import {
   AvatarDesc,
   AvatarDiv,
@@ -13,10 +11,10 @@ import {
 
 type AvatarData = {
   data: any;
+  btnData: any;
 };
 
-const ProfileAvatar = ({ data }: AvatarData) => {
-  const { t } = useTranslation();
+const ProfileAvatar = ({ data, btnData }: AvatarData) => {
   return (
     <ProfileAvatarDiv>
       <AvatarDiv>
@@ -30,13 +28,17 @@ const ProfileAvatar = ({ data }: AvatarData) => {
         <Button
           value={
             <>
-              {t("buttons.beauty")}
-              <BeautySVG />
+              {btnData?.attributes.name}
+              <img
+                src={btnData?.attributes.icon._url}
+                alt={btnData?.attributes.icon._name}
+                color="white"
+              />
             </>
           }
           onClick={() => {}}
-          color="#8CA4FF"
-          borderLine="#8CA4FF"
+          color={"#" + btnData?.attributes.color}
+          borderLine={"#" + btnData?.attributes.color}
           font="#ffffff"
         />
       </BeautyButtonDiv>

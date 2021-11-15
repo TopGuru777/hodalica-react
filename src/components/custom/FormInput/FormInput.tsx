@@ -8,6 +8,7 @@ type InputProps = {
   value: string;
   onChange: any;
   required?: boolean;
+  error?: string;
 };
 
 type textareaProps = {
@@ -24,9 +25,11 @@ const FormInput = ({
   placeholder,
   value,
   onChange,
+  error,
 }: InputProps) => {
   return (
     <InputDiv>
+      <span>{error ? error : ""}</span>
       <Input
         type={type}
         onChange={onChange}

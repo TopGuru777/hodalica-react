@@ -11,25 +11,25 @@ import {
   DValue,
 } from "./StyledStats";
 
-const DealsPart = () => {
+const DealsPart = ({ data }: any) => {
   const { t } = useTranslation();
   return (
     <DealsPartDiv>
       <DealsRedeemedDiv>
         <DRTitle>{t("stats.deals_redeemed")}</DRTitle>
-        <DRValue>16</DRValue>
+        <DRValue>{data.total}</DRValue>
       </DealsRedeemedDiv>
       <DealsRedeemedDiv>
         <DHeavyTitle>{t("stats.clients")}</DHeavyTitle>
-        <DHeavyValue>14</DHeavyValue>
+        <DHeavyValue>{data.clients}</DHeavyValue>
       </DealsRedeemedDiv>
       <DealsRedeemedDiv>
         <DTitle>{t("stats.new_clients")}</DTitle>
-        <DValue>83% | 11</DValue>
+        <DValue>{data.newClients}</DValue>
       </DealsRedeemedDiv>
       <DealsRedeemedDiv>
         <DTitle>{t("stats.existing_clients")}</DTitle>
-        <DValue>17% | 1</DValue>
+        <DValue>{data.existingClients}</DValue>
       </DealsRedeemedDiv>
     </DealsPartDiv>
   );

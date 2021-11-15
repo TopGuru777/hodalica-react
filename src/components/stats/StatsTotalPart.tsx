@@ -8,7 +8,7 @@ import {
   TotalText,
 } from "./StyledStats";
 
-const StatsTotalPart = () => {
+const StatsTotalPart = (data: any) => {
   const { t } = useTranslation();
   return (
     <StatsTotalPartDiv>

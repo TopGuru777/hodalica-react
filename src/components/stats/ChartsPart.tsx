@@ -1,38 +1,51 @@
 import React from "react";
+import Chart from "react-google-charts";
 import { useTranslation } from "react-i18next";
-import { PieChart } from "react-minimal-pie-chart";
-import { LabelRenderProps } from "react-minimal-pie-chart/types/Label";
 import { ChartDesc, ChartDescDiv, ChartDiv, ChartPartDiv } from "./StyledStats";
+import Spinner from "components/custom/Spinner/Spinner";
 
-const ChartsPart = () => {
+const ChartsPart = ({ data }: any) => {
   const { t } = useTranslation();
+
   return (
     <ChartPartDiv>
       <ChartGenerator
-        dt={[
-          { title: t("stats.bosnian"), total: 14, value: 10, color: "#FC5F77" },
-          {
-            title: t("stats.foreigners"),
-            total: 14,
-            value: 4,
-            color: "#FBA3B1",
-          },
+        data={[
+          ["chart1", "chart1"],
+          [t("stats.bosnian"), data?.chart1?.bosnian],
+          [t("stats.foreigners"), data?.chart1?.foreigner],
         ]}
+        slices={{
+          0: { color: "#FC5F77" },
+          1: { color: "#FBA3B1" },
+        }}
       />
       <ChartGenerator
-        dt={[
-          { title: t("stats.android"), total: 12, value: 8, color: "#8CA4FF" },
-          { title: t("stats.ios"), total: 12, value: 4, color: "#B1C1FF" },
+        data={[
+          ["chart2", "chart2"],
+          [t("stats.android"), data?.chart2?.android],
+          [t("stats.ios"), data?.chart2?.ios],
         ]}
+        slices={{
+          0: { color: "#8CA4FF" },
+          1: { color: "#B1C1FF" },
+        }}
       />
 
       <ChartGenerator
-        dt={[
-          { title: "12-18", total: 12, value: 1, color: "#FF8B7F" },
-          { title: "18-25", total: 12, value: 4, color: "#FCD161" },
-          { title: "26-35", total: 12, value: 5, color: "#FBB700" },
-          { title: "35+", total: 12, value: 2, color: "#FCA266" },
+        data={[
+          ["chart1", "chart1"],
+          ["12-18", data?.chart3?.age12_18],
+          ["18-25", data?.chart3?.age19_25],
+          ["26-35", data?.chart3?.age26_35],
+          ["35+", data?.chart3?.age35_plus],
         ]}
+        slices={{
+          0: { color: "#FF8B7F" },
+          1: { color: "#FCD161" },
+          2: { color: "#FBB700" },
+          3: { color: "#FCA266" },
+        }}
       />
     </ChartPartDiv>
   );
@@ -40,37 +53,31 @@ const ChartsPart = () => {
 
 export default ChartsPart;
 
-export const ChartGenerator = ({ dt }: any) => {
-  let data = dt.map((item: any, key: any) => {
-    return {
-      title: item.title,
-      key: key,
-      value: (100 / item.total) * item.value,
-      color: item.color,
-      tooltip: item.title + "|" + item.value,
-    };
-  });
+export const ChartGenerator = ({ data, slices }: any) => {
   return (
     <ChartDiv>
-      <PieChart
-        style={{ width: "198px", color: "white" }}
-        lineWidth={65}
-        totalValue={100}
-        startAngle={0}
+      <Chart
+        width={"300px"}
+        height={"300px"}
+        chartType="PieChart"
+        loader={<Spinner />}
         data={data}
-        labelPosition={75}
-        label={(data: LabelRenderProps) =>
-          parseInt(Math.round(data.dataEntry.value).toFixed()) + "%"
-        }
-        labelStyle={{ fontSize: "8px", fill: "white", fontWeight: 500 }}
+        options={{
+          legend: "none",
+          pieHole: 0.4,
+          slices: slices,
+        }}
       />
       <ChartDescDiv>
-        {dt.map((item: any, key: any) => (
-          <ChartDesc key={key} color={item.color}>
-            <div />
-            {item.title} | {item.value}
-          </ChartDesc>
-        ))}
+        {data.map(
+          (item: any, key: any) =>
+            key > 0 && (
+              <ChartDesc key={key} color={slices[key - 1]?.color}>
+                <div />
+                {item[0]} | {item[1]}
+              </ChartDesc>
+            )
+        )}
       </ChartDescDiv>
     </ChartDiv>
   );

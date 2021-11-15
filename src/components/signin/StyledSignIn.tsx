@@ -20,6 +20,7 @@ export const LogoImg = styled.img`
     width: 100px;
     transition: 0.2s linear;
   }
+  cursor: pointer;
 `;
 
 export const SignInFormDiv = styled.div``;

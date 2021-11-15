@@ -19,7 +19,7 @@ import { useTranslation } from "react-i18next";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
-const DatePickerGroup = () => {
+const DatePickerGroup = ({ handleSearch }: any) => {
   const [state, setState] = useState<any>([
     {
       startDate: new Date(),
@@ -38,6 +38,38 @@ const DatePickerGroup = () => {
     setSelected(key);
     if (key === "custom") {
       setShowCalendar((prev) => !prev);
+    } else {
+      const selectedDate: any = {
+        key: key,
+      };
+      const todayDate = new Date();
+      switch (key) {
+        case "today":
+          selectedDate.date = todayDate;
+          break;
+        case "yesterday":
+          todayDate.setDate(new Date().getDate() - 1);
+          break;
+        case "7d":
+          todayDate.setDate(new Date().getDate() - 7);
+          break;
+        case "30d":
+          todayDate.setDate(new Date().getDate() - 30);
+          break;
+        case "3m":
+          todayDate.setMonth(new Date().getMonth() - 3);
+          break;
+        case "6m":
+          todayDate.setMonth(new Date().getMonth() - 6);
+          break;
+        case "1y":
+          todayDate.setFullYear(new Date().getFullYear() - 1);
+          break;
+        default:
+          break;
+      }
+      selectedDate.date = todayDate;
+      handleSearch(selectedDate);
     }
   };
 
@@ -56,6 +88,18 @@ const DatePickerGroup = () => {
         key: "selection",
       },
     ]);
+  };
+
+  const dateRangeSearch = () => {
+    const selectedDate = {
+      key: datetype,
+      date:
+        datetype === "range"
+          ? [state[0].startDate, state[0].endDate]
+          : state[0].startDate,
+    };
+    handleSearch(selectedDate);
+    setShowCalendar(false);
   };
 
   useEffect(() => {
@@ -153,7 +197,9 @@ const DatePickerGroup = () => {
             <CalendarAction onClick={() => setShowCalendar(false)}>
               {t("date_selectors.cancel")}
             </CalendarAction>
-            <CalendarAction>{t("date_selectors.apply")}</CalendarAction>
+            <CalendarAction onClick={dateRangeSearch}>
+              {t("date_selectors.apply")}
+            </CalendarAction>
           </CalendarActionDiv>
         </CalendarModalDiv>
       )}

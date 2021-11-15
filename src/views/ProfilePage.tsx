@@ -2,52 +2,58 @@ import { ProfileSVG } from "components/custom/CustomSVG";
 import ProfileAvatar from "components/profile/ProfileAvatar";
 import { ProfileDiv } from "components/profile/StyledProfile";
 import { PageTitle } from "layouts/StyledLayout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+<<<<<<< HEAD
 import avatarImg from "assets/avatar/6.png";
 import image from "assets/img/cover.png";
+=======
+>>>>>>> 4f26fb81f423088e601f4c9f76dcc09291bb782b
 import ProfileInfo from "components/profile/ProfileInfo";
 import Footer from "layouts/footer";
+import { getProfileAction } from "action/action";
+import Spinner from "components/custom/Spinner/Spinner";
 
 const ProfilePage: React.FC = () => {
-  const profileData: any = {
-    avatar: avatarImg,
-    title: "Wiara Care",
-    subtitle: "Sarajevo",
-    phone: "+378 33 680 400",
-    location: "Kalibunar, 72273 Travnik, Bosnia",
-    image: image,
-    Bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    ],
-    schedule: [
-      { day: "Monday", time: "8:00 - 23:00" },
-      { day: "Tuesday", time: "8:00 - 23:00" },
-      { day: "Wednesday", time: "13:00 - 23:00" },
-      { day: "Thursday", time: "15:00 - 23:00" },
-      { day: "Friday", time: "9:00 - 17:00" },
-      { day: "Saturday", time: "9:00 - 18:00" },
-      { day: "Sunday", time: "8:00 - 23:00" },
-    ],
-  };
+  const [profile, setProfile] = useState<any>({});
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const getProfileFunc = async () => {
+      setLoading(true);
+      const res = await getProfileAction();
+      setProfile(res);
+      setLoading(false);
+    };
+    getProfileFunc();
+  }, []);
   const { t } = useTranslation();
   return (
     <React.Fragment>
-      <ProfileDiv>
-        <PageTitle>
-          <ProfileSVG />
-          {t("profile.title")}
-        </PageTitle>
-        <ProfileAvatar
-          data={{
-            avatar: profileData.avatar,
-            title: profileData.title,
-            subtitle: profileData.subtitle,
-          }}
-        />
-        <ProfileInfo data={profileData} />
-      </ProfileDiv>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <ProfileDiv>
+          <PageTitle>
+            <ProfileSVG />
+            {t("profile.title")}
+          </PageTitle>
+          <ProfileAvatar
+            data={{
+              avatar: profile?.attributes?.profilePicture._url,
+              title:
+                localStorage.getItem("i18nextLng") === "en" ||
+                localStorage.getItem("i18nextLng") === "en-US"
+                  ? profile?.attributes?.name
+                  : profile?.attributes?.nameBS,
+              subtitle: profile?.attributes?.city.attributes.name,
+            }}
+            btnData={profile?.attributes?.category}
+          />
+          <ProfileInfo data={profile?.attributes} />
+        </ProfileDiv>
+      )}
+
       <Footer />
     </React.Fragment>
   );
