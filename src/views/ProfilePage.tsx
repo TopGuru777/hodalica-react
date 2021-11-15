@@ -4,11 +4,8 @@ import { ProfileDiv } from "components/profile/StyledProfile";
 import { PageTitle } from "layouts/StyledLayout";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-<<<<<<< HEAD
 import avatarImg from "assets/avatar/6.png";
 import image from "assets/img/cover.png";
-=======
->>>>>>> 4f26fb81f423088e601f4c9f76dcc09291bb782b
 import ProfileInfo from "components/profile/ProfileInfo";
 import Footer from "layouts/footer";
 import { getProfileAction } from "action/action";
