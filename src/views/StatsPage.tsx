@@ -5,6 +5,7 @@ import Spinner from "components/custom/Spinner/Spinner";
 import ChartsPart from "components/stats/ChartsPart";
 import DealsPart from "components/stats/DealsPart";
 import StatListPart from "components/stats/StatListPart";
+import StatsTotalPart from "components/stats/StatsTotalPart";
 import { HrDiv, StatsPageDiv } from "components/stats/StyledStats";
 import Footer from "layouts/footer";
 import { Container, PageTitle } from "layouts/StyledLayout";
@@ -42,20 +43,6 @@ const StatsPage: React.FC = () => {
 
   return (
     <React.Fragment>
-<<<<<<< HEAD
-      <StatsPageDiv>
-        <PageTitle>
-          <StatsSVG />
-          {t("stats.title")}
-        </PageTitle>
-        <DatePickerGroup />
-        <DealsPart />
-        <ChartsPart />
-        <StatListPart />
-        {/* <HrDiv />
-          <StatsTotalPart /> */}
-      </StatsPageDiv>
-=======
       <Container>
         <StatsPageDiv>
           <PageTitle>
@@ -76,7 +63,7 @@ const StatsPage: React.FC = () => {
           )}
         </StatsPageDiv>
       </Container>
->>>>>>> 4f26fb81f423088e601f4c9f76dcc09291bb782b
+
       <Footer />
     </React.Fragment>
   );

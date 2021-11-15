@@ -35,16 +35,6 @@ const ReviewPage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
-<<<<<<< HEAD
-      <ReviewsDiv>
-        <PageTitle>
-          <ReviewSVG />
-          {reviewData.length} {t("review.title")}
-        </PageTitle>
-        <DatePickerGroup />
-        <ReviewItems data={reviewData} />
-      </ReviewsDiv>
-=======
       <Container>
         <ReviewsDiv>
           <PageTitle>
@@ -59,7 +49,6 @@ const ReviewPage: React.FC = () => {
           {loading ? <Spinner /> : <ReviewItems data={reviewdata} />}
         </ReviewsDiv>
       </Container>
->>>>>>> 4f26fb81f423088e601f4c9f76dcc09291bb782b
       <Footer />
     </React.Fragment>
   );
