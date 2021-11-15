@@ -5,8 +5,8 @@ import Spinner from "components/custom/Spinner/Spinner";
 import ChartsPart from "components/stats/ChartsPart";
 import DealsPart from "components/stats/DealsPart";
 import StatListPart from "components/stats/StatListPart";
-import StatsTotalPart from "components/stats/StatsTotalPart";
-import { HrDiv, StatsPageDiv } from "components/stats/StyledStats";
+// import StatsTotalPart from "components/stats/StatsTotalPart";
+import { StatsPageDiv } from "components/stats/StyledStats";
 import Footer from "layouts/footer";
 import { Container, PageTitle } from "layouts/StyledLayout";
 import React, { useEffect, useState } from "react";
@@ -57,8 +57,8 @@ const StatsPage: React.FC = () => {
               <DealsPart data={redeemedData} />
               <ChartsPart data={chartData} />
               <StatListPart data={statsData} />
-              <HrDiv />
-              <StatsTotalPart />
+              {/* <HrDiv />
+              <StatsTotalPart /> */}
             </React.Fragment>
           )}
         </StatsPageDiv>

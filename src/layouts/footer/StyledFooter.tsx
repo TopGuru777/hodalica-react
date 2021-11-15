@@ -68,7 +68,7 @@ export const FooterSubTitle = styled.div`
 
 export const ContactDiv = styled.div``;
 
-export const ContactItem = styled.div`
+export const ContactItem = styled.a`
   display: flex;
   align-items: center;
   margin-top: 12.5px;
@@ -76,6 +76,9 @@ export const ContactItem = styled.div`
   img {
     margin-right: 9px;
   }
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
 `;
 
 export const FooterMarkDiv = styled.div`

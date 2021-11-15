@@ -40,11 +40,17 @@ const ProfileInfo = ({ data }: InfoData) => {
             {data?.phone}
           </DetailInfo>
         )}
-
-        <DetailInfo>
-          <img src={locationSvg} alt="location" />
-          {data?.address}
-        </DetailInfo>
+        <a
+          href={"https://www.google.com/maps/place/" + data?.address}
+          rel="noreferrer"
+          target="_blank"
+          style={{ textDecoration: "none", color: "#000" }}
+        >
+          <DetailInfo>
+            <img src={locationSvg} alt="location" />
+            {data?.address}
+          </DetailInfo>{" "}
+        </a>
       </DetailInfoGroup>
       <ProfileImageDiv>
         <img src={data?.cover._url} alt="profile" />

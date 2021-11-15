@@ -57,11 +57,12 @@ export const ChartGenerator = ({ data, slices }: any) => {
   return (
     <ChartDiv>
       <Chart
-        width={"300px"}
-        height={"300px"}
+        // width={"100%"}
+        // height={"100%"}
         chartType="PieChart"
         loader={<Spinner />}
         data={data}
+        className="state_chats"
         options={{
           legend: "none",
           pieHole: 0.4,

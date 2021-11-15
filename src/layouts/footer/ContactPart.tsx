@@ -11,19 +11,22 @@ function ContactPart() {
   return (
     <ContactDiv>
       <FooterSubTitle>{t("footer.contact.title")}</FooterSubTitle>
-      <ContactItem>
+      <ContactItem href="https://hodalica.ba" target="_blank">
         <img src={WebsiteSVG} alt="website" />
         {t("footer.contact.website")}
       </ContactItem>
-      <ContactItem>
+      <ContactItem href={`mailto:${t("footer.contact.email")}?Subject=Hello!`}>
         <img src={EmailSVG} alt="email" />
         {t("footer.contact.email")}
       </ContactItem>
-      <ContactItem>
+      <ContactItem href={`tel:+${t("footer.contact.phone")}`}>
         <img src={PhoneSVG} alt="phone" />
         {t("footer.contact.phone")}
       </ContactItem>
-      <ContactItem>
+      <ContactItem
+        href={`https://instagram.com/${t("footer.contact.instagram")}`}
+        target="_blank"
+      >
         <img src={InstagramSVG} alt="instagram" />
         {t("footer.contact.instagram")}
       </ContactItem>

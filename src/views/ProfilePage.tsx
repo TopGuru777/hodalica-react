@@ -25,29 +25,31 @@ const ProfilePage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <ProfileDiv>
-          <PageTitle>
-            <ProfileSVG />
-            {t("profile.title")}
-          </PageTitle>
-          <ProfileAvatar
-            data={{
-              avatar: profile?.attributes?.profilePicture._url,
-              title:
-                localStorage.getItem("i18nextLng") === "en" ||
-                localStorage.getItem("i18nextLng") === "en-US"
-                  ? profile?.attributes?.name
-                  : profile?.attributes?.nameBS,
-              subtitle: profile?.attributes?.city.attributes.name,
-            }}
-            btnData={profile?.attributes?.category}
-          />
-          <ProfileInfo data={profile?.attributes} />
-        </ProfileDiv>
-      )}
+      <ProfileDiv>
+        <PageTitle>
+          <ProfileSVG />
+          {t("profile.title")}
+        </PageTitle>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <React.Fragment>
+            <ProfileAvatar
+              data={{
+                avatar: profile?.attributes?.profilePicture._url,
+                title:
+                  localStorage.getItem("i18nextLng") === "en" ||
+                  localStorage.getItem("i18nextLng") === "en-US"
+                    ? profile?.attributes?.name
+                    : profile?.attributes?.nameBS,
+                subtitle: profile?.attributes?.city.attributes.name,
+              }}
+              btnData={profile?.attributes?.category}
+            />
+            <ProfileInfo data={profile?.attributes} />
+          </React.Fragment>
+        )}
+      </ProfileDiv>
 
       <Footer />
     </React.Fragment>

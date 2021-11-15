@@ -57,13 +57,18 @@ export const DValue = styled.div`
 `;
 
 export const ChartPartDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 88px;
-  grid-column-gap: 5%;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  margin-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 1%;
+  justify-content: space-between;
 
   @media screen and (max-width: 1100px) {
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    grid-gap: 0;
     grid-row-gap: 50px;
   }
   @media screen and (max-width: 800px) {
@@ -72,17 +77,33 @@ export const ChartPartDiv = styled.div`
 `;
 
 export const ChartDiv = styled.div`
+  rect {
+    fill: transparent !important;
+  }
   position: relative;
   align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 32%;
+  @media screen and (max-width: 1100px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  .state_chats {
+    max-width: 300px;
+    width: 100%;
+
+    /* aspect-ratio: 1/1; */
+  }
 `;
 
 export const ChartDescDiv = styled.div`
   position: absolute;
-  bottom: -23px;
+  bottom: -40px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-auto-flow: column;

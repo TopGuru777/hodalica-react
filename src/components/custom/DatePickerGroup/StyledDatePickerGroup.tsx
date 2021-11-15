@@ -5,6 +5,7 @@ export const DatePickerGroupDiv = styled.div`
 `;
 
 export const SelectButtonDiv = styled.div`
+  width: 100%;
   overflow: auto;
   display: flex;
   border: 1px solid #ded4c5;
