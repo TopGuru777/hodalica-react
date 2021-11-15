@@ -34,6 +34,13 @@ const StatsPage: React.FC = () => {
     getData();
   }, []);
 
+  const handleSearch = async (date: any) => {
+    // setLoading(true);
+    // const res = await getReviewData(date);
+    // setLoading(false);
+    // setReviewData(res);
+  };
+
   return (
     <React.Fragment>
       <Container>
@@ -42,7 +49,7 @@ const StatsPage: React.FC = () => {
             <StatsSVG />
             {t("stats.title")}
           </PageTitle>
-          <DatePickerGroup />
+          <DatePickerGroup handleSearch={handleSearch} />
           {loading ? (
             <Spinner />
           ) : (

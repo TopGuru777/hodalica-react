@@ -46,18 +46,16 @@ export const getReviewData = async (date) => {
 
   if (date !== "all") {
     if (date.key === "range") {
-      console.log(
-        new Intl.DateTimeFormat("en-US", {
-          dateStyle: "full",
-        }).format(date.date[0])
-      );
       queryReview.greaterThanOrEqualTo("createdAt", date.date[0]);
       queryReview.lessThanOrEqualTo("createdAt", date.date[1]);
     } else {
-      const tempdate = new Date(date.date);
-      tempdate.setDate(tempdate.getDate() + 1);
-      queryReview.greaterThanOrEqualTo("createdAt", new Date(date.date));
-      queryReview.lessThanOrEqualTo("createdAt", tempdate);
+      const fromdate = new Date(date.date);
+      fromdate.setHours(0);
+      fromdate.setMinutes(0);
+      fromdate.setSeconds(0);
+      fromdate.setDate(fromdate.getDate() + 1);
+      queryReview.greaterThanOrEqualTo("createdAt", fromdate);
+      queryReview.lessThanOrEqualTo("createdAt", new Date());
     }
   }
 
@@ -188,8 +186,6 @@ export const getStats = async () => {
       },
       stats: results,
     };
-
-    console.log(resData);
 
     return resData;
   } catch (error) {

@@ -52,19 +52,23 @@ export const DValue = styled.div`
 `;
 
 export const ChartPartDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 88px;
+  grid-column-gap: 5%;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+  }
   @media screen and (max-width: 800px) {
-    flex-direction: column;
-    align-items: center;
-    & > *:not(:last-child) {
-      margin-bottom: 50px;
-    }
+    grid-template-columns: 1fr;
   }
 `;
 
 export const ChartDiv = styled.div`
+  position: relative;
+  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +76,8 @@ export const ChartDiv = styled.div`
 `;
 
 export const ChartDescDiv = styled.div`
-  margin-top: 23px;
+  position: absolute;
+  bottom: -23px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-auto-flow: column;
