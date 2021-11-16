@@ -35,10 +35,10 @@ const DatePickerGroup = ({ handleSearch }: any) => {
   const { t } = useTranslation();
 
   const handleSelected = (key: string) => {
-    setSelected(key);
-    if (key === "custom") {
+    if (key === "custom1") {
       setShowCalendar((prev) => !prev);
     } else {
+      setSelected(key);
       const selectedDate: any = {
         key: key,
       };
@@ -98,6 +98,7 @@ const DatePickerGroup = ({ handleSearch }: any) => {
           ? [state[0].startDate, state[0].endDate]
           : state[0].startDate,
     };
+    setSelected("custom");
     handleSearch(selectedDate);
     setShowCalendar(false);
   };
@@ -118,10 +119,28 @@ const DatePickerGroup = ({ handleSearch }: any) => {
       <SelectButtonDiv>
         <SelectButton
           active={selected === "custom" ? true : false}
-          onClick={() => handleSelected("custom")}
+          onClick={() => handleSelected("custom1")}
         >
-          <img src={calendarSvg} alt="calendar" />
-          {t("date_selectors.custom")}
+          {selected === "custom" &&
+            datetype === "fixed" &&
+            new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+              state[0].startDate
+            )}
+          {selected === "custom" &&
+            datetype === "range" &&
+            Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+              state[0].startDate
+            ) +
+              " - " +
+              Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+                state[0].endDate
+              )}
+          {selected !== "custom" && (
+            <>
+              <img src={calendarSvg} alt="calendar" />
+              {t("date_selectors.custom")}
+            </>
+          )}
         </SelectButton>
         <SelectButton
           active={selected === "today" ? true : false}
@@ -147,12 +166,12 @@ const DatePickerGroup = ({ handleSearch }: any) => {
         >
           {t("date_selectors.30d")}
         </SelectButton>
-        <SelectButton
+        {/* <SelectButton
           active={selected === "3m" ? true : false}
           onClick={() => handleSelected("3m")}
         >
           {t("date_selectors.3m")}
-        </SelectButton>
+        </SelectButton> */}
 
         <SelectButton
           active={selected === "1y" ? true : false}
@@ -194,7 +213,10 @@ const DatePickerGroup = ({ handleSearch }: any) => {
           </CalendarDiv>
 
           <CalendarActionDiv>
-            <CalendarAction onClick={() => setShowCalendar(false)}>
+            <CalendarAction
+              style={{ color: "white" }}
+              onClick={() => setShowCalendar(false)}
+            >
               {t("date_selectors.cancel")}
             </CalendarAction>
             <CalendarAction onClick={dateRangeSearch}>

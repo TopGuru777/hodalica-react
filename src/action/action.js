@@ -78,7 +78,7 @@ export const getStats = async () => {
     var results = await Parse.Cloud.run("getDealsUsedForPartner", {
       partnerId: partner.id,
     });
-
+    console.log(results);
     var totalDealRedeemed = 0;
     var clients = 0;
     var newclients = 0;

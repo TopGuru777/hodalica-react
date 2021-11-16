@@ -5,6 +5,18 @@ export const DatePickerGroupDiv = styled.div`
 `;
 
 export const SelectButtonDiv = styled.div`
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(139, 139, 139);
+    border-radius: 1px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: darkgray;
+    border-radius: "6px";
+  }
   width: 100%;
   overflow: auto;
   display: flex;
@@ -33,6 +45,7 @@ export const SelectButton = styled.div<SelectButtonProps>`
     width: 29px;
     height: 29px;
   }
+  white-space: nowrap;
   font-weight: 600;
   justify-content: center;
   width: 100%;
@@ -50,7 +63,7 @@ export const SelectButton = styled.div<SelectButtonProps>`
 `;
 
 export const CalendarModalDiv = styled.div`
-  top: 85px;
+  top: 100px;
   position: absolute;
   background: #fff;
   border-radius: 20px;
@@ -58,19 +71,20 @@ export const CalendarModalDiv = styled.div`
   .rdrDefinedRangesWrapper {
     display: none;
   }
-  border: 2px solid #ded4c5;
+  /* border: 2px solid #ded4c5; */
   max-width: 355px;
   width: 100%;
+  z-index: 1;
 `;
 
 export const DateTypeDiv = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  background: #f3ebde;
+  background: rgb(39, 42, 44);
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  border-bottom: 2px solid #ded4c5;
+  /* border: 2px solid gray; */
 `;
 
 type TabProps = {
@@ -78,19 +92,50 @@ type TabProps = {
 };
 
 export const DateTab = styled.div<TabProps>`
-  padding: 8px 5px;
+  padding: 12px 5px 15px 5px;
   font-size: 18px;
   ${({ active }) =>
     active
-      ? "color: rgb(57, 59, 136);border-bottom: 3px solid rgb(57, 59, 136);"
-      : "color: #000;border-bottom: none;"}
+      ? "color: rgb(123, 128, 255);border-bottom: 3px solid rgb(123, 128, 255);"
+      : "color: #888;border-bottom: none;"}
   cursor: pointer;
 `;
 
 export const CalendarDiv = styled.div`
+  .rdrCalendarWrapper {
+    background: rgb(30, 32, 35);
+  }
+  .rdrSelected,
+  .rdrStartEdge,
+  .rdrEndEdge,
+  .rdrInRange {
+    color: transparent !important;
+    border: 2px solid rgb(123, 128, 255);
+  }
+  .rdrDayPassive .rdrDayNumber span {
+    color: #555555 !important;
+  }
+  .rdrMonthPicker select option,
+  .rdrYearPicker select option {
+    background-color: rgb(30, 32, 35);
+  }
+  * {
+    color: #ffffff !important;
+  }
+  .rdrDateDisplayWrapper {
+    background: rgb(30, 32, 35);
+  }
+  .rdrDateDisplayItem {
+    border-radius: 10px;
+    background-color: rgb(30, 32, 35);
+    border: 2px solid transparent;
+  }
+  .rdrDateDisplayItemActive {
+    border: 2px solid rgb(123, 128, 255);
+  }
   border-top: none;
   max-height: 400px;
-
+  background-color: rgb(30, 32, 35);
   overflow: auto;
   overflow: auto;
   ::-webkit-scrollbar {
@@ -98,11 +143,11 @@ export const CalendarDiv = styled.div`
     height: 3px;
   }
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px lightgrey;
+    box-shadow: inset 0 0 5px rgb(30, 32, 35);
     border-radius: 1px;
   }
   ::-webkit-scrollbar-thumb {
-    background: darkgray;
+    background: #7c7c7c;
     border-radius: "6px";
   }
 `;
@@ -110,7 +155,13 @@ export const CalendarDiv = styled.div`
 export const CalendarActionDiv = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 0 30px 10px 30px;
+  background-color: rgb(30, 32, 35);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-left: 1px solid rgb(48, 50, 53);
+  border-right: 1px solid rgb(48, 50, 53);
+  border-bottom: 1px solid rgb(48, 50, 53);
+  padding: 15px 30px;
   & > *:not(:last-child) {
     margin-right: 30px;
   }
@@ -119,5 +170,5 @@ export const CalendarActionDiv = styled.div`
 export const CalendarAction = styled.div`
   font-size: 18px;
   cursor: pointer;
-  color: rgb(57, 59, 136);
+  color: rgb(123, 128, 255);
 `;

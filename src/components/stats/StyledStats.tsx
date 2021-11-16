@@ -97,6 +97,9 @@ export const ChartDiv = styled.div`
     @media screen and (max-width: 768px) {
       max-width: 300px;
     }
+    path {
+      stroke-width: 0 !important;
+    }
   }
   /* width: 100%;
     * {

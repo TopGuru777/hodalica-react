@@ -1,8 +1,8 @@
 import { ReviewSVG } from "components/custom/CustomSVG";
-import DatePickerGroup from "components/custom/DatePickerGroup/DatePickerGroup";
+// import DatePickerGroup from "components/custom/DatePickerGroup/DatePickerGroup";
 import ReviewItems from "components/reviews/ReviewItems";
 import { ReviewsDiv } from "components/reviews/StyledReview";
-import { Container, DatePickerDiv, PageTitle } from "layouts/StyledLayout";
+import { Container, PageTitle } from "layouts/StyledLayout";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -25,12 +25,12 @@ const ReviewPage: React.FC = () => {
     getData();
   }, []);
 
-  const handleSearch = async (date: any) => {
-    setLoading(true);
-    const res = await getReviewData(date);
-    setLoading(false);
-    setReviewData(res);
-  };
+  // const handleSearch = async (date: any) => {
+  //   setLoading(true);
+  //   const res = await getReviewData(date);
+  //   setLoading(false);
+  //   setReviewData(res);
+  // };
 
   const { t } = useTranslation();
   return (
@@ -43,9 +43,9 @@ const ReviewPage: React.FC = () => {
             {t("review.title")}
           </PageTitle>
 
-          <DatePickerDiv>
+          {/* <DatePickerDiv>
             <DatePickerGroup handleSearch={handleSearch} />
-          </DatePickerDiv>
+          </DatePickerDiv> */}
           {loading ? <Spinner /> : <ReviewItems data={reviewdata} />}
         </ReviewsDiv>
       </Container>
