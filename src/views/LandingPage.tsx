@@ -13,9 +13,15 @@ import {
 } from "components/landing/StyledLandingPage";
 import Footer from "layouts/footer";
 import { Container } from "layouts/StyledLayout";
-import React from "react";
+import React, { useEffect } from "react";
 
 const LandingPage: React.FC = () => {
+  useEffect(() => {
+    if (localStorage.getItem("isAuth") === "true") {
+      localStorage.setItem("currentUrl", "/stats");
+      window.location.href = "/stats";
+    }
+  }, []);
   return (
     <LandingPageDiv>
       <LandingIntroPart />

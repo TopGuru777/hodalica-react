@@ -18,6 +18,7 @@ import { useTranslation } from "react-i18next";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import Scrollbars from "react-custom-scrollbars";
 
 const DatePickerGroup = ({ handleSearch }: any) => {
   const [state, setState] = useState<any>([
@@ -116,70 +117,79 @@ const DatePickerGroup = ({ handleSearch }: any) => {
 
   return (
     <DatePickerGroupDiv>
-      <SelectButtonDiv>
-        <SelectButton
-          active={selected === "custom" ? true : false}
-          onClick={() => handleSelected("custom1")}
-        >
-          {selected === "custom" &&
-            datetype === "fixed" &&
-            new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
-              state[0].startDate
-            )}
-          {selected === "custom" &&
-            datetype === "range" &&
-            Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
-              state[0].startDate
-            ) +
-              " - " +
-              Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
-                state[0].endDate
+      <Scrollbars
+        style={{
+          width: "100%",
+          height: "-webkit-fill-available",
+          borderRadius: "15px",
+        }}
+        autoHide
+      >
+        <SelectButtonDiv>
+          <SelectButton
+            active={selected === "custom" ? true : false}
+            onClick={() => handleSelected("custom1")}
+          >
+            {selected === "custom" &&
+              datetype === "fixed" &&
+              new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+                state[0].startDate
               )}
-          {selected !== "custom" && (
-            <>
-              <img src={calendarSvg} alt="calendar" />
-              {t("date_selectors.custom")}
-            </>
-          )}
-        </SelectButton>
-        <SelectButton
-          active={selected === "today" ? true : false}
-          onClick={() => handleSelected("today")}
-        >
-          {t("date_selectors.today")}
-        </SelectButton>
-        <SelectButton
-          active={selected === "yesterday" ? true : false}
-          onClick={() => handleSelected("yesterday")}
-        >
-          {t("date_selectors.yesterday")}
-        </SelectButton>
-        <SelectButton
-          active={selected === "7d" ? true : false}
-          onClick={() => handleSelected("7d")}
-        >
-          {t("date_selectors.7d")}
-        </SelectButton>
-        <SelectButton
-          active={selected === "30d" ? true : false}
-          onClick={() => handleSelected("30d")}
-        >
-          {t("date_selectors.30d")}
-        </SelectButton>
-        {/* <SelectButton
+            {selected === "custom" &&
+              datetype === "range" &&
+              Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+                state[0].startDate
+              ) +
+                " - " +
+                Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(
+                  state[0].endDate
+                )}
+            {selected !== "custom" && (
+              <>
+                <img src={calendarSvg} alt="calendar" />
+                {t("date_selectors.custom")}
+              </>
+            )}
+          </SelectButton>
+          <SelectButton
+            active={selected === "today" ? true : false}
+            onClick={() => handleSelected("today")}
+          >
+            {t("date_selectors.today")}
+          </SelectButton>
+          <SelectButton
+            active={selected === "yesterday" ? true : false}
+            onClick={() => handleSelected("yesterday")}
+          >
+            {t("date_selectors.yesterday")}
+          </SelectButton>
+          <SelectButton
+            active={selected === "7d" ? true : false}
+            onClick={() => handleSelected("7d")}
+          >
+            {t("date_selectors.7d")}
+          </SelectButton>
+          <SelectButton
+            active={selected === "30d" ? true : false}
+            onClick={() => handleSelected("30d")}
+          >
+            {t("date_selectors.30d")}
+          </SelectButton>
+          {/* <SelectButton
           active={selected === "3m" ? true : false}
           onClick={() => handleSelected("3m")}
         >
           {t("date_selectors.3m")}
         </SelectButton> */}
 
-        <SelectButton
-          active={selected === "1y" ? true : false}
-          onClick={() => handleSelected("1y")}
-        >
-          {t("date_selectors.1y")}
-        </SelectButton>
-      </SelectButtonDiv>
+          <SelectButton
+            active={selected === "1y" ? true : false}
+            onClick={() => handleSelected("1y")}
+          >
+            {t("date_selectors.1y")}
+          </SelectButton>
+        </SelectButtonDiv>
+      </Scrollbars>
       {showCalendar && (
         <CalendarModalDiv ref={dropMenuRef}>
           <DateTypeDiv>

@@ -204,7 +204,7 @@ const StatsPage: React.FC = () => {
             <StatsSVG />
             {t("stats.title")}
           </PageTitle>
-          <DatePickerGroup handleSearch={handleSearch} />
+          <DatePickerGroup handleSearch={loading ? () => {} : handleSearch} />
           {loading ? (
             <Spinner />
           ) : (

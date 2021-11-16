@@ -2,34 +2,53 @@ import styled from "styled-components";
 
 export const DatePickerGroupDiv = styled.div`
   position: relative;
+  width: 100%;
+  height: 75px;
+  border: 1px solid #ded4c5;
+  border-radius: 15px;
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 export const SelectButtonDiv = styled.div`
-  ::-webkit-scrollbar {
+  height: -webkit-fill-available;
+  /* overflow: hidden; */
+  /* ::-webkit-scrollbar {
     width: 3px;
-    height: 3px;
-  }
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(139, 139, 139);
-    border-radius: 1px;
+    height: 1px;
+  } */
+  /* ::-webkit-scrollbar-track-piece {
+    background: transparent;
+  } */
+  /* ::-webkit-scrollbar-track {
+    background: transparent;
+
+    border-radius: 5px;
   }
   ::-webkit-scrollbar-thumb {
-    background: darkgray;
-    border-radius: "6px";
+    background: transparent;
+
+    border-radius: 5px;
   }
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  } */
+  position: relative;
   width: 100%;
-  overflow: auto;
+  height: 75px;
+  /* overflow: auto; */
   display: flex;
-  border: 1px solid #ded4c5;
   border-radius: 15px;
   & > *:not(:last-child) {
     border-right: 1px solid #ded4c5;
   }
-  & > *:last-child {
+  & > :last-child {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
   }
-  & > *:first-child {
+  & > :first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
   }
@@ -115,6 +134,9 @@ export const CalendarDiv = styled.div`
   .rdrDayPassive .rdrDayNumber span {
     color: #555555 !important;
   }
+  .rdrDayToday .rdrDayNumber span:after {
+    background-color: rgb(123, 128, 255);
+  }
   .rdrMonthPicker select option,
   .rdrYearPicker select option {
     background-color: rgb(30, 32, 35);
@@ -136,7 +158,6 @@ export const CalendarDiv = styled.div`
   border-top: none;
   max-height: 400px;
   background-color: rgb(30, 32, 35);
-  overflow: auto;
   overflow: auto;
   ::-webkit-scrollbar {
     width: 3px;

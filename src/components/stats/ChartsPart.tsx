@@ -54,6 +54,14 @@ const ChartsPart = ({ data }: any) => {
 export default ChartsPart;
 
 export const ChartGenerator = ({ data, slices }: any) => {
+  const flag = data.filter((item: any) => item[1] > 0);
+  const tempdata = [
+    ["chart1", "chart1"],
+    ["No data", 1],
+  ];
+  const tempslices = {
+    0: { color: "darkgray" },
+  };
   return (
     <ChartDiv>
       <Chart
@@ -61,12 +69,12 @@ export const ChartGenerator = ({ data, slices }: any) => {
         // height={"100%"}
         chartType="PieChart"
         loader={<Spinner />}
-        data={data}
+        data={flag.length > 0 ? data : tempdata}
         className="state_chats"
         options={{
           legend: "none",
           pieHole: 0.4,
-          slices: slices,
+          slices: flag.length > 0 ? slices : tempslices,
         }}
       />
       <ChartDescDiv>
