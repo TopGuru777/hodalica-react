@@ -19,6 +19,7 @@ export const VideoDiv = styled.div`
 export const Video = styled.video`
   width: 96%;
   margin-top: 4%;
+  border-radius: 30px;
 `;
 
 export const VideoPlayBtn = styled.img`
@@ -26,4 +27,5 @@ export const VideoPlayBtn = styled.img`
   top: 42%;
   right: 45% !important;
   z-index: 0 !important;
+  cursor: pointer;
 `;
