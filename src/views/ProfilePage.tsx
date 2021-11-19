@@ -2,25 +2,31 @@ import { ProfileSVG } from "components/custom/CustomSVG";
 import ProfileAvatar from "components/profile/ProfileAvatar";
 import { ProfileDiv } from "components/profile/StyledProfile";
 import { PageTitle } from "layouts/StyledLayout";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ProfileInfo from "components/profile/ProfileInfo";
 import Footer from "layouts/footer";
 import { getProfileAction } from "action/action";
 import Spinner from "components/custom/Spinner/Spinner";
+import ProfileContext from "context/profile";
 
 const ProfilePage: React.FC = () => {
   const [profile, setProfile] = useState<any>({});
   const [loading, setLoading] = useState(false);
+  const { profileContext, setProfileContext } = useContext<any>(ProfileContext);
 
   useEffect(() => {
     const getProfileFunc = async () => {
       setLoading(true);
       const res = await getProfileAction();
+      setProfileContext(res);
       setProfile(res);
       setLoading(false);
     };
-    getProfileFunc();
+    if (profileContext) setProfile(profileContext);
+    else getProfileFunc();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const { t } = useTranslation();
   return (

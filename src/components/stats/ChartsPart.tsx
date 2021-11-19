@@ -60,7 +60,7 @@ export const ChartGenerator = ({ data, slices }: any) => {
     ["No data", 1],
   ];
   const tempslices = {
-    0: { color: "darkgray" },
+    0: { color: "#F3EBDE" },
   };
   return (
     <ChartDiv>

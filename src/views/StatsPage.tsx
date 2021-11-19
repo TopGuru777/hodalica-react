@@ -9,16 +9,16 @@ import StatListPart from "components/stats/StatListPart";
 import { StatsPageDiv } from "components/stats/StyledStats";
 import Footer from "layouts/footer";
 import { Container, PageTitle } from "layouts/StyledLayout";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import StatsContext from "context/stats";
 
 const StatsPage: React.FC = () => {
   const [statsData, setStatsData] = useState<any>([]);
   const [redeemedData, setRedeemedData] = useState<any>({});
   const [chartData, setChartData] = useState<any>({});
   const [loading, setLoading] = useState(false);
-  const [tempstatsData, setTempstatsData] = useState<any>({});
-
+  const { statsContext, setStatsContext } = useContext<any>(StatsContext);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const StatsPage: React.FC = () => {
       setLoading(true);
 
       const res: any = await getStats();
-      setTempstatsData(res);
+      setStatsContext(res);
       setStatsData(res.stats);
 
       setRedeemedData(res.redeemed);
@@ -34,7 +34,15 @@ const StatsPage: React.FC = () => {
       setLoading(false);
     };
 
-    getData();
+    if (!statsContext) {
+      getData();
+    } else {
+      setStatsData(statsContext.stats);
+
+      setRedeemedData(statsContext.redeemed);
+      setChartData(statsContext.charts);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = async (date: any) => {
@@ -55,7 +63,7 @@ const StatsPage: React.FC = () => {
     }
 
     var temporyResults = [];
-    let tempdata = tempstatsData.stats;
+    let tempdata = statsContext.stats;
 
     for (let i = 0; i < tempdata.length; i++) {
       var tmpResult: any = {};

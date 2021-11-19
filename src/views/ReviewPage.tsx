@@ -3,26 +3,32 @@ import { ReviewSVG } from "components/custom/CustomSVG";
 import ReviewItems from "components/reviews/ReviewItems";
 import { ReviewsDiv } from "components/reviews/StyledReview";
 import { Container, PageTitle } from "layouts/StyledLayout";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import Footer from "layouts/footer";
 import { getReviewData } from "action/action";
 import Spinner from "components/custom/Spinner/Spinner";
+import ReviewContext from "context/review";
 
 const ReviewPage: React.FC = () => {
   const [reviewdata, setReviewData] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const { reviewContext, setReviewContext } = useContext<any>(ReviewContext);
+
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
       const res = await getReviewData("all");
+      setReviewContext(res);
       setLoading(false);
       setReviewData(res);
     };
 
-    getData();
+    if (reviewContext) setReviewData(reviewContext);
+    else getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // const handleSearch = async (date: any) => {
