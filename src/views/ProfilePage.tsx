@@ -1,7 +1,7 @@
 import { ProfileSVG } from "components/custom/CustomSVG";
 import ProfileAvatar from "components/profile/ProfileAvatar";
 import { ProfileDiv } from "components/profile/StyledProfile";
-import { PageTitle } from "layouts/StyledLayout";
+import { Container, PageTitle } from "layouts/StyledLayout";
 import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ProfileInfo from "components/profile/ProfileInfo";
@@ -31,32 +31,33 @@ const ProfilePage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
-      <ProfileDiv>
-        <PageTitle>
-          <ProfileSVG />
-          {t("profile.title")}
-        </PageTitle>
-        {loading ? (
-          <Spinner />
-        ) : (
-          <React.Fragment>
-            <ProfileAvatar
-              data={{
-                avatar: profile?.attributes?.profilePicture._url,
-                title:
-                  localStorage.getItem("i18nextLng") === "en" ||
-                  localStorage.getItem("i18nextLng") === "en-US"
-                    ? profile?.attributes?.name
-                    : profile?.attributes?.nameBS,
-                subtitle: profile?.attributes?.city.attributes.name,
-              }}
-              btnData={profile?.attributes?.category}
-            />
-            <ProfileInfo data={profile?.attributes} />
-          </React.Fragment>
-        )}
-      </ProfileDiv>
-
+      <Container>
+        <ProfileDiv>
+          <PageTitle>
+            <ProfileSVG />
+            {t("profile.title")}
+          </PageTitle>
+          {loading ? (
+            <Spinner />
+          ) : (
+            <React.Fragment>
+              <ProfileAvatar
+                data={{
+                  avatar: profile?.attributes?.profilePicture._url,
+                  title:
+                    localStorage.getItem("i18nextLng") === "en" ||
+                    localStorage.getItem("i18nextLng") === "en-US"
+                      ? profile?.attributes?.name
+                      : profile?.attributes?.nameBS,
+                  subtitle: profile?.attributes?.city.attributes.name,
+                }}
+                btnData={profile?.attributes?.category}
+              />
+              <ProfileInfo data={profile?.attributes} />
+            </React.Fragment>
+          )}
+        </ProfileDiv>
+      </Container>
       <Footer />
     </React.Fragment>
   );

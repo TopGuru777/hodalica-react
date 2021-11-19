@@ -43,7 +43,7 @@ const ReviewPage: React.FC = () => {
     <React.Fragment>
       <Container>
         <ReviewsDiv>
-          <PageTitle>
+          <PageTitle style={{ marginBottom: 0 }}>
             <ReviewSVG />
             {reviewdata.length > 0 ? reviewdata.length : "No"}{" "}
             {t("review.title")}
