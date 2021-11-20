@@ -4,7 +4,7 @@ import { LandingPartTitle } from "../StyledLandingPage";
 import { ForPartnerVideoDiv, Video, VideoDiv, VideoPlayBtn } from "./StyledFPV";
 import logo from "assets/icons/logoBlack.svg";
 import videoSrc from "assets/partnere.mp4";
-import videoImg from "assets/img/video.png";
+import videoImg from "assets/img/cover.png";
 
 import videoPlay from "assets/svg/videoPlay.svg";
 import rectImg from "assets/rect/Rectangle-yellow.svg";
