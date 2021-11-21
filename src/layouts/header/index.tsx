@@ -49,6 +49,17 @@ const Header: React.FC = () => {
   const [profile, setProfile] = useState<any>({});
 
   useEffect(() => {
+    const curURL =
+      "/" +
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    localStorage.setItem("currentUrl", curURL);
+    setCurrent(curURL);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [window.location.href]);
+
+  useEffect(() => {
     const getProfileFunc = async () => {
       const res = await getProfileAction();
       setProfile(res);

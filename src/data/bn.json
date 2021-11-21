@@ -16,11 +16,13 @@
     "news": "News"
   },
   "buttons": {
+    "for_partners": "For partners",
     "logout": "Log out",
     "lets_go": "Let's go",
     "beauty": "Beauty",
-    "mobile_app": "Mobile_App",
-    "view_more": "View More"
+    "mobile_app": "Mobile App",
+    "view_more": "View More",
+    "view_less": "View Less"
   },
   "footer": {
     "about_desc": "Hodalica is the first and only mobile app in the region that allows users to get amazing discounts on the spot!",
@@ -47,6 +49,8 @@
   "signin": {
     "title": "Sign in",
     "partner_code": "Partner Code",
+    "username": "Username",
+    "password": "Password",
     "confirm_partner_code": "Confirm Partner Code"
   },
   "profile": {
@@ -86,7 +90,10 @@
     "subtitle1": "FOR 59.99 BAM",
     "title": "SAVE UP TO",
     "subtitle2": "15.000 + BAM",
-    "app_available": "The app is available on the App Store and Google Play.",
+    "app_available_prefix": "The app is available on the",
+    "app_store": "App Store",
+    "google_play": "Google Play",
+    "and": "and",
     "is_the_first_and_only": "is the first and only",
     "amazing_prefix_text": "in the region that allows users to get",
     "amazing_discounts": "amazing discounts",
@@ -113,12 +120,22 @@
     "how_data": {
       "how": "How",
       "it_works": "it works",
-      "how_1": "Download the app from Google Play or Play Store",
-      "how_2": "Create your account and select the package you want to use",
+      "how_1_prefix": "Download the app from ",
+      "or": "or",
+      "how_2": "Create your account and select the ",
+      "how_2_suffix": "package you want to use",
       "how_3": "Browse our partners and choose the discount you like",
-      "how_4": "Look for Hodalica flyer with a QR code in our partner location and scan it to redeem the offer.",
-      "how_5": "You will receive a receipt with reflected discount, and you can make the payment directly at the partner location.",
-      "start_saving": "Start Saving On The",
+      "how_4_1": "Look for Hodalica flyer with a ",
+      "qr_code": "QR code",
+      "how_4_2": " in our partner location and scan it to ",
+      "redeem": "redeem the offer.",
+      "how_5_1": "You will receive a ",
+      "how_5_receipt": "receipt with reflected discount",
+      "how_5_2": ", and you can make the payment directly at the ",
+      "how_5_partner": "partner location.",
+      "start": "Start ",
+      "saving": "Saving",
+      "on_the": " On The ",
       "go": "Go"
     },
     "faq_title": "Frequently asked questions",
