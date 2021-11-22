@@ -22,6 +22,10 @@ export const Input = styled.input`
     color: #adadad;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   }
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 `;
 
 export const TextArea = styled.textarea`
@@ -40,4 +44,8 @@ export const TextArea = styled.textarea`
     color: #adadad;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   }
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 `;
