@@ -8,7 +8,7 @@ export const FaqPartnerDiv = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 425px) {
-    /* margin-top: -30px; */
+    margin-top: -30px;
   }
 `;
 

@@ -6,7 +6,7 @@ export const BenefitPartnerDiv = styled.div`
   @media screen and (max-width: 768px) {
     margin-bottom: 80px;
     transition: 0.2s linear;
-    /* margin-top: -40px; */
+    margin-top: -40px;
   }
 `;
 
