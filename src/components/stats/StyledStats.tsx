@@ -3,17 +3,18 @@ import styled from "styled-components";
 export const StatsPageDiv = styled.div`
   max-width: 900px;
   width: 80%;
-  margin: 50px auto 200px auto;
+  margin: 20px auto 200px auto;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
     width: calc(100% - 30px);
     margin: 0 auto 100px auto;
     transition: 0.2s linear;
+    margin-top: -40px;
   }
 `;
 
 export const DealsPartDiv = styled.div`
-  margin: 70px 0 45px 0;
+  margin: 40px 0 25px 0;
   & > *:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -145,7 +146,7 @@ export const ChartDesc = styled.div<chartDescProps>`
 
 export const StatListPartDiv = styled.div`
   & > *:not(:last-child) {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 `;
 
@@ -164,7 +165,12 @@ export const StatsTotalPartDiv = styled.div`
 
 export const StatsTotalDiv = styled.div`
   & > *:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 425px) {
+    & > *:not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
 `;
 
@@ -186,22 +192,32 @@ export const SubTotalText = styled.div`
 
 export const StatListDiv = styled.div`
   @media screen and (max-width: 768px) {
-    padding-left: 50px;
+    padding-left: 45px;
   }
 `;
 
 export const ListTitle = styled.div`
-  font-weight: 900;
+  font-weight: 800;
+
   span {
     font-size: 31px;
+  }
+  @media screen and (max-width: 425px) {
+    span {
+      font-size: 24px;
+      font-weight: 900;
+    }
   }
   font-size: 20px;
 `;
 
 export const ListSubTitle = styled.div`
   font-size: 20px;
-  margin-top: -5px;
-  font-weight: 700;
+  font-weight: 600;
+  @media screen and (max-width: 425px) {
+    font-size: 17px;
+    margin-top: 5px;
+  }
 `;
 
 export const ListContentDiv = styled.div`
@@ -220,12 +236,18 @@ export const ListContentDiv = styled.div`
   font-weight: 500;
   color: #00000050;
   margin-top: 5px;
+  @media screen and (max-width: 425px) {
+    font-size: 15px;
+  }
 `;
 
 export const ListCount = styled.div`
   font-size: 30px;
   color: #fc697f;
   font-weight: 700;
+  @media screen and (max-width: 425px) {
+    font-size: 24x;
+  }
 `;
 
 export const StatListItem = styled.div`
@@ -269,10 +291,16 @@ export const PeopleInfo = styled.div``;
 export const PeopleName = styled.div`
   font-weight: 700;
   font-size: 20px;
+  @media screen and (max-width: 425px) {
+    font-size: 16px;
+  }
 `;
 
 export const PeopleDate = styled.div`
   font-size: 15px;
   color: #00000050;
   font-weight: 500;
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
+  }
 `;

@@ -26,8 +26,12 @@ export const HowTitleDiv = styled.div`
   span {
     margin-top: -10px !important;
     font-size: 65px;
-    margin: 0 10px;
     font-weight: 900;
+  }
+  div {
+    margin-top: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   transition: 0.2s linear;
   @media screen and (max-width: 768px) {
@@ -37,8 +41,12 @@ export const HowTitleDiv = styled.div`
     }
     transition: 0.2s linear;
   }
-  @media screen and (max-width: 320px) {
+
+  @media screen and (max-width: 425px) {
     font-size: 15px;
+    div {
+      margin-top: -5px;
+    }
     span {
       font-size: 36px;
     }
@@ -54,9 +62,9 @@ export const CompassSvg = styled.img`
     margin-bottom: 15px;
     transition: 0.2s linear;
   }
-  @media screen and (max-width: 320px) {
-    width: 70px;
-    margin-bottom: 10px;
+  @media screen and (max-width: 425px) {
+    width: 50px;
+    margin-bottom: 20px;
     transition: 0.2s linear;
   }
 `;
@@ -104,8 +112,9 @@ export const BoxImg = styled.img`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 425px) {
-    width: 250px;
+    width: 180px;
     transition: 0.2s linear;
+    margin-top: -135px;
   }
 `;
 
@@ -145,7 +154,7 @@ export const How5VideoDiv = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 2%;
+  margin-top: 10px;
   padding-top: 2%;
   video {
     width: 100%;
@@ -281,12 +290,14 @@ export const How4TextPart = styled.div`
   width: 100%;
   font-size: 24px;
   font-weight: 500;
-  margin-left: -20%;
+  margin-left: -10%;
   span {
-    margin-top: -15px !important;
     font-size: 65px;
-    margin: 0 15px;
     font-weight: 900;
+  }
+  div {
+    margin-left: 15px;
+    margin-right: 15px;
   }
   transition: 0.2s linear;
   @media screen and (max-width: 768px) {
@@ -297,7 +308,7 @@ export const How4TextPart = styled.div`
     }
     transition: 0.2s linear;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 425px) {
     font-size: 15px;
     span {
       font-size: 36px;

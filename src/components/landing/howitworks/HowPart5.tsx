@@ -43,10 +43,7 @@ const HowPart5 = () => {
           className="top-animation-video-1 grid__item small-video"
           poster={mob1}
         >
-          <source
-            src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-            type="video/mp4"
-          />
+          <source src="" type="video/mp4" />
         </video>
         <video
           // autoPlay
@@ -56,10 +53,7 @@ const HowPart5 = () => {
           className="top-animation-video-1 grid__item small-video"
           poster={mob2}
         >
-          <source
-            src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-            type="video/mp4"
-          />
+          <source src="" type="video/mp4" />
         </video>
         <video
           // autoPlay
@@ -69,10 +63,7 @@ const HowPart5 = () => {
           className="top-animation-video-1 grid__item small-video"
           poster={mob3}
         >
-          <source
-            src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-            type="video/mp4"
-          />
+          <source src="" type="video/mp4" />
         </video>
         <Rect5 no={1} src={rect1} alt="rect1" />
         <Rect5 no={2} src={rect2} alt="rect2" />

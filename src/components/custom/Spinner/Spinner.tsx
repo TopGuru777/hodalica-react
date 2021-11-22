@@ -5,6 +5,7 @@ import spinner from "assets/svg/spinner.svg";
 
 const SpinnerDiv = styled.div`
   width: 100%;
+  padding-top: 150px;
   text-align: center;
 `;
 

@@ -102,7 +102,7 @@ export const Menus = styled.div`
 
 export const MenuShowBtn = styled.div`
   margin-left: 20px;
-  font-size: 34px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -155,12 +155,16 @@ export const TransDiv = styled.div`
   align-items: center;
   transition: 0.2s linear;
   img {
-    width: 34.5px;
+    width: 33px;
     cursor: pointer;
   }
   @media screen and (max-width: 425px) {
     grid-gap: 10px;
     transition: 0.2s linear;
+    img {
+      width: 25px;
+      cursor: pointer;
+    }
   }
 `;
 

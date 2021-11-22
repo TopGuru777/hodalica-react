@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FooterDiv = styled.div`
   display: grid;
+  padding-top: 50px;
   grid-template-columns: 1fr 2fr;
   grid-column-gap: 20%;
   margin-bottom: 80px;
@@ -20,11 +21,13 @@ export const FooterDiv = styled.div`
   @media screen and (max-width: 500px) {
     width: 100%;
     transition: 0.2s linear;
+    padding-top: 20px;
   }
 `;
 
 export const LinksPart = styled.div`
   display: flex;
+
   justify-content: space-between;
   @media screen and (max-width: 375px) {
     width: 50%;
@@ -40,6 +43,10 @@ export const LinksPart = styled.div`
 export const AboutDescDiv = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 425px) {
+    padding: 10px;
+    display: none;
+  }
 `;
 
 export const QuickLinkDiv = styled.div`
@@ -50,7 +57,8 @@ export const QuickLinkDiv = styled.div`
 
 export const QuickLinkItem = styled.div`
   position: relative;
-  margin-top: 6.7px;
+  margin-top: 6px;
+
   cursor: pointer;
   transition: 0.2s linear;
   font-weight: 600;

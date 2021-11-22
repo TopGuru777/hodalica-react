@@ -65,8 +65,8 @@ export const ChartGenerator = ({ data, slices }: any) => {
   return (
     <ChartDiv>
       <Chart
-        // width={"100%"}
-        // height={"100%"}
+        width={"100%"}
+        height={"100%"}
         chartType="PieChart"
         loader={<Spinner />}
         data={flag.length > 0 ? data : tempdata}

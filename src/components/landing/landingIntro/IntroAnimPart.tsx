@@ -39,10 +39,7 @@ const IntroAnimPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={animImg1}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </AnimItem>
         <AnimItem no={2} className="animation-move">
@@ -54,10 +51,7 @@ const IntroAnimPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={animImg2}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/06/video2.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </AnimItem>
         <AnimItem no={3} className="animation-move">
@@ -69,10 +63,7 @@ const IntroAnimPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={animImg3}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/06/video5.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </AnimItem>
         <AnimItem no={4} className="animation-move">
@@ -84,10 +75,7 @@ const IntroAnimPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={animImg4}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/06/video1.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </AnimItem>
         <AnimItem no={5} className="animation-move">
@@ -99,10 +87,7 @@ const IntroAnimPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={animImg5}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/06/video3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </AnimItem>
         <AnimShapes no={1} className="animation-move" />

@@ -45,7 +45,7 @@ const ReviewPage: React.FC = () => {
         <ReviewsDiv>
           <PageTitle style={{ marginBottom: 0 }}>
             <ReviewSVG />
-            {reviewdata.length > 0 ? reviewdata.length : "No"}{" "}
+            {reviewdata.length > 0 ? reviewdata.length : "0"}{" "}
             {t("review.title")}
           </PageTitle>
 

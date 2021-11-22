@@ -20,6 +20,9 @@ export const Video = styled.video`
   width: 96%;
   margin-top: 4%;
   border-radius: 30px;
+  @media screen and (max-width: 500px) {
+    border-radius: 10px;
+  }
 `;
 
 export const VideoPlayBtn = styled.img`

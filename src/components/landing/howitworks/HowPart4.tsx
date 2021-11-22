@@ -30,10 +30,7 @@ const HowPart4 = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={mob}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
           <Arrow4Img src={arrow} alt="arrow" />
           <Rect4 no={1} src={rect1} alt="rect1" />

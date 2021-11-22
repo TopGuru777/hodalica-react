@@ -24,10 +24,7 @@ const MobileIntroPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={mob1}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </MobileDiv>
         <MobileDiv>
@@ -39,10 +36,7 @@ const MobileIntroPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={mob2}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
           <Dot size="xs" color="#8FC7F4" pos={1} />
           <Dot size="xs" color="#09C8CC" pos={2} />
@@ -60,10 +54,7 @@ const MobileIntroPart = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={mob3}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
         </MobileDiv>
       </MobileIntroDiv>

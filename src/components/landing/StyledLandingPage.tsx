@@ -2,7 +2,7 @@ import styled from "styled-components";
 import dashedBorder from "assets/svg/Line.svg";
 
 export const LandingPageDiv = styled.div`
-  margin-top: 100px;
+  margin-top: 70px;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
     transition: 0.2s linear;
@@ -13,22 +13,26 @@ export const LandingPageDiv = styled.div`
 export const ForPartnerDiv = styled.div`
   background-color: #fbf2e480;
   position: relative;
-  padding-top: 180px;
-  padding-bottom: 15px;
-  @media screen and (max-width: 768px) {
+  padding-top: 100px;
+  margin-top: 200px;
+  @media screen and (max-width: 425px) {
     transition: 0.2s linear;
-    padding-top: 100px;
+    padding-top: 40px;
+    margin-top: 20px;
   }
 `;
 
 export const DashBorder = styled.div`
   position: absolute;
-  top: 50px;
+  top: -30px;
   width: 100%;
   height: 20px;
   background-image: url(${dashedBorder});
   background-size: 100%;
   background-repeat: repeat-x;
+  @media screen and (max-width: 425px) {
+    top: -10px;
+  }
 `;
 
 export const TitleDiv = styled.div`

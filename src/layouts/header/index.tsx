@@ -262,7 +262,7 @@ const Header: React.FC = () => {
                 {t("menus.faq")}
               </MenuItem>
             </a>
-            <a
+            {/* <a
               href="/#news"
               style={{ textDecoration: "none" }}
               onClick={() => {
@@ -280,7 +280,7 @@ const Header: React.FC = () => {
               >
                 {t("menus.news")}
               </MenuItem>
-            </a>
+            </a> */}
           </Menus>
           <Link
             to="/signin"

@@ -21,7 +21,7 @@ const dayofweek = [
   "Monnday",
   "Tuesday",
   "Wednesday",
-  "Thirsday",
+  "Thursday",
   "Friday",
   "Saturday",
 ];

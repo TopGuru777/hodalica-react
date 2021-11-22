@@ -54,10 +54,7 @@ const MobileAppIntroDiv = () => {
             className="top-animation-video-1 grid__item small-video"
             poster={mobimg}
           >
-            <source
-              src="https://technoandchill.com/wp-content/uploads/2021/07/topVideoNew3.mp4"
-              type="video/mp4"
-            />
+            <source src="" type="video/mp4" />
           </video>
           <img src={bigLogo} alt="big-logo" />
         </MobileAppVideo>

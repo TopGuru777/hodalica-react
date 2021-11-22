@@ -49,6 +49,9 @@ export const LandingIntroDescDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 425px) {
+    margin-top: 40px;
+  }
 `;
 
 export const IntroText = styled.div`
@@ -70,9 +73,13 @@ export const AppAvailableDiv = styled.div`
   grid-gap: 11px;
   margin-top: 10px;
   max-width: 340px;
+
   width: 100%;
   img {
     width: 100%;
+  }
+  @media screen and (max-width: 425px) {
+    max-width: 260px;
   }
 `;
 
@@ -81,6 +88,11 @@ export const IntroAnimDiv = styled.div`
   aspect-ratio: 9/8;
   width: 70%;
   margin: auto;
+  margin-top: 20px;
+  @media screen and (max-width: 425px) {
+    margin-top: 60px;
+    width: 100%;
+  }
 `;
 
 type AnimProps = {
@@ -157,8 +169,10 @@ export const MobileAppDiv = styled.div`
   }
   @media screen and (max-width: 425px) {
     flex-direction: column;
-    width: calc(100% - 30px);
-    margin: 70px auto;
+    width: calc(100% - 50px);
+    margin: 50px auto;
+    margin-left: 25px;
+    margin-right: 25px;
     transition: 0.2s linear;
   }
 `;
@@ -233,6 +247,9 @@ export const MobileAppVideoDiv = styled.div`
     margin: 15% auto;
     transition: 0.2s linear;
   }
+  @media screen and (max-width: 425px) {
+    margin-top: 80px;
+  }
 `;
 
 export const MobileAppVideo = styled.div`
@@ -292,6 +309,10 @@ export const DotGroup = styled.div`
   }
   @media screen and (max-width: 425px) {
     width: 80%;
+    margin-bottom: -10%;
+    & > *:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 `;
 

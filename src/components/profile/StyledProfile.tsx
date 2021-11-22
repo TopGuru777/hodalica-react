@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const ProfileDiv = styled.div`
   max-width: 900px;
   width: 80%;
-  margin: 50px auto 200px auto;
+  margin: 20px auto 200px auto;
   transition: 0.2s linear;
   @media screen and (max-width: 425px) {
     width: calc(100% - 30px);
     margin: 0 auto 100px auto;
     transition: 0.2s linear;
+    margin-top: -40px;
   }
 `;
 
@@ -16,7 +17,7 @@ export const ProfileAvatarDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
   @media screen and (max-width: 550px) {
     flex-direction: column;
     & > *:not(:last-child) {
@@ -29,15 +30,15 @@ export const ProfileAvatarDiv = styled.div`
 
 export const AvatarDiv = styled.div`
   img {
-    width: 92px;
+    width: 80px;
     margin-right: 24px;
     border-radius: 50%;
     @media screen and (max-width: 768px) {
-      width: 85px;
+      width: 80px;
       transition: 0.2s linear;
     }
     @media screen and (max-width: 375px) {
-      width: 80px;
+      width: 50px;
       transition: 0.2s linear;
     }
   }
@@ -52,6 +53,10 @@ export const BeautyButtonDiv = styled.div`
   width: 150px;
   font-size: 18px;
   font-weight: 600;
+  @media screen and (max-width: 375px) {
+    font-size: 15px;
+    font-weight: 600;
+  }
 `;
 
 export const AvatarTitle = styled.div`
@@ -59,11 +64,11 @@ export const AvatarTitle = styled.div`
   font-size: 40px;
   transition: 0.2s linear;
   @media screen and (max-width: 768px) {
-    font-size: 35px;
+    font-size: 33px;
     transition: 0.2s linear;
   }
   @media screen and (max-width: 375px) {
-    font-size: 30px;
+    font-size: 20px;
     transition: 0.2s linear;
   }
 `;
@@ -111,7 +116,7 @@ export const ProfileImageDiv = styled.div`
   img {
     max-width: 503px;
     width: 100%;
-    border-radius: 25px;
+    border-radius: 15px;
   }
 `;
 

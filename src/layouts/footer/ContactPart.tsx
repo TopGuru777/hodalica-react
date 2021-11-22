@@ -23,10 +23,7 @@ function ContactPart() {
         <img src={PhoneSVG} alt="phone" />
         {t("footer.contact.phone")}
       </ContactItem>
-      <ContactItem
-        href={`https://instagram.com/${t("footer.contact.instagram")}`}
-        target="_blank"
-      >
+      <ContactItem href={`https://instagram.com/hodalica.ba`} target="_blank">
         <img src={InstagramSVG} alt="instagram" />
         {t("footer.contact.instagram")}
       </ContactItem>

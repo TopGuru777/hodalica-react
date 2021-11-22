@@ -7,6 +7,9 @@ export const FaqPartnerDiv = styled.div`
     margin-bottom: 100px;
     transition: 0.2s linear;
   }
+  @media screen and (max-width: 425px) {
+    margin-top: -30px;
+  }
 `;
 
 export const FaqUserDiv = styled.div`
@@ -18,19 +21,18 @@ export const FaqUserDiv = styled.div`
 `;
 
 export const FaqSubtitle = styled.div`
-  font-size: 41px;
-  margin-top: -10px;
+  font-size: 35px;
   font-weight: 700;
   @media screen and (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 30px;
     transition: 0.2s linear;
   }
   @media screen and (max-width: 768px) {
-    font-size: 32px;
+    font-size: 25px;
     transition: 0.2s linear;
   }
   @media screen and (max-width: 500px) {
-    font-size: 28px;
+    font-size: 20px;
     transition: 0.2s linear;
   }
 `;
@@ -58,14 +60,14 @@ export const ListTitle = styled.div`
   margin-bottom: 10px;
   font-weight: 700;
   @media screen and (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 32px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 32px;
+    font-size: 26px;
     transition: 0.2s linear;
   }
   @media screen and (max-width: 500px) {
-    font-size: 28px;
+    font-size: 20px;
     transition: 0.2s linear;
   }
 `;

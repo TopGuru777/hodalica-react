@@ -6,6 +6,7 @@ export const BenefitPartnerDiv = styled.div`
   @media screen and (max-width: 768px) {
     margin-bottom: 80px;
     transition: 0.2s linear;
+    margin-top: -40px;
   }
 `;
 
@@ -13,6 +14,12 @@ export const Benefits = styled.div`
   margin-top: 42px;
   & > *:not(:last-child) {
     margin-bottom: 35px;
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: 20px;
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 `;
 
@@ -43,9 +50,9 @@ export const BenefitItem = styled.div`
   @media screen and (max-width: 425px) {
     font-size: 15px;
     img {
-      margin-right: 25px;
-      width: 40px;
-      height: 40px;
+      margin-right: 15px;
+      width: 30px;
+      height: 30px;
     }
     transition: 0.2s linear;
   }

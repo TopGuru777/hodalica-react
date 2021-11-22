@@ -6,6 +6,7 @@ export const PartnersDiv = styled.div`
   @media screen and (max-width: 768px) {
     transition: 0.2s linear;
     margin-bottom: 80px;
+    margin-top: -30px;
   }
 `;
 
@@ -24,10 +25,13 @@ export const PartnersGroup = styled.div`
   @media screen and (max-width: 500px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media screen and (max-width: 320px) {
-    grid-template-columns: 1fr;
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+
     img {
-      width: 80%;
+      width: 100%;
       margin: auto;
     }
   }

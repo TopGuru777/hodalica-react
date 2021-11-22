@@ -18,7 +18,7 @@ export const BenefitUserDiv = styled.div`
     transition: 0.2s linear;
   }
   @media screen and (max-width: 425px) {
-    width: calc(100% - 30px);
+    width: calc(100% - 50px);
     transition: 0.2s linear;
   }
 `;
