@@ -4,6 +4,7 @@ import dashedBorder from "assets/svg/Line.svg";
 export const LandingPageDiv = styled.div`
   margin-top: 70px;
   transition: 0.2s linear;
+
   @media screen and (max-width: 425px) {
     transition: 0.2s linear;
     margin-top: 0;
@@ -15,6 +16,7 @@ export const ForPartnerDiv = styled.div`
   position: relative;
   padding-top: 100px;
   margin-top: 200px;
+  padding-bottom: 50px;
   @media screen and (max-width: 425px) {
     transition: 0.2s linear;
     padding-top: 40px;
