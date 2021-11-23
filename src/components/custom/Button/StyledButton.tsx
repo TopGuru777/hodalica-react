@@ -7,7 +7,7 @@ type btnProps = {
 export const ButtonDiv = styled.div<btnProps>`
   img {
     width: 25px;
-    margin-left: 15px;
+    margin: 0 15px;
   }
   :hover {
     ${({ c }) =>

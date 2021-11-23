@@ -30,18 +30,23 @@ export const HeaderContainer = styled.div`
 
 export const scrollEvent = () => {
   const scrollmove: any = document.getElementById("Header");
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    scrollmove.style.boxShadow = "0 3px 21px #00000040";
-    scrollmove.style.backgroundColor = "#FDF5E9";
-    scrollmove.style.height = "80px";
-  } else {
-    if (window.innerWidth <= 425) {
+  if (localStorage.getItem("currentUrl") !== "/signin") {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      scrollmove.style.boxShadow = "0 3px 21px #00000040";
+      scrollmove.style.backgroundColor = "#FDF5E9";
       scrollmove.style.height = "80px";
     } else {
-      scrollmove.style.height = "117px";
+      if (window.innerWidth <= 425) {
+        scrollmove.style.height = "80px";
+      } else {
+        scrollmove.style.height = "117px";
+      }
+      scrollmove.style.boxShadow = "none";
+      scrollmove.style.backgroundColor = "#fffaf2";
     }
-    scrollmove.style.boxShadow = "none";
-    scrollmove.style.backgroundColor = "#fffaf2";
   }
 };
 

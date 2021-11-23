@@ -25,7 +25,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 import LogoIMG from "assets/icons/logoColor.png";
-import Logo1IMG from "assets/icons/logoBlack.svg";
+import Logo1IMG from "assets/icons/logo.png";
 import en_img from "assets/icons/englishIcon.png";
 import bn_img from "assets/icons/bosnianIcon.png";
 import { ProfileSVG, ReviewSVG, StatsSVG } from "components/custom/CustomSVG";
@@ -312,32 +312,32 @@ const Header: React.FC = () => {
   const RenderMenuContainer = () => {
     return (
       <HeaderDiv>
-        {localStorage.getItem("currentUrl") !== "/signin" ? (
-          <React.Fragment>
-            <RenderLogoDiv />
-            <MenuItemDiv>
-              {!mobileView && <RenderAuthMenu />}
+        {/* {localStorage.getItem("currentUrl") !== "/signin" ? ( */}
+        <React.Fragment>
+          <RenderLogoDiv />
+          <MenuItemDiv>
+            {!mobileView && <RenderAuthMenu />}
 
-              <TransDiv>
-                <img
-                  src={bn_img}
-                  onClick={() => changeLanguage("bn")}
-                  alt="bosnian"
-                />
-                <img
-                  src={en_img}
-                  onClick={() => changeLanguage("en")}
-                  alt="english"
-                />
-              </TransDiv>
-              {mobileView && localStorage.getItem("currentUrl") !== "/signin" && (
-                <MenuShowBtn onClick={() => setMenuflag(true)}>
-                  <TiThMenu />
-                </MenuShowBtn>
-              )}
-            </MenuItemDiv>
-          </React.Fragment>
-        ) : (
+            <TransDiv>
+              <img
+                src={bn_img}
+                onClick={() => changeLanguage("bn")}
+                alt="bosnian"
+              />
+              <img
+                src={en_img}
+                onClick={() => changeLanguage("en")}
+                alt="english"
+              />
+            </TransDiv>
+            {mobileView && localStorage.getItem("currentUrl") !== "/signin" && (
+              <MenuShowBtn onClick={() => setMenuflag(true)}>
+                <TiThMenu />
+              </MenuShowBtn>
+            )}
+          </MenuItemDiv>
+        </React.Fragment>
+        {/* ) : (
           <React.Fragment>
             <div />
             <TransDiv>
@@ -353,189 +353,191 @@ const Header: React.FC = () => {
               />
             </TransDiv>
           </React.Fragment>
-        )}
+        )} */}
       </HeaderDiv>
     );
   };
 
   return (
-    <HeaderBar id="Header">
-      <HeaderContainer>
-        <RenderMenuContainer />
-      </HeaderContainer>
-      {mobileView && (
-        <MobileMenuDiv flag={menuflag} ref={menuRef}>
-          {isAuth ? (
-            <SideMenuDiv>
-              <Link
-                to="/stats"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/stats");
-                  setMenuflag(false);
-                  setCurrent("/stats");
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/stats" ||
-                    current === "/stats"
-                      ? true
-                      : false
-                  }
-                >
-                  <StatsSVG />
-                  {t("menus.stats")}
-                </SideMenu>
-              </Link>
-              <Link
-                to="/reviews"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/reviews");
-                  setMenuflag(false);
-                  setCurrent("/reviews");
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/reviews" ||
-                    current === "/reviews"
-                      ? true
-                      : false
-                  }
-                >
-                  <ReviewSVG />
-                  {t("menus.reviews")}
-                </SideMenu>
-              </Link>
-              <Link
-                to="/profile"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/profile");
-                  setMenuflag(false);
-                  setCurrent("/profile");
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/profile" ||
-                    current === "/profile"
-                      ? true
-                      : false
-                  }
-                >
-                  <ProfileSVG />
-                  {t("menus.profile")}
-                </SideMenu>
-              </Link>
-              <Link
-                to="/"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.removeItem("isAuth");
-                  window.location.href = "/";
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/logout" ||
-                    current === "/logout"
-                      ? true
-                      : false
-                  }
-                >
-                  {t("buttons.logout")}
-                </SideMenu>
-              </Link>
-            </SideMenuDiv>
-          ) : (
-            <SideMenuDiv>
-              <a
-                href="/#how"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/#how");
-                  setCurrent("/#how");
-                  setMenuflag(false);
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/#how" ||
-                    current === "/#how"
-                      ? true
-                      : false
-                  }
-                >
-                  {t("menus.how_it_works")}
-                </SideMenu>
-              </a>
-              <a
-                href="/#faq"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/#faq");
-                  setCurrent("/#faq");
-                  setMenuflag(false);
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/#faq" ||
-                    current === "/#faq"
-                      ? true
-                      : false
-                  }
-                >
-                  {t("menus.faq")}
-                </SideMenu>
-              </a>
-              <a
-                href="/#news"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/#news");
-                  setCurrent("/#news");
-                  setMenuflag(false);
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/#news" ||
-                    current === "/#news"
-                      ? true
-                      : false
-                  }
-                >
-                  {t("menus.news")}
-                </SideMenu>
-              </a>
-              <Link
-                to="/signin"
-                style={{ textDecoration: "none" }}
-                onClick={() => {
-                  localStorage.setItem("currentUrl", "/signin");
-                  setMenuflag(false);
-                  setCurrent("/signin");
-                }}
-              >
-                <SideMenu
-                  active={
-                    localStorage.getItem("currentUrl") === "/signin" ||
-                    current === "/signin"
-                      ? true
-                      : false
-                  }
-                >
-                  {t("buttons.for_partners")}
-                </SideMenu>
-              </Link>
-            </SideMenuDiv>
-          )}
+    <>
+      {localStorage.getItem("currentUrl") !== "/signin" && (
+        <HeaderBar id="Header">
+          <HeaderContainer>
+            <RenderMenuContainer />
+          </HeaderContainer>
+          {mobileView && (
+            <MobileMenuDiv flag={menuflag} ref={menuRef}>
+              {isAuth ? (
+                <SideMenuDiv>
+                  <Link
+                    to="/stats"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/stats");
+                      setMenuflag(false);
+                      setCurrent("/stats");
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/stats" ||
+                        current === "/stats"
+                          ? true
+                          : false
+                      }
+                    >
+                      <StatsSVG />
+                      {t("menus.stats")}
+                    </SideMenu>
+                  </Link>
+                  <Link
+                    to="/reviews"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/reviews");
+                      setMenuflag(false);
+                      setCurrent("/reviews");
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/reviews" ||
+                        current === "/reviews"
+                          ? true
+                          : false
+                      }
+                    >
+                      <ReviewSVG />
+                      {t("menus.reviews")}
+                    </SideMenu>
+                  </Link>
+                  <Link
+                    to="/profile"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/profile");
+                      setMenuflag(false);
+                      setCurrent("/profile");
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/profile" ||
+                        current === "/profile"
+                          ? true
+                          : false
+                      }
+                    >
+                      <ProfileSVG />
+                      {t("menus.profile")}
+                    </SideMenu>
+                  </Link>
+                  <Link
+                    to="/"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.removeItem("isAuth");
+                      window.location.href = "/";
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/logout" ||
+                        current === "/logout"
+                          ? true
+                          : false
+                      }
+                    >
+                      {t("buttons.logout")}
+                    </SideMenu>
+                  </Link>
+                </SideMenuDiv>
+              ) : (
+                <SideMenuDiv>
+                  <a
+                    href="/#how"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/#how");
+                      setCurrent("/#how");
+                      setMenuflag(false);
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/#how" ||
+                        current === "/#how"
+                          ? true
+                          : false
+                      }
+                    >
+                      {t("menus.how_it_works")}
+                    </SideMenu>
+                  </a>
+                  <a
+                    href="/#faq"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/#faq");
+                      setCurrent("/#faq");
+                      setMenuflag(false);
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/#faq" ||
+                        current === "/#faq"
+                          ? true
+                          : false
+                      }
+                    >
+                      {t("menus.faq")}
+                    </SideMenu>
+                  </a>
+                  <a
+                    href="/#news"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/#news");
+                      setCurrent("/#news");
+                      setMenuflag(false);
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/#news" ||
+                        current === "/#news"
+                          ? true
+                          : false
+                      }
+                    >
+                      {t("menus.news")}
+                    </SideMenu>
+                  </a>
+                  <Link
+                    to="/signin"
+                    style={{ textDecoration: "none" }}
+                    onClick={() => {
+                      localStorage.setItem("currentUrl", "/signin");
+                      setMenuflag(false);
+                      setCurrent("/signin");
+                    }}
+                  >
+                    <SideMenu
+                      active={
+                        localStorage.getItem("currentUrl") === "/signin" ||
+                        current === "/signin"
+                          ? true
+                          : false
+                      }
+                    >
+                      {t("buttons.for_partners")}
+                    </SideMenu>
+                  </Link>
+                </SideMenuDiv>
+              )}
 
-          {/* <SideBottomDiv>
+              {/* <SideBottomDiv>
             {isAuth ? (
               <Link
                 to="/"
@@ -579,9 +581,11 @@ const Header: React.FC = () => {
               </Link>
             )}
           </SideBottomDiv> */}
-        </MobileMenuDiv>
+            </MobileMenuDiv>
+          )}
+        </HeaderBar>
       )}
-    </HeaderBar>
+    </>
   );
 };
 

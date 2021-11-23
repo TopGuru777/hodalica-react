@@ -77,6 +77,11 @@ export const AppAvailableDiv = styled.div`
   width: 100%;
   img {
     width: 100%;
+    transition: 0.2s linear;
+    :hover {
+      transition: 0.2s linear;
+      box-shadow: 0 10px 20px #00000050;
+    }
   }
   @media screen and (max-width: 425px) {
     max-width: 260px;
