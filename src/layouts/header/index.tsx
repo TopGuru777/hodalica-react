@@ -36,6 +36,8 @@ import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { getProfileAction, logoutAction } from "action/action";
 
+import { useLocation } from "react-router-dom";
+
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
 
@@ -48,6 +50,8 @@ const Header: React.FC = () => {
   const [loading, setloading] = useState(false);
   const [profile, setProfile] = useState<any>({});
 
+  const location = useLocation();
+
   useEffect(() => {
     const curURL =
       "/" +
@@ -57,7 +61,7 @@ const Header: React.FC = () => {
     localStorage.setItem("currentUrl", curURL);
     setCurrent(curURL);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [window.location.href]);
+  }, [location]);
 
   useEffect(() => {
     const getProfileFunc = async () => {

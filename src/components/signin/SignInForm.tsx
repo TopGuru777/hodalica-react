@@ -1,7 +1,7 @@
 import { signinAction } from "action/action";
 import Button from "components/custom/Button/Button";
 import FormInput from "components/custom/FormInput/FormInput";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   SignInButton,
@@ -60,6 +60,10 @@ const SignInForm = () => {
       }
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <SignInFormDiv>

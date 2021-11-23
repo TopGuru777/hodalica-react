@@ -16,3 +16,7 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+.root {
+  overflow: hidden;
+}

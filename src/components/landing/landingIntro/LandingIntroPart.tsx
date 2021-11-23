@@ -37,8 +37,20 @@ const LandingIntroPart = () => {
           <span>{t("landing.google_play")}</span>
         </IntroText>
         <AppAvailableDiv>
-          <img src={googleSvg} alt="googleSvg" />
-          <img src={appstoreSvg} alt="appstoreSvg" />
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hodalica"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={googleSvg} alt="googleSvg" />
+          </a>
+          <a
+            href="https://apps.apple.com/app/hodalica/id1577507558?l=en"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={appstoreSvg} alt="appstoreSvg" />
+          </a>
         </AppAvailableDiv>
       </LandingIntroDescDiv>
       <MobileAppIntroDiv />
