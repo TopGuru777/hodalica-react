@@ -14,7 +14,7 @@ import {
 import Footer from "layouts/footer";
 import { Container } from "layouts/StyledLayout";
 import React, { useEffect } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
 const LandingPage: React.FC = () => {
   const history = useHistory();

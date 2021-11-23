@@ -4,7 +4,7 @@ import React from "react";
 import logoImg from "assets/icons/logoBlack.svg";
 import SignInForm from "components/signin/SignInForm";
 import Footer from "layouts/footer";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
 const SignInPage: React.FC = () => {
   const history = useHistory();

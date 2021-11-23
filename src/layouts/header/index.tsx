@@ -36,8 +36,7 @@ import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { getProfileAction, logoutAction } from "action/action";
 
-import { useLocation } from "react-router-dom";
-import { useHistory } from "react-router";
+import { useLocation, useHistory } from "react-router-dom";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();

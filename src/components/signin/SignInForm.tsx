@@ -12,7 +12,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import btnSpinner from "assets/svg/spinnerButton.svg";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 // import { withRouter } from "react-router";
 // import { withRouter } from "react-router-dom";
 
