@@ -17,6 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.root {
-  overflow: hidden;
+#root {
+  overflow: hidden !important;
 }
