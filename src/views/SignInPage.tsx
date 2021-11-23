@@ -1,5 +1,5 @@
 import { LogoImg, SignInDiv } from "components/signin/StyledSignIn";
-import React, { useMemo } from "react";
+import React from "react";
 
 import logoImg from "assets/icons/logoBlack.svg";
 import SignInForm from "components/signin/SignInForm";
