@@ -4,8 +4,10 @@ import React from "react";
 import logoImg from "assets/icons/logoBlack.svg";
 import SignInForm from "components/signin/SignInForm";
 import Footer from "layouts/footer";
+import { useHistory } from "react-router";
 
 const SignInPage: React.FC = () => {
+  const history = useHistory();
   return (
     <React.Fragment>
       <SignInDiv>
@@ -13,8 +15,7 @@ const SignInPage: React.FC = () => {
           src={logoImg}
           alt="logo Image"
           onClick={() => {
-            localStorage.setItem("currentUrl", "/stats");
-            window.location.href = "/";
+            history.push("/");
           }}
         />
         <SignInForm />

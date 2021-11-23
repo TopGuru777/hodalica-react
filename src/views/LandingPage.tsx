@@ -14,13 +14,18 @@ import {
 import Footer from "layouts/footer";
 import { Container } from "layouts/StyledLayout";
 import React, { useEffect } from "react";
+import { useHistory } from "react-router";
 
 const LandingPage: React.FC = () => {
+  const history = useHistory();
+
   useEffect(() => {
     if (localStorage.getItem("isAuth") === "true") {
       localStorage.setItem("currentUrl", "/stats");
-      window.location.href = "/stats";
+      // window.location.href = "/stats";
+      history.push("/stats");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <LandingPageDiv>

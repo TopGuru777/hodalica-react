@@ -37,6 +37,7 @@ import { Link } from "react-router-dom";
 import { getProfileAction, logoutAction } from "action/action";
 
 import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -51,6 +52,7 @@ const Header: React.FC = () => {
   const [profile, setProfile] = useState<any>({});
 
   const location = useLocation();
+  const history = useHistory();
 
   useEffect(() => {
     const curURL =
@@ -64,6 +66,11 @@ const Header: React.FC = () => {
   }, [location]);
 
   useEffect(() => {
+    setIsAuth(localStorage.getItem("isAuth") === "true" ? true : false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [localStorage.getItem("isAuth")]);
+
+  useEffect(() => {
     const getProfileFunc = async () => {
       const res = await getProfileAction();
       setProfile(res);
@@ -72,7 +79,7 @@ const Header: React.FC = () => {
       getProfileFunc();
     }
 
-    setIsAuth(localStorage.getItem("isAuth") === "true" ? true : false);
+    // setIsAuth(localStorage.getItem("isAuth") === "true" ? true : false);
     const setResponsiveness = () => {
       return window.innerWidth <= 850
         ? setState((prevState) => ({ ...prevState, mobileView: true }))
@@ -134,7 +141,7 @@ const Header: React.FC = () => {
     await logoutAction();
     setloading(false);
     localStorage.removeItem("isAuth");
-    window.location.href = "/";
+    history.push("/");
   };
 
   const RenderAuthMenu = () => {

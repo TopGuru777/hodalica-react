@@ -12,6 +12,9 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import btnSpinner from "assets/svg/spinnerButton.svg";
+import { useHistory } from "react-router";
+// import { withRouter } from "react-router";
+// import { withRouter } from "react-router-dom";
 
 const SignInForm = () => {
   const { t } = useTranslation();
@@ -19,6 +22,7 @@ const SignInForm = () => {
   const [password, setpassword] = useState("");
   const [errors, setErrors] = useState<any>({});
   const [loading, setloading] = useState(false);
+  const history = useHistory();
 
   const handleLogIn = async () => {
     if (username === "") {
@@ -52,7 +56,7 @@ const SignInForm = () => {
       const res = await signinAction(data);
       setloading(false);
       if (res.success) {
-        window.location.href = "/stats";
+        history.push("/stats");
         localStorage.setItem("currentUrl", "stats");
         localStorage.setItem("isAuth", "true");
       } else {
