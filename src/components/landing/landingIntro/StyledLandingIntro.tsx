@@ -86,11 +86,11 @@ export const AppAvailableDiv = styled.div`
 export const IntroAnimDiv = styled.div`
   position: relative;
   width: 70%;
-  padding-top: 78.75%;
+  padding-top: 62.2%;
   margin: auto;
   margin-top: 20px;
   @media screen and (max-width: 425px) {
-    padding-top: 112.5%;
+    padding-top: 88.9%;
     margin-top: 60px;
     width: 100%;
   }
@@ -241,11 +241,9 @@ export const MADesc = styled.div`
 `;
 
 export const MobileAppVideoDiv = styled.div`
-  padding-top: 45%;
   width: 45%;
   @media screen and (max-width: 768px) {
     width: 100%;
-    padding-top: 100%;
     margin: 15% auto;
     transition: 0.2s linear;
   }
