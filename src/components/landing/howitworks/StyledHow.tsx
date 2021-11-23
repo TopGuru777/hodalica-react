@@ -114,7 +114,7 @@ export const BoxImg = styled.img`
   @media screen and (max-width: 425px) {
     width: 180px;
     transition: 0.2s linear;
-    margin-top: -135px;
+    /* margin-top: -135px; */
   }
 `;
 
