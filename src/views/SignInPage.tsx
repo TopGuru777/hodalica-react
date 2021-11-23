@@ -19,6 +19,7 @@ const SignInPage: React.FC = ({ history }: any) => {
             history.push("/");
           }}
         />
+        sadfasdfasdfasdf
         <SignInForm />
       </SignInDiv>
       <Footer />
