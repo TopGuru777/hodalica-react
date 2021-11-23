@@ -5,10 +5,9 @@ import logoImg from "assets/icons/logoBlack.svg";
 import SignInForm from "components/signin/SignInForm";
 import Footer from "layouts/footer";
 
-// import { useRouter } from "action/action";
-import { withRouter } from "react-router-dom";
-const SignInPage: React.FC = ({ history }: any) => {
-  // const history = useRouter();
+import { useRouter } from "action/action";
+const SignInPage: React.FC = () => {
+  const history = useRouter();
   return (
     <React.Fragment>
       <SignInDiv>
@@ -19,7 +18,6 @@ const SignInPage: React.FC = ({ history }: any) => {
             history.push("/");
           }}
         />
-        sadfasdfasdfasdf
         <SignInForm />
       </SignInDiv>
       <Footer />
@@ -27,4 +25,4 @@ const SignInPage: React.FC = ({ history }: any) => {
   );
 };
 
-export default withRouter(SignInPage);
+export default SignInPage;
