@@ -1,13 +1,13 @@
 import { LogoImg, SignInDiv } from "components/signin/StyledSignIn";
-import React from "react";
+import React, { useMemo } from "react";
 
 import logoImg from "assets/icons/logoBlack.svg";
 import SignInForm from "components/signin/SignInForm";
 import Footer from "layouts/footer";
-import { useHistory } from "react-router-dom";
 
+import { useRouter } from "action/action";
 const SignInPage: React.FC = () => {
-  const history = useHistory();
+  const history = useRouter();
   return (
     <React.Fragment>
       <SignInDiv>

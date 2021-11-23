@@ -54,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@types/query-string": "^6.3.0",
     "@types/react-custom-scrollbars": "^4.0.9",
     "@types/react-date-range": "^1.4.1",
     "@types/react-router-dom": "^5.3.2",
