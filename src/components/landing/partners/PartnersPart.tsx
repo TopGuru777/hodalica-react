@@ -11,7 +11,7 @@ const PartnersPart = () => {
   const [viewmore, setViewmore] = useState(true);
 
   return (
-    <PartnersDiv>
+    <PartnersDiv id="partner">
       <LandingPartTitle>{t("landing.partners")}</LandingPartTitle>
       <PartnersGroup>
         {partnerImgs.map((item: any, key: any) => {
@@ -27,6 +27,7 @@ const PartnersPart = () => {
         <Button
           value={viewmore ? t("buttons.view_more") : t("buttons.view_less")}
           onClick={() => {
+            window.location.href = "/#partner";
             setViewmore((prev) => !prev);
           }}
           color="#ffffff00"

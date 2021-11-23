@@ -16,7 +16,7 @@ import {
   MenuShowBtn,
   MobileMenuDiv,
   scrollEvent,
-  SideBottomDiv,
+  // SideBottomDiv,
   SideMenu,
   SideMenuDiv,
   TransDiv,
@@ -430,6 +430,25 @@ const Header: React.FC = () => {
                   {t("menus.profile")}
                 </SideMenu>
               </Link>
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                onClick={() => {
+                  localStorage.removeItem("isAuth");
+                  window.location.href = "/";
+                }}
+              >
+                <SideMenu
+                  active={
+                    localStorage.getItem("currentUrl") === "/logout" ||
+                    current === "/logout"
+                      ? true
+                      : false
+                  }
+                >
+                  {t("buttons.logout")}
+                </SideMenu>
+              </Link>
             </SideMenuDiv>
           ) : (
             <SideMenuDiv>
@@ -493,10 +512,30 @@ const Header: React.FC = () => {
                   {t("menus.news")}
                 </SideMenu>
               </a>
+              <Link
+                to="/signin"
+                style={{ textDecoration: "none" }}
+                onClick={() => {
+                  localStorage.setItem("currentUrl", "/signin");
+                  setMenuflag(false);
+                  setCurrent("/signin");
+                }}
+              >
+                <SideMenu
+                  active={
+                    localStorage.getItem("currentUrl") === "/signin" ||
+                    current === "/signin"
+                      ? true
+                      : false
+                  }
+                >
+                  {t("buttons.for_partners")}
+                </SideMenu>
+              </Link>
             </SideMenuDiv>
           )}
 
-          <SideBottomDiv>
+          {/* <SideBottomDiv>
             {isAuth ? (
               <Link
                 to="/"
@@ -539,7 +578,7 @@ const Header: React.FC = () => {
                 </SideMenu>
               </Link>
             )}
-          </SideBottomDiv>
+          </SideBottomDiv> */}
         </MobileMenuDiv>
       )}
     </HeaderBar>

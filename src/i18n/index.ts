@@ -11,7 +11,7 @@ const options: any = {
 
   debug: true,
 
-  // lng: 'en',
+  lng: "bn",
 
   resources: {
     bn: {
