@@ -81,7 +81,7 @@ export const HowPart2Div = styled.div`
 
 export const How2VideoDiv = styled.div`
   position: relative;
-  aspect-ratio: 25/24;
+  padding-top: 96%;
   width: 100%;
 `;
 
@@ -265,7 +265,7 @@ export const HowPart4Div = styled.div`
 
 export const How4VideoPart = styled.div`
   width: 100%;
-  aspect-ratio: 2/3;
+  padding-top: 150%;
   position: relative;
   video {
     position: absolute;
