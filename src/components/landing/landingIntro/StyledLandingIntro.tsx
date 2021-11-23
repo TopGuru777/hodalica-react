@@ -85,7 +85,6 @@ export const AppAvailableDiv = styled.div`
 
 export const IntroAnimDiv = styled.div`
   position: relative;
-  /* aspect-ratio: 9/8; */
   width: 70%;
   padding-top: 78.75%;
   margin: auto;
@@ -242,10 +241,11 @@ export const MADesc = styled.div`
 `;
 
 export const MobileAppVideoDiv = styled.div`
-  aspect-ratio: 1/1;
+  padding-top: 45%;
   width: 45%;
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding-top: 100%;
     margin: 15% auto;
     transition: 0.2s linear;
   }
@@ -256,7 +256,7 @@ export const MobileAppVideoDiv = styled.div`
 
 export const MobileAppVideo = styled.div`
   width: 100%;
-  aspect-ratio: 1/1;
+  padding-top: 100%;
   position: relative;
   video {
     width: 80%;
@@ -329,13 +329,13 @@ export const Dot = styled.div<dotProps>`
   ${({ size }) => {
     switch (size) {
       case "lg":
-        return "width: 37%;aspect-ratio: 1/1;";
+        return "width: 37%;padding-top: 37%;";
       case "md":
-        return "width: 25%;aspect-ratio: 1/1;";
+        return "width: 25%;padding-top: 25%;";
       case "sm":
-        return "width: 17%;aspect-ratio: 1/1;";
+        return "width: 17%;padding-top: 17%;";
       case "xs":
-        return "width: 13%;aspect-ratio: 1/1;";
+        return "width: 13%;padding-top: 13%;";
       default:
         return;
     }
