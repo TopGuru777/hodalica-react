@@ -6,8 +6,9 @@ import SignInForm from "components/signin/SignInForm";
 import Footer from "layouts/footer";
 
 import { useRouter } from "action/action";
-const SignInPage: React.FC = () => {
-  const history = useRouter();
+import { withRouter } from "react-router-dom";
+const SignInPage: React.FC = ({ history }: any) => {
+  // const history = useRouter();
   return (
     <React.Fragment>
       <SignInDiv>
@@ -25,4 +26,4 @@ const SignInPage: React.FC = () => {
   );
 };
 
-export default SignInPage;
+export default withRouter(SignInPage);
