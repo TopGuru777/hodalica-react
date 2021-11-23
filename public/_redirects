@@ -1,0 +1,5 @@
+# This rule will trigger at /blog/my-old-title
+/*    /index.html    200
+/stats    /stats    200
+/reviews    /reviews    200
+/profile    /profile    200
