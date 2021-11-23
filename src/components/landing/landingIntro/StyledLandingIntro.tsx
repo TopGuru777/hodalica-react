@@ -85,11 +85,13 @@ export const AppAvailableDiv = styled.div`
 
 export const IntroAnimDiv = styled.div`
   position: relative;
-  aspect-ratio: 9/8;
+  /* aspect-ratio: 9/8; */
   width: 70%;
+  padding-top: 78.75%;
   margin: auto;
   margin-top: 20px;
   @media screen and (max-width: 425px) {
+    padding-top: 112.5%;
     margin-top: 60px;
     width: 100%;
   }
