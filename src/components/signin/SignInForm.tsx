@@ -1,4 +1,4 @@
-import { signinAction } from "action/action";
+import { signinAction, useRouter } from "action/action";
 import Button from "components/custom/Button/Button";
 import FormInput from "components/custom/FormInput/FormInput";
 import React, { useEffect, useState } from "react";
@@ -12,7 +12,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import btnSpinner from "assets/svg/spinnerButton.svg";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import { withRouter } from "react-router";
 // import { withRouter } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const SignInForm = () => {
   const [password, setpassword] = useState("");
   const [errors, setErrors] = useState<any>({});
   const [loading, setloading] = useState(false);
-  const history = useHistory();
+  const history = useRouter();
 
   const handleLogIn = async () => {
     if (username === "") {

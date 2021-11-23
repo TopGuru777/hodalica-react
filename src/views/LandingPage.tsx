@@ -1,3 +1,4 @@
+import { useRouter } from "action/action";
 import BenefitPartnerPart from "components/landing/benefitpartner/BenefitPartnerPart";
 import BenefitUserPart from "components/landing/benefituser/BenefitUserPart";
 import FaqPartnerPart from "components/landing/faqpatner/FaqPartnerPart";
@@ -14,10 +15,10 @@ import {
 import Footer from "layouts/footer";
 import { Container } from "layouts/StyledLayout";
 import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+// import {  } from "react-router-dom";
 
 const LandingPage: React.FC = () => {
-  const history = useHistory();
+  const history = useRouter();
 
   useEffect(() => {
     if (localStorage.getItem("isAuth") === "true") {
