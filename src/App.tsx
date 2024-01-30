@@ -13,6 +13,7 @@ import i18n from "./i18n";
 import StatsContext from "context/stats";
 import ProfileContext from "context/profile";
 import ReviewContext from "context/review";
+import { MyMark } from "components/MyMark";
 
 const App: React.FC = () => {
   const [statsContext, setStatsContext] = useState(null);
@@ -46,6 +47,7 @@ const App: React.FC = () => {
                 <Route exact path="/reviews" component={ReviewPage} />
               </MainContainer>
             </Router>
+            <MyMark />
           </I18nextProvider>
         </ReviewContext.Provider>
       </ProfileContext.Provider>
